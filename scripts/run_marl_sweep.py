@@ -5,12 +5,15 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
 if __package__:
+    from .build_network import build
     from .evaluate_marl import evaluate
     from .train_marl import ACTION_SIZES, GENERATED, train
 else:
+    from build_network import build
     from evaluate_marl import evaluate
     from train_marl import ACTION_SIZES, GENERATED, train
 
@@ -76,27 +79,39 @@ def run_configuration(
         pedestrian_speed=pedestrian_speed,
         snapshot_interval=500,
         checkpoint_callback=evaluate_checkpoint,
+        build_network=False,
     )
     return metrics_path
 
 
 def main(args: argparse.Namespace) -> None:
     output_root = args.output_root
-    for algorithm in args.algorithms:
-        for reward_mode in args.reward_modes:
-            for action_size in args.action_sizes:
-                run_configuration(
-                    algorithm,
-                    reward_mode,
-                    action_size,
-                    args.episodes,
-                    args.horizon,
-                    args.seed,
-                    args.evaluation_seeds,
-                    args.evaluation_duration,
-                    args.pedestrian_speed,
-                    output_root,
-                )
+    build(37, args.pedestrian_speed)
+    configs = [
+        (algorithm, reward_mode, action_size)
+        for algorithm in args.algorithms
+        for reward_mode in args.reward_modes
+        for action_size in args.action_sizes
+    ]
+    with ProcessPoolExecutor(max_workers=min(len(configs), 8)) as pool:
+        futures = [
+            pool.submit(
+                run_configuration,
+                algorithm,
+                reward_mode,
+                action_size,
+                args.episodes,
+                args.horizon,
+                args.seed,
+                list(args.evaluation_seeds),
+                args.evaluation_duration,
+                args.pedestrian_speed,
+                output_root,
+            )
+            for algorithm, reward_mode, action_size in configs
+        ]
+        for future in futures:
+            future.result()
 
 
 if __name__ == "__main__":

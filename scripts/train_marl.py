@@ -49,7 +49,11 @@ class SignalEnvironment:
         green_duration: int = 37,
         pedestrian_speed: float = 1.4,
     ):
-        self.traci = _import_traci()
+        try:
+            import libsumo as traci
+        except ImportError:
+            traci = _import_traci()
+        self.traci = traci
         self.seed = seed
         self.duration = duration
         self.reward_mode = reward_mode
@@ -98,6 +102,10 @@ class SignalEnvironment:
                 str(self.duration),
                 "--step-length",
                 "1",
+                "--no-step-log",
+                "true",
+                "--no-warnings",
+                "true",
             ]
         )
         self.time = 0
@@ -480,6 +488,7 @@ def train(
     pedestrian_speed: float = 1.4,
     snapshot_interval: int = 500,
     checkpoint_callback: Callable[[Path, int], None] | None = None,
+    build_network: bool = True,
 ) -> None:
     if algorithm not in ("mappo", "ippo"):
         raise ValueError("algorithm must be mappo or ippo")
@@ -490,7 +499,9 @@ def train(
     if snapshot_interval < 0:
         raise ValueError("snapshot_interval must be non-negative")
     torch.manual_seed(seed)
-    build(green_duration, pedestrian_speed)
+    torch.set_num_threads(1)
+    if build_network:
+        build(green_duration, pedestrian_speed)
     actors = [Actor(action_size) for _ in AGENTS]
     critics = (
         [Critic(OBSERVATION_SIZE * 3)]

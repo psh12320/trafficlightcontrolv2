@@ -99,7 +99,8 @@ def run_configuration(
 
 def main(args: argparse.Namespace) -> None:
     output_root = args.output_root
-    build(37, args.pedestrian_speed, args.vehicle_period)
+    if not args.skip_build:
+        build(37, args.pedestrian_speed, args.vehicle_period)
     configs = [
         (algorithm, reward_mode, action_size)
         for algorithm in args.algorithms
@@ -151,5 +152,6 @@ if __name__ == "__main__":
     parser.add_argument("--snapshot-interval", type=int, default=500)
     parser.add_argument("--pedestrian-interval", type=int, default=20)
     parser.add_argument("--vehicle-period", type=int, default=6)
+    parser.add_argument("--skip-build", action="store_true")
     parser.add_argument("--output-root", type=Path, default=GENERATED / "marl-sweep")
     main(parser.parse_args())

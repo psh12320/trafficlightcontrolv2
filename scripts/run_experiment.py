@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import json
 from pathlib import Path
 
 from run_baseline import GENERATED, run
@@ -16,6 +17,8 @@ def main(
     controller: str,
     green_duration: int,
     pedestrian_speed: float,
+    vehicle_period: int,
+    pedestrian_interval: int,
 ) -> None:
     rows = [
         run(
@@ -26,6 +29,8 @@ def main(
             controller,
             green_duration,
             pedestrian_speed,
+            vehicle_period,
+            pedestrian_interval,
         )
         for seed in seeds
     ]
@@ -33,7 +38,15 @@ def main(
     with output.open("w", newline="", encoding="utf-8") as file:
         writer = csv.DictWriter(file, fieldnames=rows[0].keys())
         writer.writeheader()
-        writer.writerows(rows)
+        writer.writerows(
+            {
+                key: json.dumps(value, sort_keys=True)
+                if isinstance(value, dict)
+                else value
+                for key, value in row.items()
+            }
+            for row in rows
+        )
     print(f"Wrote {len(rows)} baseline runs to {output}")
 
 
@@ -53,6 +66,8 @@ if __name__ == "__main__":
     )
     parser.add_argument("--green-duration", type=int, default=37)
     parser.add_argument("--pedestrian-speed", type=float, default=1.4)
+    parser.add_argument("--vehicle-period", type=int, default=6)
+    parser.add_argument("--pedestrian-interval", type=int, default=20)
     args = parser.parse_args()
     main(
         args.seeds,
@@ -61,4 +76,6 @@ if __name__ == "__main__":
         args.controller,
         args.green_duration,
         args.pedestrian_speed,
+        args.vehicle_period,
+        args.pedestrian_interval,
     )

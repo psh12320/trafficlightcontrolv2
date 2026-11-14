@@ -44,6 +44,7 @@ def run_configuration(
     evaluation_seeds: list[int],
     evaluation_duration: int,
     pedestrian_speed: float,
+    snapshot_interval: int,
     output_root: Path,
 ) -> Path:
     name = f"{algorithm}-{reward_mode}-actions{action_size}-seed{seed}"
@@ -77,7 +78,7 @@ def run_configuration(
         reward_mode=reward_mode,
         action_size=action_size,
         pedestrian_speed=pedestrian_speed,
-        snapshot_interval=500,
+        snapshot_interval=snapshot_interval,
         checkpoint_callback=evaluate_checkpoint,
         build_network=False,
     )
@@ -106,6 +107,7 @@ def main(args: argparse.Namespace) -> None:
                 list(args.evaluation_seeds),
                 args.evaluation_duration,
                 args.pedestrian_speed,
+                args.snapshot_interval,
                 output_root,
             )
             for algorithm, reward_mode, action_size in configs
@@ -132,5 +134,6 @@ if __name__ == "__main__":
     parser.add_argument("--evaluation-seeds", nargs="+", type=int, default=(11, 12, 13))
     parser.add_argument("--evaluation-duration", type=int, default=3600)
     parser.add_argument("--pedestrian-speed", type=float, default=1.4)
+    parser.add_argument("--snapshot-interval", type=int, default=500)
     parser.add_argument("--output-root", type=Path, default=GENERATED / "marl-sweep")
     main(parser.parse_args())

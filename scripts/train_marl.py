@@ -13,11 +13,11 @@ from torch.distributions import Categorical
 
 if __package__:
     from .build_network import GENERATED, build
-    from .run_baseline import PEDESTRIAN_ROUTES, _crossing_phase_map
+    from .run_baseline import PEDESTRIAN_ROUTES, _crossing_phase_map, _p95
     from .run_simulation import _import_traci, _sumo_binary
 else:
     from build_network import GENERATED, build
-    from run_baseline import PEDESTRIAN_ROUTES, _crossing_phase_map
+    from run_baseline import PEDESTRIAN_ROUTES, _crossing_phase_map, _p95
     from run_simulation import _import_traci, _sumo_binary
 
 
@@ -48,6 +48,7 @@ class SignalEnvironment:
         action_size: int = ACTION_SIZE,
         green_duration: int = 37,
         pedestrian_speed: float = 1.4,
+        pedestrian_interval: int = 20,
     ):
         try:
             import libsumo as traci
@@ -68,6 +69,9 @@ class SignalEnvironment:
         if pedestrian_speed <= 0:
             raise ValueError("pedestrian_speed must be positive")
         self.pedestrian_speed = pedestrian_speed
+        if pedestrian_interval <= 0:
+            raise ValueError("pedestrian_interval must be positive")
+        self.pedestrian_interval = pedestrian_interval
         self.time = 0
         self.pedestrian_id = 0
         self.pedestrian_arrivals = 0
@@ -85,6 +89,7 @@ class SignalEnvironment:
         self.pedestrian_completed = 0
         self.pedestrian_completed_waiting = 0.0
         self.pedestrian_completed_waits: list[float] = []
+        self.pedestrian_waits_by_crossing: dict[str, list[float]] = {}
         self.waiting_by_crossing: dict[str, float] = {}
         self.phase_age = {agent: 0 for agent in AGENTS}
         self.last_phase = {agent: None for agent in AGENTS}
@@ -125,6 +130,7 @@ class SignalEnvironment:
         self.pedestrian_completed = 0
         self.pedestrian_completed_waiting = 0.0
         self.pedestrian_completed_waits = []
+        self.pedestrian_waits_by_crossing = {}
         self.waiting_by_crossing = {}
         self.phase_age = {agent: 0 for agent in AGENTS}
         self.last_phase = {
@@ -236,7 +242,7 @@ class SignalEnvironment:
         return -value - self.switch_penalty * switches
 
     def step(self, actions: torch.Tensor) -> tuple[torch.Tensor, float, bool]:
-        if self.time >= 10 and self.time % 20 == 0:
+        if self.time >= 10 and self.time % self.pedestrian_interval == 0:
             for junction, start, crossing, end in PEDESTRIAN_ROUTES:
                 person_id = f"train-ped-{self.pedestrian_id}"
                 self.traci.person.add(person_id, start, 0, self.time)
@@ -328,6 +334,10 @@ class SignalEnvironment:
                 waiting = self.pedestrian_wait_by_id.pop(person, 0.0)
                 self.pedestrian_completed_waiting += waiting
                 self.pedestrian_completed_waits.append(waiting)
+                crossing = self.pedestrian_meta[person][1]
+                self.pedestrian_waits_by_crossing.setdefault(
+                    crossing, []
+                ).append(waiting)
         self.time += DECISION_INTERVAL
         return (
             self.observe(),
@@ -343,11 +353,17 @@ class SignalEnvironment:
         active_people = len(self.traci.person.getIDList())
         pedestrian_waits = list(self.pedestrian_wait_by_id.values())
         all_pedestrian_waits = pedestrian_waits + self.pedestrian_completed_waits
-        p95 = (
-            statistics.quantiles(all_pedestrian_waits, n=20, method="inclusive")[18]
-            if len(all_pedestrian_waits) > 1
-            else (all_pedestrian_waits[0] if all_pedestrian_waits else 0.0)
-        )
+        active_waits_by_crossing: dict[str, list[float]] = {}
+        for person_id, waiting in self.pedestrian_wait_by_id.items():
+            crossing = self.pedestrian_meta[person_id][1]
+            active_waits_by_crossing.setdefault(crossing, []).append(waiting)
+        p95_by_crossing = {}
+        for route in PEDESTRIAN_ROUTES:
+            crossing = route[2]
+            p95_by_crossing[crossing] = _p95(
+                self.pedestrian_waits_by_crossing.get(crossing, [])
+                + active_waits_by_crossing.get(crossing, [])
+            )
         return {
             "vehicle_departed": self.vehicle_arrivals,
             "vehicle_completed": self.vehicle_completed,
@@ -369,20 +385,11 @@ class SignalEnvironment:
             / max(self.pedestrian_arrivals, 1),
             "pedestrian_completed_average_waiting_seconds": self.pedestrian_completed_waiting
             / max(self.pedestrian_completed, 1),
-            "pedestrian_p95_waiting_seconds": p95,
-            "pedestrian_completed_p95_waiting_seconds": (
-                statistics.quantiles(
-                    self.pedestrian_completed_waits,
-                    n=20,
-                    method="inclusive",
-                )[18]
-                if len(self.pedestrian_completed_waits) > 1
-                else (
-                    self.pedestrian_completed_waits[0]
-                    if self.pedestrian_completed_waits
-                    else 0.0
-                )
+            "pedestrian_p95_waiting_seconds": _p95(all_pedestrian_waits),
+            "pedestrian_completed_p95_waiting_seconds": _p95(
+                self.pedestrian_completed_waits
             ),
+            "pedestrian_p95_by_crossing": p95_by_crossing,
             "waiting_by_crossing": dict(self.waiting_by_crossing),
         }
 
@@ -486,9 +493,11 @@ def train(
     rnd_coefficient: float = 0.0,
     green_duration: int = 37,
     pedestrian_speed: float = 1.4,
+    pedestrian_interval: int = 20,
+    vehicle_period: int = 6,
     snapshot_interval: int = 500,
     checkpoint_callback: Callable[[Path, int], None] | None = None,
-    build_network: bool = True,
+    skip_build: bool = False,
 ) -> None:
     if algorithm not in ("mappo", "ippo"):
         raise ValueError("algorithm must be mappo or ippo")
@@ -500,8 +509,8 @@ def train(
         raise ValueError("snapshot_interval must be non-negative")
     torch.manual_seed(seed)
     torch.set_num_threads(1)
-    if build_network:
-        build(green_duration, pedestrian_speed)
+    if not skip_build:
+        build(green_duration, pedestrian_speed, vehicle_period)
     actors = [Actor(action_size) for _ in AGENTS]
     critics = (
         [Critic(OBSERVATION_SIZE * 3)]
@@ -523,6 +532,8 @@ def train(
         "action_size": action_size,
         "green_duration": green_duration,
         "pedestrian_speed": pedestrian_speed,
+        "pedestrian_interval": pedestrian_interval,
+        "vehicle_period": vehicle_period,
     }
 
     for episode in range(episodes):
@@ -537,6 +548,7 @@ def train(
             action_size,
             green_duration,
             pedestrian_speed,
+            pedestrian_interval,
         )
         observation = environment.reset()
         rollout = []

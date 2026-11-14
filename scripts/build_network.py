@@ -100,7 +100,9 @@ def create_edges() -> None:
     _write_xml(GENERATED / "network.edg.xml", root)
 
 
-def create_routes() -> None:
+def create_routes(vehicle_period: int = 6) -> None:
+    if vehicle_period <= 0:
+        raise ValueError("vehicle_period must be positive")
     root = ElementTree.Element("routes")
     vehicle_type = ElementTree.SubElement(
         root,
@@ -134,18 +136,24 @@ def create_routes() -> None:
             route=route_id,
             begin="0",
             end="3600",
-            period="6",
+            period=str(vehicle_period),
             departLane="best",
             departSpeed="max",
         )
     _write_xml(GENERATED / "traffic.rou.xml", root)
 
 
-def build(green_duration: int = 37, pedestrian_speed: float = 1.4) -> Path:
+def build(
+    green_duration: int = 37,
+    pedestrian_speed: float = 1.4,
+    vehicle_period: int = 6,
+) -> Path:
     if green_duration <= 0:
         raise ValueError("green_duration must be positive")
     if pedestrian_speed <= 0:
         raise ValueError("pedestrian_speed must be positive")
+    if vehicle_period <= 0:
+        raise ValueError("vehicle_period must be positive")
     netconvert = shutil.which("netconvert")
     if netconvert is None:
         raise RuntimeError(
@@ -154,7 +162,7 @@ def build(green_duration: int = 37, pedestrian_speed: float = 1.4) -> Path:
     GENERATED.mkdir(parents=True, exist_ok=True)
     create_nodes()
     create_edges()
-    create_routes()
+    create_routes(vehicle_period)
     network = GENERATED / "network.net.xml"
     subprocess.run(
         [
@@ -205,6 +213,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--green-duration", type=int, default=37)
     parser.add_argument("--pedestrian-speed", type=float, default=1.4)
+    parser.add_argument("--vehicle-period", type=int, default=6)
     args = parser.parse_args()
     print(f"Generated SUMO scenario in {GENERATED}")
-    build(args.green_duration, args.pedestrian_speed)
+    build(args.green_duration, args.pedestrian_speed, args.vehicle_period)

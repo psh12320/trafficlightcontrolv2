@@ -2,6 +2,7 @@ from pathlib import Path
 from xml.etree import ElementTree
 
 from scripts.build_network import build, create_edges, create_nodes, create_routes, GENERATED
+from scripts.run_baseline import _p95
 from scripts.train_marl import _gae
 import torch
 
@@ -22,6 +23,22 @@ def test_routes_use_defined_edges(tmp_path, monkeypatch):
     route_root = ElementTree.parse(tmp_path / "traffic.rou.xml").getroot()
     for route in route_root.findall("route"):
         assert set(route.get("edges", "").split()).issubset(edge_ids)
+
+
+def test_routes_use_requested_vehicle_period(tmp_path, monkeypatch):
+    monkeypatch.setattr("scripts.build_network.GENERATED", tmp_path)
+    create_routes(vehicle_period=10)
+    route_root = ElementTree.parse(tmp_path / "traffic.rou.xml").getroot()
+    assert {
+        flow.get("period")
+        for flow in route_root.findall("flow")
+    } == {"10"}
+
+
+def test_p95_handles_empty_and_single_crossing_samples():
+    assert _p95([]) == 0.0
+    assert _p95([7.0]) == 7.0
+    assert _p95([0.0, 10.0]) == 9.5
 
 
 def test_signal_timing_sets_green_and_clearance_phases(tmp_path, monkeypatch):

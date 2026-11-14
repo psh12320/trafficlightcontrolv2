@@ -21,6 +21,9 @@ def evaluate(
     seeds: list[int],
     duration: int,
     pedestrian_speed: float | None = None,
+    pedestrian_interval: int | None = None,
+    vehicle_period: int | None = None,
+    skip_build: bool = False,
 ) -> list[dict[str, float | str | dict[str, float]]]:
     saved = torch.load(checkpoint, map_location="cpu", weights_only=True)
     metadata = saved.get("metadata", {})
@@ -28,7 +31,18 @@ def evaluate(
     green_duration = metadata.get("green_duration", 37)
     configured_speed = metadata.get("pedestrian_speed", 1.4)
     speed = pedestrian_speed if pedestrian_speed is not None else configured_speed
-    build(green_duration, speed)
+    interval = (
+        pedestrian_interval
+        if pedestrian_interval is not None
+        else metadata.get("pedestrian_interval", 20)
+    )
+    period = (
+        vehicle_period
+        if vehicle_period is not None
+        else metadata.get("vehicle_period", 6)
+    )
+    if not skip_build:
+        build(green_duration, speed, period)
     actors = [Actor(action_size) for _ in AGENTS]
     for actor, state in zip(actors, saved["actors"]):
         actor.load_state_dict(state)
@@ -47,6 +61,7 @@ def evaluate(
             action_size,
             green_duration,
             speed,
+            interval,
         )
         observation = environment.reset()
         try:
@@ -77,6 +92,9 @@ if __name__ == "__main__":
     parser.add_argument("--seeds", nargs="+", type=int, default=[1, 2, 3])
     parser.add_argument("--duration", type=int, default=300)
     parser.add_argument("--pedestrian-speed", type=float)
+    parser.add_argument("--pedestrian-interval", type=int)
+    parser.add_argument("--vehicle-period", type=int)
+    parser.add_argument("--skip-build", action="store_true")
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     rows = evaluate(
@@ -84,6 +102,9 @@ if __name__ == "__main__":
         args.seeds,
         args.duration,
         args.pedestrian_speed,
+        args.pedestrian_interval,
+        args.vehicle_period,
+        args.skip_build,
     )
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)

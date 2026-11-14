@@ -45,6 +45,8 @@ def run_configuration(
     evaluation_duration: int,
     pedestrian_speed: float,
     snapshot_interval: int,
+    pedestrian_interval: int,
+    vehicle_period: int,
     output_root: Path,
 ) -> Path:
     name = f"{algorithm}-{reward_mode}-actions{action_size}-seed{seed}"
@@ -55,7 +57,15 @@ def run_configuration(
     rows: list[dict[str, object]] = []
 
     def evaluate_checkpoint(path: Path, episode: int) -> None:
-        for row in evaluate(path, evaluation_seeds, evaluation_duration):
+        for row in evaluate(
+            path,
+            evaluation_seeds,
+            evaluation_duration,
+            pedestrian_speed,
+            pedestrian_interval,
+            vehicle_period,
+            skip_build=True,
+        ):
             rows.append(
                 {
                     "algorithm": algorithm,
@@ -78,16 +88,18 @@ def run_configuration(
         reward_mode=reward_mode,
         action_size=action_size,
         pedestrian_speed=pedestrian_speed,
+        pedestrian_interval=pedestrian_interval,
+        vehicle_period=vehicle_period,
         snapshot_interval=snapshot_interval,
         checkpoint_callback=evaluate_checkpoint,
-        build_network=False,
+        skip_build=True,
     )
     return metrics_path
 
 
 def main(args: argparse.Namespace) -> None:
     output_root = args.output_root
-    build(37, args.pedestrian_speed)
+    build(37, args.pedestrian_speed, args.vehicle_period)
     configs = [
         (algorithm, reward_mode, action_size)
         for algorithm in args.algorithms
@@ -108,6 +120,8 @@ def main(args: argparse.Namespace) -> None:
                 args.evaluation_duration,
                 args.pedestrian_speed,
                 args.snapshot_interval,
+                args.pedestrian_interval,
+                args.vehicle_period,
                 output_root,
             )
             for algorithm, reward_mode, action_size in configs
@@ -135,5 +149,7 @@ if __name__ == "__main__":
     parser.add_argument("--evaluation-duration", type=int, default=3600)
     parser.add_argument("--pedestrian-speed", type=float, default=1.4)
     parser.add_argument("--snapshot-interval", type=int, default=500)
+    parser.add_argument("--pedestrian-interval", type=int, default=20)
+    parser.add_argument("--vehicle-period", type=int, default=6)
     parser.add_argument("--output-root", type=Path, default=GENERATED / "marl-sweep")
     main(parser.parse_args())

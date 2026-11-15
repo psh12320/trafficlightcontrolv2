@@ -6,3 +6,6 @@ __pycache__/
 /HANDOFF.md
 /V*_HANDOFF.md
 /report_figures/_support/
+
+# This historical smoke runner requires the archived 21-input V3 source.
+/scripts/smoke_v3.py

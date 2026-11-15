@@ -1,3 +1,4 @@
 eclipse-sumo>=1.28,<2
+libsumo>=1.28,<2
 numpy<2
 torch>=2.0

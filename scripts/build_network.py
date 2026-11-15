@@ -22,7 +22,7 @@ def _write_xml(path: Path, root: ElementTree.Element) -> None:
     ElementTree.ElementTree(root).write(path, encoding="utf-8", xml_declaration=True)
 
 
-def create_nodes() -> None:
+def create_nodes(output_dir: Path | None = None) -> None:
     root = ElementTree.Element("nodes")
     junctions = {"J0": (0, 0), "J1": (200, 0), "J2": (400, 0)}
     for junction_id, (x, y) in junctions.items():
@@ -68,10 +68,10 @@ def create_nodes() -> None:
     }
     for node_id, (x, y) in boundary.items():
         ElementTree.SubElement(root, "node", id=node_id, x=str(x), y=str(y))
-    _write_xml(GENERATED / "network.nod.xml", root)
+    _write_xml((output_dir or GENERATED) / "network.nod.xml", root)
 
 
-def create_edges() -> None:
+def create_edges(output_dir: Path | None = None) -> None:
     root = ElementTree.Element("edges")
 
     def edge(edge_id: str, source: str, target: str) -> None:
@@ -97,10 +97,10 @@ def create_edges() -> None:
     for left, right in (("J0", "J1"), ("J1", "J2")):
         edge(f"{left}_{right}", left, right)
         edge(f"{right}_{left}", right, left)
-    _write_xml(GENERATED / "network.edg.xml", root)
+    _write_xml((output_dir or GENERATED) / "network.edg.xml", root)
 
 
-def create_routes(vehicle_period: int = 6) -> None:
+def create_routes(vehicle_period: int = 6, output_dir: Path | None = None) -> None:
     if vehicle_period <= 0:
         raise ValueError("vehicle_period must be positive")
     root = ElementTree.Element("routes")
@@ -140,13 +140,14 @@ def create_routes(vehicle_period: int = 6) -> None:
             departLane="best",
             departSpeed="max",
         )
-    _write_xml(GENERATED / "traffic.rou.xml", root)
+    _write_xml((output_dir or GENERATED) / "traffic.rou.xml", root)
 
 
 def build(
     green_duration: int = 37,
     pedestrian_speed: float = 1.4,
     vehicle_period: int = 6,
+    output_dir: Path | None = None,
 ) -> Path:
     if green_duration <= 0:
         raise ValueError("green_duration must be positive")
@@ -159,18 +160,19 @@ def build(
         raise RuntimeError(
             "netconvert was not found. Install SUMO and add its bin directory to PATH."
         )
-    GENERATED.mkdir(parents=True, exist_ok=True)
-    create_nodes()
-    create_edges()
-    create_routes(vehicle_period)
-    network = GENERATED / "network.net.xml"
+    target = output_dir or GENERATED
+    target.mkdir(parents=True, exist_ok=True)
+    create_nodes(target)
+    create_edges(target)
+    create_routes(vehicle_period, target)
+    network = target / "network.net.xml"
     subprocess.run(
         [
             netconvert,
             "-n",
-            str(GENERATED / "network.nod.xml"),
+            str(target / "network.nod.xml"),
             "-e",
-            str(GENERATED / "network.edg.xml"),
+            str(target / "network.edg.xml"),
             "--crossings.guess",
             "true",
             "--sidewalks.guess",
@@ -205,7 +207,7 @@ def build(
     ElementTree.SubElement(config, "time-to-teleport", value="-1")
     ElementTree.SubElement(config, "begin", value="0")
     ElementTree.SubElement(config, "end", value="3600")
-    _write_xml(GENERATED / "simulation.sumocfg", config)
+    _write_xml(target / "simulation.sumocfg", config)
     return network
 
 
@@ -214,6 +216,7 @@ if __name__ == "__main__":
     parser.add_argument("--green-duration", type=int, default=37)
     parser.add_argument("--pedestrian-speed", type=float, default=1.4)
     parser.add_argument("--vehicle-period", type=int, default=6)
+    parser.add_argument("--output-dir", type=Path)
     args = parser.parse_args()
     print(f"Generated SUMO scenario in {GENERATED}")
-    build(args.green_duration, args.pedestrian_speed, args.vehicle_period)
+    build(args.green_duration, args.pedestrian_speed, args.vehicle_period, args.output_dir)

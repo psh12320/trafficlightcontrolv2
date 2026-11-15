@@ -19,7 +19,7 @@ else:
 
 MIN_GREEN = 10
 SIMULATION_END = 600
-WARMUP = 60
+WARMUP = 0  # Metrics cover the entire requested simulation duration.
 PEDESTRIAN_INTERVAL = 20
 PEDESTRIAN_START = 10
 ALL_CROSSINGS = tuple(route[2] for route in (
@@ -155,6 +155,8 @@ def run(
     crossing_phases = {
         tls_id: _crossing_phase_map(traci, tls_id) for tls_id in phase_age
     }
+    active_vehicles = ()
+    active_people = ()
 
     try:
         while traci.simulation.getTime() < duration:
@@ -169,6 +171,7 @@ def run(
                     pedestrian_meta[person_id] = (junction, crossing)
                     pedestrian_id += 1
 
+            active_person_set = set(traci.person.getIDList())
             for tls_id in phase_age:
                 current_phase = traci.trafficlight.getPhase(tls_id)
                 if current_phase != last_phase[tls_id]:
@@ -181,7 +184,7 @@ def run(
                     crossing
                     for person_id, (junction, crossing) in pedestrian_meta.items()
                     if junction == tls_id
-                    and person_id in traci.person.getIDList()
+                    and person_id in active_person_set
                     and traci.person.getSpeed(person_id) < 0.1
                     and traci.person.getRoadID(person_id) != crossing
                 ]
@@ -265,22 +268,28 @@ def run(
         "pedestrian_arrivals": pedestrian_id,
         "vehicle_completed": vehicle_completed,
         "pedestrian_completed": pedestrian_completed,
-        "vehicle_unfinished": len(vehicle_wait_by_id),
-        "pedestrian_unfinished": len(pedestrian_wait_by_id),
+        "vehicle_unfinished": len(active_vehicles),
+        "pedestrian_unfinished": len(active_people),
         "vehicle_time_loss_seconds": vehicle_time_loss,
         "vehicle_completed_time_loss_seconds": vehicle_completed_time_loss,
         "pedestrian_p95_waiting_seconds": _p95(
-            pedestrian_waits_completed + list(pedestrian_wait_by_id.values())
+            pedestrian_waits_completed
+            + [pedestrian_wait_by_id.get(person_id, 0.0) for person_id in active_people]
         ),
         "pedestrian_completed_p95_waiting_seconds": _p95(
             pedestrian_waits_completed
+        ),
+        "pedestrian_max_waiting_seconds": max(
+            pedestrian_waits_completed
+            + [pedestrian_wait_by_id.get(person_id, 0.0) for person_id in active_people],
+            default=0.0,
         ),
         "pedestrian_p95_by_crossing": {
             crossing: _p95(
                 pedestrian_waits_by_crossing[crossing]
                 + [
-                    waiting
-                    for person_id, waiting in pedestrian_wait_by_id.items()
+                    pedestrian_wait_by_id.get(person_id, 0.0)
+                    for person_id in active_people
                     if pedestrian_meta[person_id][1] == crossing
                 ]
             )

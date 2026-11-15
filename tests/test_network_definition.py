@@ -5,6 +5,7 @@ from scripts.build_network import build, create_edges, create_nodes, create_rout
 from scripts.run_baseline import _p95
 from scripts.train_marl import _gae
 import torch
+import pytest
 
 
 def test_network_has_three_signalized_junctions_and_twelve_crossings(tmp_path, monkeypatch):
@@ -92,5 +93,5 @@ def test_proposal_reward_objectives_are_distinct():
     vehicle_only = environment._reward(2.0, 3.0, 0)
     environment.reward_mode = "vehicle_pedestrian"
     combined = environment._reward(2.0, 3.0, 0)
-    assert vehicle_only == -2.0
-    assert combined == -5.0
+    assert vehicle_only == pytest.approx(-2.0/20.8)
+    assert combined == pytest.approx(-2.0/20.8-3.0/20.0)

@@ -43,7 +43,7 @@ def evaluate(
     )
     if not skip_build:
         build(green_duration, speed, period)
-    actors = [Actor(action_size) for _ in AGENTS]
+    actors = [Actor(action_size, metadata.get("observation_size", 25)) for _ in AGENTS]
     for actor, state in zip(actors, saved["actors"]):
         actor.load_state_dict(state)
         actor.eval()
@@ -62,6 +62,7 @@ def evaluate(
             green_duration,
             speed,
             interval,
+            frame_stack=metadata.get("frame_stack", 1),
         )
         observation = environment.reset()
         try:
@@ -82,7 +83,9 @@ def evaluate(
         finally:
             environment.close()
         results.append({"controller": saved["algorithm"], "seed": seed,
-                        "duration_seconds": duration, **metrics})
+                        "duration_seconds": duration, "vehicle_period": period,
+                        "pedestrian_interval": interval,
+                        "pedestrian_speed_meters_per_second": speed, **metrics})
     return results
 
 

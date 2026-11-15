@@ -3,8 +3,11 @@
 from __future__ import annotations
 
 import argparse
+import json
+import random
 import statistics
 from pathlib import Path
+from tempfile import TemporaryDirectory
 from typing import Callable
 
 import torch
@@ -22,15 +25,21 @@ else:
 
 
 AGENTS = ("J0", "J1", "J2")
-OBSERVATION_SIZE = 13
-ACTION_SIZE = 4
+OBSERVATION_SIZE = 25
+ACTION_SIZE = 2
 ACTION_SIZES = (2, 4)
 DECISION_INTERVAL = 5
 TRAINING_HORIZON = 120
 MIN_GREEN = 10
 MAX_GREEN = 45
 VEHICLE_SCALE = 20.8
-PEDESTRIAN_SCALE = 81.35
+PEDESTRIAN_SCALE = 20.0
+DEFAULT_SWITCH_PENALTY = 3.0
+URGENCY_COEFFICIENT = 0.5
+URGENCY_WAIT_SCALE = 60.0
+CROSSING_APPROACHES = {crossing: start for _, start, crossing, _ in PEDESTRIAN_ROUTES}
+VEHICLE_PERIOD_CHOICES = (4, 6, 8)
+PEDESTRIAN_INTERVAL_CHOICES = (12, 20, 30)
 
 
 class SignalEnvironment:
@@ -43,12 +52,14 @@ class SignalEnvironment:
         reward_mode: str = "raw",
         vehicle_weight: float = 1.0,
         pedestrian_weight: float = 1.0,
-        switch_penalty: float = 0.1,
+        switch_penalty: float = DEFAULT_SWITCH_PENALTY,
         observation_mode: str = "full",
         action_size: int = ACTION_SIZE,
         green_duration: int = 37,
         pedestrian_speed: float = 1.4,
         pedestrian_interval: int = 20,
+        configuration: Path | None = None,
+        frame_stack: int = 1,
     ):
         try:
             import libsumo as traci
@@ -56,6 +67,12 @@ class SignalEnvironment:
             traci = _import_traci()
         self.traci = traci
         self.seed = seed
+        self.configuration = configuration or GENERATED / "simulation.sumocfg"
+        if frame_stack not in (1, 3):
+            raise ValueError("frame_stack must be 1 or 3")
+        self.frame_stack = frame_stack
+        self._frame_history = []
+        self._frame_time = None
         self.duration = duration
         self.reward_mode = reward_mode
         self.vehicle_weight = vehicle_weight
@@ -100,7 +117,7 @@ class SignalEnvironment:
             [
                 _sumo_binary("sumo"),
                 "-c",
-                str(GENERATED / "simulation.sumocfg"),
+                str(self.configuration),
                 "--seed",
                 str(self.seed),
                 "--end",
@@ -139,22 +156,50 @@ class SignalEnvironment:
         self.crossing_phases = {
             agent: _crossing_phase_map(self.traci, agent) for agent in AGENTS
         }
+        self._frame_history = []
+        self._frame_time = None
         return self.observe()
 
-    def _pedestrian_counts(self, agent: str) -> list[float]:
-        counts = {f":{agent}_c{index}": 0 for index in range(4)}
+    def _pedestrian_features(self) -> dict[str, tuple[list[float], list[float], list[float]]]:
+        counts = dict.fromkeys(CROSSING_APPROACHES, 0)
+        oldest = dict.fromkeys(CROSSING_APPROACHES, 0.0)
+        occupancies = dict.fromkeys(CROSSING_APPROACHES, 0)
         for person in self.traci.person.getIDList():
             road = self.traci.person.getRoadID(person)
-            for crossing in counts:
-                if road == crossing and self.traci.person.getSpeed(person) < 0.1:
-                    counts[crossing] += 1
-        return [min(1.0, counts[key] / 10.0) for key in counts]
+            if road in occupancies:
+                occupancies[road] += 1
+                continue
+            if self.traci.person.getSpeed(person) >= 0.1:
+                continue
+            # SUMO queues pedestrians on internal walking areas, not only on
+            # the route's start edge. Use the actual upcoming crossing there.
+            next_edge = self.traci.person.getNextEdge(person)
+            crossing = next_edge if next_edge in counts else None
+            if crossing is None:
+                assigned = self.pedestrian_meta.get(person, (None, None))[1]
+                if assigned in counts and road == CROSSING_APPROACHES[assigned]:
+                    crossing = assigned
+            if crossing is not None:
+                counts[crossing] += 1
+                oldest[crossing] = max(oldest[crossing], self.traci.person.getWaitingTime(person))
+        self._last_crossing_max_waits = list(oldest.values())
+        return {
+            agent: (
+                [min(1.0, counts[f":{agent}_c{i}"] / 10.0) for i in range(4)],
+                [min(1.0, oldest[f":{agent}_c{i}"] / 120.0) for i in range(4)],
+                [min(1.0, occupancies[f":{agent}_c{i}"] / 5.0) for i in range(4)],
+            ) for agent in AGENTS
+        }
+
+    def _pedestrian_counts(self, agent: str) -> list[float]:
+        return self._pedestrian_features()[agent][0]
 
     def observe(self) -> torch.Tensor:
         output = []
         local_queues: dict[str, float] = {}
         queue_values_by_agent: dict[str, list[float]] = {}
-        pedestrian_values_by_agent: dict[str, list[float]] = {}
+        density_values_by_agent: dict[str, list[float]] = {}
+        pedestrian_features_by_agent = self._pedestrian_features()
         phase_by_agent: dict[str, int] = {}
         for agent in AGENTS:
             lanes = list(dict.fromkeys(self.traci.trafficlight.getControlledLanes(agent)))
@@ -165,19 +210,25 @@ class SignalEnvironment:
             ]
             while len(queue_values) < 4:
                 queue_values.append(0.0)
+            density_values = [
+                min(1.0, self.traci.lane.getLastStepVehicleNumber(lane) / 25.0)
+                for lane in incoming[:4]
+            ]
+            while len(density_values) < 4:
+                density_values.append(0.0)
             local_queues[agent] = sum(queue_values) / 4
             queue_values_by_agent[agent] = queue_values
-            pedestrian_values_by_agent[agent] = self._pedestrian_counts(agent)
+            density_values_by_agent[agent] = density_values
             phase_by_agent[agent] = self.traci.trafficlight.getPhase(agent)
         for agent in AGENTS:
-            pedestrian_values = pedestrian_values_by_agent[agent]
+            counts, oldest, occupancy = pedestrian_features_by_agent[agent]
             phase = phase_by_agent[agent]
-            vehicle_features = queue_values_by_agent[agent]
-            pedestrian_features = pedestrian_values
+            vehicle_features = queue_values_by_agent[agent] + density_values_by_agent[agent]
+            pedestrian_features = counts + oldest + occupancy
             if self.observation_mode == "vehicle":
-                pedestrian_features = [0.0] * 4
+                pedestrian_features = [0.0] * 12
             elif self.observation_mode == "pedestrian":
-                vehicle_features = [0.0] * 4
+                vehicle_features = [0.0] * 8
             phase_features = [1.0 if phase in (0, 3) else 0.0, phase / 5.0]
             neighbors = [
                 local_queues[other]
@@ -192,7 +243,40 @@ class SignalEnvironment:
                 + neighbors
             )
             output.append(values)
-        return torch.tensor(output, dtype=torch.float32)
+        frame = torch.tensor(output, dtype=torch.float32)
+        return self._stack_frame(frame)
+
+    def _stack_frame(self, frame: torch.Tensor) -> torch.Tensor:
+        count = getattr(self, "frame_stack", 1)
+        if count == 1:
+            return frame
+        if not self._frame_history:
+            self._frame_history = [frame.clone() for _ in range(count)]
+        elif self._frame_time != self.time:
+            self._frame_history = self._frame_history[1:] + [frame.clone()]
+        self._frame_time = self.time
+        return torch.cat(self._frame_history, dim=1)
+
+    def pedestrian_actuated_actions(self) -> torch.Tensor:
+        """The recorded baseline's request rule at legal five-second decisions.
+
+        Preserve its assigned-crossing, stopped-person and road!=crossing
+        semantics, including holding if the current phase is also requested.
+        The baseline itself checks every second; this environment checks every5s.
+        """
+        active = set(self.traci.person.getIDList())
+        masks = self.action_masks()
+        actions = []
+        for index, agent in enumerate(AGENTS):
+            requests = {self.crossing_phases[agent][crossing]
+                for person, (junction, crossing) in self.pedestrian_meta.items()
+                if junction == agent and person in active
+                and self.traci.person.getSpeed(person) < 0.1
+                and self.traci.person.getRoadID(person) != crossing
+                and crossing in self.crossing_phases[agent]}
+            phase = self.traci.trafficlight.getPhase(agent)
+            actions.append(int(bool(requests) and phase not in requests and bool(masks[index, 1])))
+        return torch.tensor(actions, dtype=torch.long)
 
     def action_masks(self) -> torch.Tensor:
         masks = []
@@ -208,16 +292,21 @@ class SignalEnvironment:
 
     def _reward(self, vehicle_wait: float, pedestrian_wait: float, switches: int) -> float:
         if self.reward_mode == "vehicle":
-            value = self.vehicle_weight * vehicle_wait
-        elif self.reward_mode in ("vehicle_pedestrian", "raw"):
+            value = self.vehicle_weight * vehicle_wait / VEHICLE_SCALE
+        elif self.reward_mode == "raw":
             value = (
                 self.vehicle_weight * vehicle_wait
                 + self.pedestrian_weight * pedestrian_wait
             )
-        elif self.reward_mode == "normalized":
+        elif self.reward_mode in ("vehicle_pedestrian", "normalized"):
+            urgency = (
+                URGENCY_COEFFICIENT * sum((wait / URGENCY_WAIT_SCALE) ** 2
+                    for wait in getattr(self, "_last_crossing_max_waits", []))
+                if self.reward_mode == "vehicle_pedestrian" else 0.0
+            )
             value = (
                 self.vehicle_weight * vehicle_wait / VEHICLE_SCALE
-                + self.pedestrian_weight * pedestrian_wait / PEDESTRIAN_SCALE
+                + self.pedestrian_weight * (pedestrian_wait / PEDESTRIAN_SCALE + urgency)
             )
         elif self.reward_mode == "constrained":
             target = VEHICLE_SCALE * 1.05
@@ -241,11 +330,11 @@ class SignalEnvironment:
             )
         return -value - self.switch_penalty * switches
 
-    def step(self, actions: torch.Tensor) -> tuple[torch.Tensor, float, bool]:
-        if self.time >= 10 and self.time % self.pedestrian_interval == 0:
+    def _spawn_pedestrians(self, now: int) -> None:
+        if now >= 10 and now % self.pedestrian_interval == 0:
             for junction, start, crossing, end in PEDESTRIAN_ROUTES:
                 person_id = f"train-ped-{self.pedestrian_id}"
-                self.traci.person.add(person_id, start, 0, self.time)
+                self.traci.person.add(person_id, start, 0, now)
                 self.traci.person.appendWalkingStage(
                     person_id, [start, crossing, end], 0, self.pedestrian_speed
                 )
@@ -253,6 +342,8 @@ class SignalEnvironment:
                 self.waiting_by_crossing.setdefault(crossing, 0.0)
                 self.pedestrian_id += 1
                 self.pedestrian_arrivals += 1
+
+    def step(self, actions: torch.Tensor) -> tuple[torch.Tensor, float, bool]:
         switches = 0
         for index, agent in enumerate(AGENTS):
             phase = self.traci.trafficlight.getPhase(agent)
@@ -286,6 +377,7 @@ class SignalEnvironment:
         step_vehicle_wait = 0.0
         step_pedestrian_wait = 0.0
         for _ in range(DECISION_INTERVAL):
+            self._spawn_pedestrians(int(self.traci.simulation.getTime()))
             self.traci.simulationStep()
             vehicles = self.traci.vehicle.getIDList()
             persons = self.traci.person.getIDList()
@@ -339,8 +431,10 @@ class SignalEnvironment:
                     crossing, []
                 ).append(waiting)
         self.time += DECISION_INTERVAL
+        # observe() refreshes current per-crossing waits before reward shaping.
+        observation = self.observe()
         return (
-            self.observe(),
+            observation,
             self._reward(step_vehicle_wait, step_pedestrian_wait, switches),
             self.time >= self.duration,
         )
@@ -350,11 +444,16 @@ class SignalEnvironment:
 
     def metrics(self) -> dict[str, object]:
         active_vehicles = len(self.traci.vehicle.getIDList())
-        active_people = len(self.traci.person.getIDList())
-        pedestrian_waits = list(self.pedestrian_wait_by_id.values())
+        active_person_ids = self.traci.person.getIDList()
+        active_people = len(active_person_ids)
+        pedestrian_waits = [
+            self.pedestrian_wait_by_id.get(person_id, 0.0)
+            for person_id in active_person_ids
+        ]
         all_pedestrian_waits = pedestrian_waits + self.pedestrian_completed_waits
         active_waits_by_crossing: dict[str, list[float]] = {}
-        for person_id, waiting in self.pedestrian_wait_by_id.items():
+        for person_id in active_person_ids:
+            waiting = self.pedestrian_wait_by_id.get(person_id, 0.0)
             crossing = self.pedestrian_meta[person_id][1]
             active_waits_by_crossing.setdefault(crossing, []).append(waiting)
         p95_by_crossing = {}
@@ -386,6 +485,7 @@ class SignalEnvironment:
             "pedestrian_completed_average_waiting_seconds": self.pedestrian_completed_waiting
             / max(self.pedestrian_completed, 1),
             "pedestrian_p95_waiting_seconds": _p95(all_pedestrian_waits),
+            "pedestrian_max_waiting_seconds": max(all_pedestrian_waits, default=0.0),
             "pedestrian_completed_p95_waiting_seconds": _p95(
                 self.pedestrian_completed_waits
             ),
@@ -395,10 +495,10 @@ class SignalEnvironment:
 
 
 class Actor(nn.Module):
-    def __init__(self, action_size: int = ACTION_SIZE):
+    def __init__(self, action_size: int = ACTION_SIZE, observation_size: int = OBSERVATION_SIZE):
         super().__init__()
         self.network = nn.Sequential(
-            nn.Linear(OBSERVATION_SIZE, 64),
+            nn.Linear(observation_size, 64),
             nn.Tanh(),
             nn.Linear(64, action_size),
         )
@@ -481,7 +581,7 @@ def train(
     reward_mode: str = "raw",
     vehicle_weight: float = 1.0,
     pedestrian_weight: float = 1.0,
-    switch_penalty: float = 0.1,
+    switch_penalty: float = DEFAULT_SWITCH_PENALTY,
     observation_mode: str = "full",
     action_size: int = ACTION_SIZE,
     learning_rate: float = 3e-4,
@@ -498,6 +598,9 @@ def train(
     snapshot_interval: int = 500,
     checkpoint_callback: Callable[[Path, int], None] | None = None,
     skip_build: bool = False,
+    randomize_demand: bool = False,
+    frame_stack: int = 1,
+    bc_episodes: int = 0,
 ) -> None:
     if algorithm not in ("mappo", "ippo"):
         raise ValueError("algorithm must be mappo or ippo")
@@ -507,21 +610,33 @@ def train(
         raise ValueError("episodes and horizon must be positive")
     if snapshot_interval < 0:
         raise ValueError("snapshot_interval must be non-negative")
+    if frame_stack not in (1, 3) or bc_episodes < 0:
+        raise ValueError("frame_stack must be 1 or 3 and bc_episodes non-negative")
+    if bc_episodes and action_size != 2:
+        raise ValueError("BC requires the two-action space")
     torch.manual_seed(seed)
     torch.set_num_threads(1)
     if not skip_build:
         build(green_duration, pedestrian_speed, vehicle_period)
-    actors = [Actor(action_size) for _ in AGENTS]
+    observation_size = OBSERVATION_SIZE * frame_stack
+    actors = [Actor(action_size, observation_size) for _ in AGENTS]
     critics = (
-        [Critic(OBSERVATION_SIZE * 3)]
+        [Critic(observation_size * 3)]
         if algorithm == "mappo"
-        else [Critic(OBSERVATION_SIZE) for _ in AGENTS]
+        else [Critic(observation_size) for _ in AGENTS]
     )
-    rnd = RND(OBSERVATION_SIZE * 3) if rnd_coefficient > 0 else None
+    rnd = RND(observation_size * 3) if rnd_coefficient > 0 else None
     parameters = [p for model in actors + critics for p in model.parameters()]
     if rnd is not None:
         parameters.extend(rnd.predictor.parameters())
     optimizer = torch.optim.Adam(parameters, lr=learning_rate)
+    checkpoint.parent.mkdir(parents=True, exist_ok=True)
+    demand_random = random.Random(seed)
+    temporary_networks = TemporaryDirectory(prefix="demand-", dir=checkpoint.parent) if randomize_demand else None
+    network_cache: dict[int, Path] = {}
+    schedule_path = checkpoint.parent / "demand-schedule.jsonl"
+    if randomize_demand:
+        schedule_path.write_text("", encoding="utf-8")
     metadata = {
         "observation_mode": observation_mode,
         "reward_mode": reward_mode,
@@ -534,9 +649,60 @@ def train(
         "pedestrian_speed": pedestrian_speed,
         "pedestrian_interval": pedestrian_interval,
         "vehicle_period": vehicle_period,
+        "randomize_demand": randomize_demand,
+        "vehicle_period_choices": list(VEHICLE_PERIOD_CHOICES) if randomize_demand else [vehicle_period],
+        "pedestrian_interval_choices": list(PEDESTRIAN_INTERVAL_CHOICES) if randomize_demand else [pedestrian_interval],
+        "reward_objective_version": "v5-bc-frame-stack" if bc_episodes or frame_stack == 3 else "v4-upstream-calibrated-switching",
+        "observation_size": observation_size,
+        "base_observation_size": OBSERVATION_SIZE,
+        "frame_stack": frame_stack,
+        "frame_order": "oldest-to-newest; reset padded with three initial-frame copies",
+        "centralized_critic_input_size": observation_size * 3,
+        "bc_episodes": bc_episodes,
+        "bc_sampling": "balanced-legal-action-minibatches" if bc_episodes else None,
+        "critic_warmup_episodes": 5 if bc_episodes else 0,
+        "learning_rate": learning_rate,
+        "observation_layout": ["vehicle_queue_4", "approach_vehicle_density_4", "pedestrian_waiting_count_4", "oldest_current_wait_4", "crossing_occupancy_4", "phase_2", "phase_age_1", "neighbor_queue_2"],
+        "approach_vehicle_density_scale": 25.0,
+        "pedestrian_detection": "next-crossing-walking-area-with-assigned-start-fallback",
+        "urgency_coefficient": URGENCY_COEFFICIENT,
+        "urgency_wait_scale": URGENCY_WAIT_SCALE,
+        "urgency_aggregation": "sum over 12 crossings once per five-second reward step",
+        "vehicle_scale": VEHICLE_SCALE,
+        "pedestrian_scale": PEDESTRIAN_SCALE,
     }
 
+    if bc_episodes:
+        if __package__:
+            from .marl_bc import warm_start
+        else:
+            from marl_bc import warm_start
+        def bc_environment(simulation_seed):
+            return SignalEnvironment(simulation_seed, horizon, reward_mode,
+                vehicle_weight, pedestrian_weight, switch_penalty, observation_mode,
+                action_size, green_duration, pedestrian_speed, pedestrian_interval,
+                frame_stack=frame_stack)
+        bc_report = warm_start(actors, critics, bc_environment, bc_episodes, seed, gamma, algorithm)
+        (checkpoint.parent / "bc-metrics.json").write_text(json.dumps(bc_report, indent=2), encoding="utf-8")
+        bc_path = (snapshot_dir or checkpoint.parent) / "episode-0-bc.pt"
+        _save_checkpoint(algorithm, actors, critics, bc_path,
+                         {**metadata, "training_episode": 0, "stage": "bc-and-critic-warmup"})
+        if checkpoint_callback is not None:
+            checkpoint_callback(bc_path, 0)
+
     for episode in range(episodes):
+        episode_period = demand_random.choice(VEHICLE_PERIOD_CHOICES) if randomize_demand else vehicle_period
+        episode_interval = demand_random.choice(PEDESTRIAN_INTERVAL_CHOICES) if randomize_demand else pedestrian_interval
+        configuration = None
+        if temporary_networks is not None:
+            if episode_period not in network_cache:
+                target = Path(temporary_networks.name) / f"vehicle-period-{episode_period}"
+                build(green_duration, pedestrian_speed, episode_period, output_dir=target)
+                network_cache[episode_period] = target / "simulation.sumocfg"
+            configuration = network_cache[episode_period]
+            with schedule_path.open("a", encoding="utf-8") as schedule:
+                schedule.write(json.dumps({"episode": episode+1, "simulation_seed": seed+episode,
+                    "vehicle_period": episode_period, "pedestrian_interval": episode_interval})+"\n")
         environment = SignalEnvironment(
             seed + episode,
             horizon,
@@ -548,7 +714,9 @@ def train(
             action_size,
             green_duration,
             pedestrian_speed,
-            pedestrian_interval,
+            episode_interval,
+            configuration,
+            frame_stack=frame_stack,
         )
         observation = environment.reset()
         rollout = []
@@ -658,12 +826,14 @@ def train(
                 actors,
                 critics,
                 snapshot_dir / f"episode-{episode + 1}.pt",
-                metadata,
+                {**metadata, "training_episode": episode + 1, "stage": "ppo"},
             )
             if checkpoint_callback is not None:
                 checkpoint_callback(snapshot_dir / f"episode-{episode + 1}.pt", episode + 1)
         print(f"episode={episode + 1}/{episodes} reward={rewards.sum().item():.1f}")
-    _save_checkpoint(algorithm, actors, critics, checkpoint, metadata)
+    _save_checkpoint(algorithm, actors, critics, checkpoint, {**metadata, "training_episode": episodes, "stage": "ppo"})
+    if temporary_networks is not None:
+        temporary_networks.cleanup()
 
 
 if __name__ == "__main__":
@@ -681,7 +851,7 @@ if __name__ == "__main__":
     parser.add_argument("--action-size", choices=(2, 4), type=int, default=ACTION_SIZE)
     parser.add_argument("--vehicle-weight", type=float, default=1.0)
     parser.add_argument("--pedestrian-weight", type=float, default=1.0)
-    parser.add_argument("--switch-penalty", type=float, default=0.1)
+    parser.add_argument("--switch-penalty", type=float, default=DEFAULT_SWITCH_PENALTY)
     parser.add_argument("--observation-mode", choices=("full", "vehicle", "pedestrian"))
     parser.add_argument("--learning-rate", type=float, default=3e-4)
     parser.add_argument("--ppo-epochs", type=int, default=5)
@@ -693,6 +863,11 @@ if __name__ == "__main__":
     parser.add_argument("--green-duration", type=int, default=37)
     parser.add_argument("--pedestrian-speed", type=float, default=1.4)
     parser.add_argument("--snapshot-interval", type=int, default=500)
+    parser.add_argument("--pedestrian-interval", type=int, default=20)
+    parser.add_argument("--vehicle-period", type=int, default=6)
+    parser.add_argument("--randomize-demand", action="store_true")
+    parser.add_argument("--frame-stack", type=int, choices=(1, 3), default=1)
+    parser.add_argument("--bc-episodes", type=int, default=0)
     args = parser.parse_args()
     train(
         args.algorithm,
@@ -716,5 +891,10 @@ if __name__ == "__main__":
         args.rnd_coefficient,
         args.green_duration,
         args.pedestrian_speed,
-        args.snapshot_interval,
+        pedestrian_interval=args.pedestrian_interval,
+        vehicle_period=args.vehicle_period,
+        snapshot_interval=args.snapshot_interval,
+        randomize_demand=args.randomize_demand,
+        frame_stack=args.frame_stack,
+        bc_episodes=args.bc_episodes,
     )

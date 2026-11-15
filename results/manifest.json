@@ -1,0 +1,2175 @@
+{
+  "format_version": 1,
+  "files": {
+    "v1/checkpoints/ippo-vehicle-actions4-seed100/episode-20.pt": {
+      "sha256": "4d6767a84735570187fe5a3f66d840d4aa0cec2bc543153d9e890c95bc01744d",
+      "bytes": 45877,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-100/ippo-vehicle-actions4-seed100/snapshots/episode-20.pt",
+      "source_sha256": "4d6767a84735570187fe5a3f66d840d4aa0cec2bc543153d9e890c95bc01744d"
+    },
+    "v1/checkpoints/ippo-vehicle_pedestrian-actions4-seed100/episode-20.pt": {
+      "sha256": "8d3821a52a70893bf5d24a8a80ffb040f5f53a01911176271057644906bf245a",
+      "bytes": 45941,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-100/ippo-vehicle_pedestrian-actions4-seed100/snapshots/episode-20.pt",
+      "source_sha256": "8d3821a52a70893bf5d24a8a80ffb040f5f53a01911176271057644906bf245a"
+    },
+    "v1/checkpoints/mappo-vehicle-actions4-seed100/episode-20.pt": {
+      "sha256": "757e6938eeeb0e4b61a484ef218046e0e78309041c01d997339141b412c9377c",
+      "bytes": 41333,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-100/mappo-vehicle-actions4-seed100/snapshots/episode-20.pt",
+      "source_sha256": "757e6938eeeb0e4b61a484ef218046e0e78309041c01d997339141b412c9377c"
+    },
+    "v1/checkpoints/mappo-vehicle_pedestrian-actions4-seed100/episode-40.pt": {
+      "sha256": "07d07c68def0671a784cf07a3edc966a798fd9d36bcba077476fe87a758bd594",
+      "bytes": 41397,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-100/mappo-vehicle_pedestrian-actions4-seed100/snapshots/episode-40.pt",
+      "source_sha256": "07d07c68def0671a784cf07a3edc966a798fd9d36bcba077476fe87a758bd594"
+    },
+    "v1/checkpoints/ippo-vehicle-actions4-seed200/episode-60.pt": {
+      "sha256": "a75f8c4d9246f2bcf2dc2b1ae68f9db54a74671b8adfdec6ec04f78ae420b9c6",
+      "bytes": 45877,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-200/ippo-vehicle-actions4-seed200/snapshots/episode-60.pt",
+      "source_sha256": "a75f8c4d9246f2bcf2dc2b1ae68f9db54a74671b8adfdec6ec04f78ae420b9c6"
+    },
+    "v1/checkpoints/ippo-vehicle_pedestrian-actions4-seed200/episode-60.pt": {
+      "sha256": "3c2a20afc3e5133990fb558e675258b14e33ed9728b46309819d1a6b3da9dd4b",
+      "bytes": 45941,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-200/ippo-vehicle_pedestrian-actions4-seed200/snapshots/episode-60.pt",
+      "source_sha256": "3c2a20afc3e5133990fb558e675258b14e33ed9728b46309819d1a6b3da9dd4b"
+    },
+    "v1/checkpoints/mappo-vehicle-actions4-seed200/episode-40.pt": {
+      "sha256": "2a60774f554b69fdd0c7547076f66e2ca415d8e22564cff7d705fe91612e0c4a",
+      "bytes": 41333,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-200/mappo-vehicle-actions4-seed200/snapshots/episode-40.pt",
+      "source_sha256": "2a60774f554b69fdd0c7547076f66e2ca415d8e22564cff7d705fe91612e0c4a"
+    },
+    "v1/checkpoints/mappo-vehicle_pedestrian-actions4-seed200/episode-60.pt": {
+      "sha256": "c79cce540694928b525165acf1f3bc320f15a4ed2e755d5727bf76e617855bcb",
+      "bytes": 41397,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-200/mappo-vehicle_pedestrian-actions4-seed200/snapshots/episode-60.pt",
+      "source_sha256": "c79cce540694928b525165acf1f3bc320f15a4ed2e755d5727bf76e617855bcb"
+    },
+    "v1/checkpoints/ippo-vehicle-actions4-seed300/episode-20.pt": {
+      "sha256": "7de59bcc3c0995fb61167030466ebb504fec0abfe62506a3c064bf905465e46c",
+      "bytes": 45877,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-300/ippo-vehicle-actions4-seed300/snapshots/episode-20.pt",
+      "source_sha256": "7de59bcc3c0995fb61167030466ebb504fec0abfe62506a3c064bf905465e46c"
+    },
+    "v1/checkpoints/ippo-vehicle_pedestrian-actions4-seed300/episode-20.pt": {
+      "sha256": "948aae7013d7618a25a2e6fc2f53cde7b9f66195d6df282eae9bad9d4ec82553",
+      "bytes": 45941,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-300/ippo-vehicle_pedestrian-actions4-seed300/snapshots/episode-20.pt",
+      "source_sha256": "948aae7013d7618a25a2e6fc2f53cde7b9f66195d6df282eae9bad9d4ec82553"
+    },
+    "v1/checkpoints/mappo-vehicle-actions4-seed300/episode-40.pt": {
+      "sha256": "dd4ea0e85c2ada52ae3dd70cba18d55c97b2417b29de1677de71e0d398f3b2e1",
+      "bytes": 41333,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-300/mappo-vehicle-actions4-seed300/snapshots/episode-40.pt",
+      "source_sha256": "dd4ea0e85c2ada52ae3dd70cba18d55c97b2417b29de1677de71e0d398f3b2e1"
+    },
+    "v1/checkpoints/mappo-vehicle_pedestrian-actions4-seed300/episode-40.pt": {
+      "sha256": "7d244c36c0425992f5bc826db0ca5b4c137e7d6adb3a880f9ab6c7d2e797299e",
+      "bytes": 41397,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-300/mappo-vehicle_pedestrian-actions4-seed300/snapshots/episode-40.pt",
+      "source_sha256": "7d244c36c0425992f5bc826db0ca5b4c137e7d6adb3a880f9ab6c7d2e797299e"
+    },
+    "v1/selected-checkpoints.json": {
+      "sha256": "7e6a660ea636800b1ef2b584faa4cab9db7cfc4db43fff30a21a297224a76886",
+      "bytes": 4700,
+      "source": "scenario/generated/archive-60ep-pilot/selected-checkpoints-local.json",
+      "source_sha256": "78a3bb1e554bfeedd1b6582e73397bdedec1f6f207025e9addc185a83fdd3363",
+      "transformation": "Checkpoint paths are relative to this version directory; selection metrics and model hashes are retained."
+    },
+    "v1/FINAL_RESULTS.md": {
+      "sha256": "0eab316d291ddafb14efd5e58d8b6534c44c25be2e1fc218560bd6ec885a2c96",
+      "bytes": 4815,
+      "source": "scenario/generated/archive-60ep-pilot/FINAL_RESULTS.md",
+      "source_sha256": "0eab316d291ddafb14efd5e58d8b6534c44c25be2e1fc218560bd6ec885a2c96"
+    },
+    "v1/AUDIT_RESULTS.json": {
+      "sha256": "044454c32ce5dfeaf118689beab11cbe6e7c3a8578a67b09186f6760586ba048",
+      "bytes": 261,
+      "source": "scenario/generated/archive-60ep-pilot/AUDIT_RESULTS.json",
+      "source_sha256": "044454c32ce5dfeaf118689beab11cbe6e7c3a8578a67b09186f6760586ba048"
+    },
+    "v1/final-summary.csv": {
+      "sha256": "f51a0d4c8143ac21073c700da221efa32b743c4b4f8db361428178f785ecbdd5",
+      "bytes": 25885,
+      "source": "scenario/generated/archive-60ep-pilot/final-summary.csv",
+      "source_sha256": "f51a0d4c8143ac21073c700da221efa32b743c4b4f8db361428178f785ecbdd5"
+    },
+    "v1/final-primary-results.csv": {
+      "sha256": "d627c97afe6e5b3dca6ad8867305543f1cc8d5bd8d2ecc136242ae7d25a0e150",
+      "bytes": 34705,
+      "source": "scenario/generated/archive-60ep-pilot/final-primary-results.csv",
+      "source_sha256": "ae5200b8c27a21070adaf1e056dad49ca1ec5c61e820945dafae82d1ea8ac8b5",
+      "transformation": "Metric cells are unchanged; checkpoint paths are relative to this version directory and CSV line endings are normalized."
+    },
+    "v1/final-demand-sweep.csv": {
+      "sha256": "7dd96ba587b3aafb2941d96ecd2e251db97c22181bd5359b344ace964bda126e",
+      "bytes": 68205,
+      "source": "scenario/generated/archive-60ep-pilot/final-demand-sweep.csv",
+      "source_sha256": "cc009fde7069fc48aa41741f7582080d47b1b3d417c37e6ba7807b5f19324bcd",
+      "transformation": "Metric cells are unchanged; checkpoint paths are relative to this version directory and CSV line endings are normalized."
+    },
+    "v1/final-slow-pedestrian-results.csv": {
+      "sha256": "2afeff857f72e7b041b9f39ce160e86fac8e90043d6eb45460ad46076ba28d21",
+      "bytes": 34636,
+      "source": "scenario/generated/archive-60ep-pilot/final-slow-pedestrian-results.csv",
+      "source_sha256": "6b4f5c96328e5315770992d6915403c381145372466010f62c2620f2d77b6d3e",
+      "transformation": "Metric cells are unchanged; checkpoint paths are relative to this version directory and CSV line endings are normalized."
+    },
+    "v1/validation-baseline.csv": {
+      "sha256": "858095ca42f27bfb43f84fe6b78461cd9714b2c2cf5f9f745b36c7ac933b4070",
+      "bytes": 3000,
+      "source": "scenario/generated/archive-60ep-pilot/validation-baseline/pedestrian-actuated-results.csv",
+      "source_sha256": "858095ca42f27bfb43f84fe6b78461cd9714b2c2cf5f9f745b36c7ac933b4070"
+    },
+    "v1/multiseed-100/ippo-vehicle-actions4-seed100/checkpoint-metrics.csv": {
+      "sha256": "47cf1281543438af71ea6a452d421a0fbdb1d253f1969d340114a13fd8d743fb",
+      "bytes": 7032,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-100/ippo-vehicle-actions4-seed100/checkpoint-metrics.csv",
+      "source_sha256": "47cf1281543438af71ea6a452d421a0fbdb1d253f1969d340114a13fd8d743fb"
+    },
+    "v1/multiseed-100/ippo-vehicle-actions4-seed100/training-complete.json": {
+      "sha256": "db90521c21dd4027b61c9f37540d98c0e832c06f9fb1a5a9070fa47cae1e6b4e",
+      "bytes": 202,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-100/ippo-vehicle-actions4-seed100/training-complete.json",
+      "source_sha256": "db90521c21dd4027b61c9f37540d98c0e832c06f9fb1a5a9070fa47cae1e6b4e"
+    },
+    "v1/multiseed-100/ippo-vehicle-actions4-seed100/training.log": {
+      "sha256": "10f7c49da20096edf196927069fee58a6c6449ca164fd7808631ccf09a4e920b",
+      "bytes": 1851,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-100/ippo-vehicle-actions4-seed100/training.log",
+      "source_sha256": "10f7c49da20096edf196927069fee58a6c6449ca164fd7808631ccf09a4e920b"
+    },
+    "v1/multiseed-100/ippo-vehicle_pedestrian-actions4-seed100/checkpoint-metrics.csv": {
+      "sha256": "1002e3a1c0b62b31c67930a29a476f355a50e08012e4817f3a527dbe0c0785f3",
+      "bytes": 7121,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-100/ippo-vehicle_pedestrian-actions4-seed100/checkpoint-metrics.csv",
+      "source_sha256": "1002e3a1c0b62b31c67930a29a476f355a50e08012e4817f3a527dbe0c0785f3"
+    },
+    "v1/multiseed-100/ippo-vehicle_pedestrian-actions4-seed100/training-complete.json": {
+      "sha256": "d38fb01cb7a4deddb0452504130b75d057b92657a6a8c1d50d2091f8eb78bc5e",
+      "bytes": 212,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-100/ippo-vehicle_pedestrian-actions4-seed100/training-complete.json",
+      "source_sha256": "d38fb01cb7a4deddb0452504130b75d057b92657a6a8c1d50d2091f8eb78bc5e"
+    },
+    "v1/multiseed-100/ippo-vehicle_pedestrian-actions4-seed100/training.log": {
+      "sha256": "6c313ee935840e8843f461d6ac9c097aa1a5fb581e897d474804daa5568578cf",
+      "bytes": 1853,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-100/ippo-vehicle_pedestrian-actions4-seed100/training.log",
+      "source_sha256": "6c313ee935840e8843f461d6ac9c097aa1a5fb581e897d474804daa5568578cf"
+    },
+    "v1/multiseed-100/mappo-vehicle-actions4-seed100/checkpoint-metrics.csv": {
+      "sha256": "bc3760f778851ac90bd957d81483dad7e5501a9ec52e425b73f6651300917a64",
+      "bytes": 7040,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-100/mappo-vehicle-actions4-seed100/checkpoint-metrics.csv",
+      "source_sha256": "bc3760f778851ac90bd957d81483dad7e5501a9ec52e425b73f6651300917a64"
+    },
+    "v1/multiseed-100/mappo-vehicle-actions4-seed100/training-complete.json": {
+      "sha256": "33de5aa2a2d9f880300ca274bf602227d3133240f7935be5536eb2acf3374076",
+      "bytes": 202,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-100/mappo-vehicle-actions4-seed100/training-complete.json",
+      "source_sha256": "33de5aa2a2d9f880300ca274bf602227d3133240f7935be5536eb2acf3374076"
+    },
+    "v1/multiseed-100/mappo-vehicle-actions4-seed100/training.log": {
+      "sha256": "cf3db400da53ed681113d8c377b5dc7470c13add4cfd79da02f9fb1b16058383",
+      "bytes": 1851,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-100/mappo-vehicle-actions4-seed100/training.log",
+      "source_sha256": "cf3db400da53ed681113d8c377b5dc7470c13add4cfd79da02f9fb1b16058383"
+    },
+    "v1/multiseed-100/mappo-vehicle_pedestrian-actions4-seed100/checkpoint-metrics.csv": {
+      "sha256": "6965bab993c5172b145732971dbc85326c872ad518cedf4113cf88679fba5afa",
+      "bytes": 7128,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-100/mappo-vehicle_pedestrian-actions4-seed100/checkpoint-metrics.csv",
+      "source_sha256": "6965bab993c5172b145732971dbc85326c872ad518cedf4113cf88679fba5afa"
+    },
+    "v1/multiseed-100/mappo-vehicle_pedestrian-actions4-seed100/training-complete.json": {
+      "sha256": "0653144ad559541dbe278595d03bda0ad5e715fabf2a2f584002cbabe479848d",
+      "bytes": 214,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-100/mappo-vehicle_pedestrian-actions4-seed100/training-complete.json",
+      "source_sha256": "0653144ad559541dbe278595d03bda0ad5e715fabf2a2f584002cbabe479848d"
+    },
+    "v1/multiseed-100/mappo-vehicle_pedestrian-actions4-seed100/training.log": {
+      "sha256": "5db8de72445fd7da68a04c0ee2aa87601f45ac67f001f0712becb0513de2c224",
+      "bytes": 1854,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-100/mappo-vehicle_pedestrian-actions4-seed100/training.log",
+      "source_sha256": "5db8de72445fd7da68a04c0ee2aa87601f45ac67f001f0712becb0513de2c224"
+    },
+    "v1/multiseed-200/ippo-vehicle-actions4-seed200/checkpoint-metrics.csv": {
+      "sha256": "9a876556f3c8411529826694557db3282d2c138a8699c7d6a3456e6f1f28cc5c",
+      "bytes": 7049,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-200/ippo-vehicle-actions4-seed200/checkpoint-metrics.csv",
+      "source_sha256": "9a876556f3c8411529826694557db3282d2c138a8699c7d6a3456e6f1f28cc5c"
+    },
+    "v1/multiseed-200/ippo-vehicle-actions4-seed200/training-complete.json": {
+      "sha256": "b84c3074e2208b1cf49d1d41fa6e210d1598bffb0da7b098db504d800b3e2a1f",
+      "bytes": 201,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-200/ippo-vehicle-actions4-seed200/training-complete.json",
+      "source_sha256": "b84c3074e2208b1cf49d1d41fa6e210d1598bffb0da7b098db504d800b3e2a1f"
+    },
+    "v1/multiseed-200/ippo-vehicle-actions4-seed200/training.log": {
+      "sha256": "ca54c62d63f49bb8f5dc3a5aa0cfc1950ea1caf52eacc36b3225596040837491",
+      "bytes": 1851,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-200/ippo-vehicle-actions4-seed200/training.log",
+      "source_sha256": "ca54c62d63f49bb8f5dc3a5aa0cfc1950ea1caf52eacc36b3225596040837491"
+    },
+    "v1/multiseed-200/ippo-vehicle_pedestrian-actions4-seed200/checkpoint-metrics.csv": {
+      "sha256": "270a082b4a04fbf2a6870609566877e351fec174843361b1d730d88fda221881",
+      "bytes": 7137,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-200/ippo-vehicle_pedestrian-actions4-seed200/checkpoint-metrics.csv",
+      "source_sha256": "270a082b4a04fbf2a6870609566877e351fec174843361b1d730d88fda221881"
+    },
+    "v1/multiseed-200/ippo-vehicle_pedestrian-actions4-seed200/training-complete.json": {
+      "sha256": "e556a4bdafe1c2d441534127cd1d31f841b18411948d41d0c75ab2409a1a9146",
+      "bytes": 213,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-200/ippo-vehicle_pedestrian-actions4-seed200/training-complete.json",
+      "source_sha256": "e556a4bdafe1c2d441534127cd1d31f841b18411948d41d0c75ab2409a1a9146"
+    },
+    "v1/multiseed-200/ippo-vehicle_pedestrian-actions4-seed200/training.log": {
+      "sha256": "09d7abc43f3507d35fb708e87367deb06ea896663849623dd11b3ba093f4f3dc",
+      "bytes": 1851,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-200/ippo-vehicle_pedestrian-actions4-seed200/training.log",
+      "source_sha256": "09d7abc43f3507d35fb708e87367deb06ea896663849623dd11b3ba093f4f3dc"
+    },
+    "v1/multiseed-200/mappo-vehicle-actions4-seed200/checkpoint-metrics.csv": {
+      "sha256": "b9a274fa93328b148df7e08a1cc69cc8c7d489409e3d8843b75e4accfb2bea99",
+      "bytes": 7064,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-200/mappo-vehicle-actions4-seed200/checkpoint-metrics.csv",
+      "source_sha256": "b9a274fa93328b148df7e08a1cc69cc8c7d489409e3d8843b75e4accfb2bea99"
+    },
+    "v1/multiseed-200/mappo-vehicle-actions4-seed200/training-complete.json": {
+      "sha256": "52d1dbcb646a7f1e0c627289943f3363648bd3c0ae072d44c1c35d231a1fdf7f",
+      "bytes": 202,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-200/mappo-vehicle-actions4-seed200/training-complete.json",
+      "source_sha256": "52d1dbcb646a7f1e0c627289943f3363648bd3c0ae072d44c1c35d231a1fdf7f"
+    },
+    "v1/multiseed-200/mappo-vehicle-actions4-seed200/training.log": {
+      "sha256": "0ac6f389818a28553fa01ba8c595bc63b4a257ddb399cc84d4bbd4558bbb5e11",
+      "bytes": 1851,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-200/mappo-vehicle-actions4-seed200/training.log",
+      "source_sha256": "0ac6f389818a28553fa01ba8c595bc63b4a257ddb399cc84d4bbd4558bbb5e11"
+    },
+    "v1/multiseed-200/mappo-vehicle_pedestrian-actions4-seed200/checkpoint-metrics.csv": {
+      "sha256": "f051fa3f7e24c8cb565e1a333ba2b930c81e97e5a24105d09d452381130084e3",
+      "bytes": 7163,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-200/mappo-vehicle_pedestrian-actions4-seed200/checkpoint-metrics.csv",
+      "source_sha256": "f051fa3f7e24c8cb565e1a333ba2b930c81e97e5a24105d09d452381130084e3"
+    },
+    "v1/multiseed-200/mappo-vehicle_pedestrian-actions4-seed200/training-complete.json": {
+      "sha256": "4a14e32425ec306d9bd5d9eb89e6858a965ebfa4e99804e5a8fcf4f79b55ad8f",
+      "bytes": 213,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-200/mappo-vehicle_pedestrian-actions4-seed200/training-complete.json",
+      "source_sha256": "4a14e32425ec306d9bd5d9eb89e6858a965ebfa4e99804e5a8fcf4f79b55ad8f"
+    },
+    "v1/multiseed-200/mappo-vehicle_pedestrian-actions4-seed200/training.log": {
+      "sha256": "9f8634b9f40da9fabf309dd7d583473149fb0e8f2e53b5a98f1cb6cba3edede4",
+      "bytes": 1853,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-200/mappo-vehicle_pedestrian-actions4-seed200/training.log",
+      "source_sha256": "9f8634b9f40da9fabf309dd7d583473149fb0e8f2e53b5a98f1cb6cba3edede4"
+    },
+    "v1/multiseed-300/ippo-vehicle-actions4-seed300/checkpoint-metrics.csv": {
+      "sha256": "f3f58df1156ff478199d66a841ad652bb8653e723f252872e9bdd97f5230aa34",
+      "bytes": 7048,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-300/ippo-vehicle-actions4-seed300/checkpoint-metrics.csv",
+      "source_sha256": "f3f58df1156ff478199d66a841ad652bb8653e723f252872e9bdd97f5230aa34"
+    },
+    "v1/multiseed-300/ippo-vehicle-actions4-seed300/training-complete.json": {
+      "sha256": "d83dc1260adbe9f545b2c53839d3789c9f33b483d32c9b1129446ea3d1e6e56b",
+      "bytes": 202,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-300/ippo-vehicle-actions4-seed300/training-complete.json",
+      "source_sha256": "d83dc1260adbe9f545b2c53839d3789c9f33b483d32c9b1129446ea3d1e6e56b"
+    },
+    "v1/multiseed-300/ippo-vehicle-actions4-seed300/training.log": {
+      "sha256": "3e17a09270523b90ecff146c0807108b0be74cad918d1d781b0747460a352364",
+      "bytes": 1851,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-300/ippo-vehicle-actions4-seed300/training.log",
+      "source_sha256": "3e17a09270523b90ecff146c0807108b0be74cad918d1d781b0747460a352364"
+    },
+    "v1/multiseed-300/ippo-vehicle_pedestrian-actions4-seed300/checkpoint-metrics.csv": {
+      "sha256": "59c73c54d20baa984b52ad5d24669b3d42f003feb58769ce63b7a535466a6189",
+      "bytes": 7120,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-300/ippo-vehicle_pedestrian-actions4-seed300/checkpoint-metrics.csv",
+      "source_sha256": "59c73c54d20baa984b52ad5d24669b3d42f003feb58769ce63b7a535466a6189"
+    },
+    "v1/multiseed-300/ippo-vehicle_pedestrian-actions4-seed300/training-complete.json": {
+      "sha256": "b0ce7d9cf882b1b581529e3c430916b364bd6b3fb4fb7aaafb7d97af2d1190d3",
+      "bytes": 212,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-300/ippo-vehicle_pedestrian-actions4-seed300/training-complete.json",
+      "source_sha256": "b0ce7d9cf882b1b581529e3c430916b364bd6b3fb4fb7aaafb7d97af2d1190d3"
+    },
+    "v1/multiseed-300/ippo-vehicle_pedestrian-actions4-seed300/training.log": {
+      "sha256": "b605454529ae7deb7c94d1f36ee55dd8193cce9c162ca54a388309c1c7291b29",
+      "bytes": 1853,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-300/ippo-vehicle_pedestrian-actions4-seed300/training.log",
+      "source_sha256": "b605454529ae7deb7c94d1f36ee55dd8193cce9c162ca54a388309c1c7291b29"
+    },
+    "v1/multiseed-300/mappo-vehicle-actions4-seed300/checkpoint-metrics.csv": {
+      "sha256": "c640c8baea2686553e470435b80a94fb335d670545d1d82f36c8fb3b9cf47e64",
+      "bytes": 7062,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-300/mappo-vehicle-actions4-seed300/checkpoint-metrics.csv",
+      "source_sha256": "c640c8baea2686553e470435b80a94fb335d670545d1d82f36c8fb3b9cf47e64"
+    },
+    "v1/multiseed-300/mappo-vehicle-actions4-seed300/training-complete.json": {
+      "sha256": "5e54fc86b45779c398f690dc7c1c8dc27485761afbcc8dab3a5347beb6feae5f",
+      "bytes": 203,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-300/mappo-vehicle-actions4-seed300/training-complete.json",
+      "source_sha256": "5e54fc86b45779c398f690dc7c1c8dc27485761afbcc8dab3a5347beb6feae5f"
+    },
+    "v1/multiseed-300/mappo-vehicle-actions4-seed300/training.log": {
+      "sha256": "ef846e7324a6ee723eb9246c51bcb443b6680a03232ed9e649832b16ad02a33b",
+      "bytes": 1851,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-300/mappo-vehicle-actions4-seed300/training.log",
+      "source_sha256": "ef846e7324a6ee723eb9246c51bcb443b6680a03232ed9e649832b16ad02a33b"
+    },
+    "v1/multiseed-300/mappo-vehicle_pedestrian-actions4-seed300/checkpoint-metrics.csv": {
+      "sha256": "002a1bb508722b3ef1e40331cf3367b416b2fde9f57ded06a87bc16ec58d7fd3",
+      "bytes": 7171,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-300/mappo-vehicle_pedestrian-actions4-seed300/checkpoint-metrics.csv",
+      "source_sha256": "002a1bb508722b3ef1e40331cf3367b416b2fde9f57ded06a87bc16ec58d7fd3"
+    },
+    "v1/multiseed-300/mappo-vehicle_pedestrian-actions4-seed300/training-complete.json": {
+      "sha256": "fcae4e10e989009c5996a3000789a140423f1190be872cceb2decb853f16649d",
+      "bytes": 213,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-300/mappo-vehicle_pedestrian-actions4-seed300/training-complete.json",
+      "source_sha256": "fcae4e10e989009c5996a3000789a140423f1190be872cceb2decb853f16649d"
+    },
+    "v1/multiseed-300/mappo-vehicle_pedestrian-actions4-seed300/training.log": {
+      "sha256": "73204ecc782dd1c433117f1969587c9a8d915a4478ab4abd378bb435a90939b0",
+      "bytes": 1854,
+      "source": "scenario/generated/archive-60ep-pilot/multiseed-300/mappo-vehicle_pedestrian-actions4-seed300/training.log",
+      "source_sha256": "73204ecc782dd1c433117f1969587c9a8d915a4478ab4abd378bb435a90939b0"
+    },
+    "v1/source.zip": {
+      "sha256": "b8320127e710e4c9193ef94317cfee89f2c6b1cd1ea5d884f49b8ce835fe3675",
+      "bytes": 34081,
+      "source": "scenario/generated/archive-60ep-pilot/reproducibility-source.zip",
+      "source_sha256": "1ad3a82b9682d5dd139f4e1607a372084aa5e93bda4be53ab9bf0d7bb3f0416e",
+      "transformation": "Python implementation, tests, and dependency files are preserved byte-for-byte from the archived version."
+    },
+    "v2/checkpoints/ippo-vehicle-actions4-seed100/episode-100.pt": {
+      "sha256": "6788d239487fb258f78c2d5df0c6cb0e1206e99eb4440c71f0d571eda7d31730",
+      "bytes": 46163,
+      "source": "scenario/generated/final-v2-results/checkpoints/ippo-vehicle-actions4-seed100/episode-100.pt",
+      "source_sha256": "6788d239487fb258f78c2d5df0c6cb0e1206e99eb4440c71f0d571eda7d31730"
+    },
+    "v2/checkpoints/ippo-vehicle_pedestrian-actions4-seed100/episode-50.pt": {
+      "sha256": "349b93f7614b3c4a753bc4ca109dd599904f32cd5b7df4e8329dda400bba273d",
+      "bytes": 46197,
+      "source": "scenario/generated/final-v2-results/checkpoints/ippo-vehicle_pedestrian-actions4-seed100/episode-50.pt",
+      "source_sha256": "349b93f7614b3c4a753bc4ca109dd599904f32cd5b7df4e8329dda400bba273d"
+    },
+    "v2/checkpoints/mappo-vehicle-actions4-seed100/episode-50.pt": {
+      "sha256": "b5297ac97ecb6fa2625ba0c38746f9bc9f9fde4475643b68c8fcdbc7dee27738",
+      "bytes": 41589,
+      "source": "scenario/generated/final-v2-results/checkpoints/mappo-vehicle-actions4-seed100/episode-50.pt",
+      "source_sha256": "b5297ac97ecb6fa2625ba0c38746f9bc9f9fde4475643b68c8fcdbc7dee27738"
+    },
+    "v2/checkpoints/mappo-vehicle_pedestrian-actions4-seed100/episode-250.pt": {
+      "sha256": "459476d6eb388db584f4532bec671c04e846e592541b4ab7fc87b3b1de885907",
+      "bytes": 41611,
+      "source": "scenario/generated/final-v2-results/checkpoints/mappo-vehicle_pedestrian-actions4-seed100/episode-250.pt",
+      "source_sha256": "459476d6eb388db584f4532bec671c04e846e592541b4ab7fc87b3b1de885907"
+    },
+    "v2/checkpoints/ippo-vehicle-actions4-seed200/episode-150.pt": {
+      "sha256": "ffc9ad10e2a55d104df64be1f21d63ac1f25b0e094c2d321fdd01d768b8cc7fe",
+      "bytes": 46163,
+      "source": "scenario/generated/final-v2-results/checkpoints/ippo-vehicle-actions4-seed200/episode-150.pt",
+      "source_sha256": "ffc9ad10e2a55d104df64be1f21d63ac1f25b0e094c2d321fdd01d768b8cc7fe"
+    },
+    "v2/checkpoints/ippo-vehicle_pedestrian-actions4-seed200/episode-150.pt": {
+      "sha256": "3138240c1215087a1c6457834727d0e1d23be09483126b1dae1dd7a7c305041f",
+      "bytes": 46227,
+      "source": "scenario/generated/final-v2-results/checkpoints/ippo-vehicle_pedestrian-actions4-seed200/episode-150.pt",
+      "source_sha256": "3138240c1215087a1c6457834727d0e1d23be09483126b1dae1dd7a7c305041f"
+    },
+    "v2/checkpoints/mappo-vehicle-actions4-seed200/episode-100.pt": {
+      "sha256": "ec4c294ac00c3026d3989b430183386bfa7aee900d411cdb139975252dfca9e1",
+      "bytes": 41611,
+      "source": "scenario/generated/final-v2-results/checkpoints/mappo-vehicle-actions4-seed200/episode-100.pt",
+      "source_sha256": "ec4c294ac00c3026d3989b430183386bfa7aee900d411cdb139975252dfca9e1"
+    },
+    "v2/checkpoints/mappo-vehicle_pedestrian-actions4-seed200/episode-100.pt": {
+      "sha256": "6a72ccf8c63f011acbbdfbc120e4812b40bdd701d2a4ba38a08d647a98c62a90",
+      "bytes": 41611,
+      "source": "scenario/generated/final-v2-results/checkpoints/mappo-vehicle_pedestrian-actions4-seed200/episode-100.pt",
+      "source_sha256": "6a72ccf8c63f011acbbdfbc120e4812b40bdd701d2a4ba38a08d647a98c62a90"
+    },
+    "v2/checkpoints/ippo-vehicle-actions4-seed300/episode-150.pt": {
+      "sha256": "fc1373687f4eb000cb65599b916043e52e4954c99cd4303b4b43c1be253b104a",
+      "bytes": 46163,
+      "source": "scenario/generated/final-v2-results/checkpoints/ippo-vehicle-actions4-seed300/episode-150.pt",
+      "source_sha256": "fc1373687f4eb000cb65599b916043e52e4954c99cd4303b4b43c1be253b104a"
+    },
+    "v2/checkpoints/ippo-vehicle_pedestrian-actions4-seed300/episode-50.pt": {
+      "sha256": "97aa0c2ec39d22245fbd2b7136cc59b19a63d64d8032836f6556c7414ec1b38a",
+      "bytes": 46197,
+      "source": "scenario/generated/final-v2-results/checkpoints/ippo-vehicle_pedestrian-actions4-seed300/episode-50.pt",
+      "source_sha256": "97aa0c2ec39d22245fbd2b7136cc59b19a63d64d8032836f6556c7414ec1b38a"
+    },
+    "v2/checkpoints/mappo-vehicle-actions4-seed300/episode-300.pt": {
+      "sha256": "794ae2a048352ca7b36de6a122f59e509262a3d9e40b9ad5ac5e14ce183c34ee",
+      "bytes": 41611,
+      "source": "scenario/generated/final-v2-results/checkpoints/mappo-vehicle-actions4-seed300/episode-300.pt",
+      "source_sha256": "794ae2a048352ca7b36de6a122f59e509262a3d9e40b9ad5ac5e14ce183c34ee"
+    },
+    "v2/checkpoints/mappo-vehicle_pedestrian-actions4-seed300/episode-150.pt": {
+      "sha256": "842fe5b1294c75189fec2ecd680c5183dbad6cabd1e305ff07754d7ab0d3f6b7",
+      "bytes": 41611,
+      "source": "scenario/generated/final-v2-results/checkpoints/mappo-vehicle_pedestrian-actions4-seed300/episode-150.pt",
+      "source_sha256": "842fe5b1294c75189fec2ecd680c5183dbad6cabd1e305ff07754d7ab0d3f6b7"
+    },
+    "v2/selected-checkpoints.json": {
+      "sha256": "ac13048ae98decacf22b6f4f825c058d7901db79fd23d7fbbd09cbfae31ad148",
+      "bytes": 5372,
+      "source": "scenario/generated/final-v2-results/selected-checkpoints-local.json",
+      "source_sha256": "01d1a79d78293a27342518bd24c50240e3fe425c06f1a1bc05e0812150f350a7",
+      "transformation": "Checkpoint paths are relative to this version directory; selection metrics and model hashes are retained."
+    },
+    "v2/FINAL_RESULTS.md": {
+      "sha256": "b9ad5be9f23f6233e9285164b95df14ef4f992f5920480e9051ffe323c4b8381",
+      "bytes": 7665,
+      "source": "scenario/generated/final-v2-results/FINAL_RESULTS.md",
+      "source_sha256": "b9ad5be9f23f6233e9285164b95df14ef4f992f5920480e9051ffe323c4b8381"
+    },
+    "v2/KEY_TAKEAWAYS.md": {
+      "sha256": "e05ab1e7262448fa0a41d4ed06dcc63ae0f65dfa5318ab1f1f30ebb621fb0567",
+      "bytes": 2057,
+      "source": "scenario/generated/final-v2-results/KEY_TAKEAWAYS.md",
+      "source_sha256": "e05ab1e7262448fa0a41d4ed06dcc63ae0f65dfa5318ab1f1f30ebb621fb0567"
+    },
+    "v2/AUDIT_RESULTS.json": {
+      "sha256": "d033d26dd9a4e170a633516ac8a3afba8abf17045a4af8aa6ca51c0f95fde65d",
+      "bytes": 410,
+      "source": "scenario/generated/final-v2-results/AUDIT_RESULTS.json",
+      "source_sha256": "d033d26dd9a4e170a633516ac8a3afba8abf17045a4af8aa6ca51c0f95fde65d"
+    },
+    "v2/final-summary.csv": {
+      "sha256": "81b087fc1c1fe8b8ff1b19ac58b7e5ba75d36d8a109ea9b778e9d2b7c53389f9",
+      "bytes": 25890,
+      "source": "scenario/generated/final-v2-results/final-summary.csv",
+      "source_sha256": "81b087fc1c1fe8b8ff1b19ac58b7e5ba75d36d8a109ea9b778e9d2b7c53389f9"
+    },
+    "v2/actuated-comparison.csv": {
+      "sha256": "de5398ffba71c724d3097ed7d9583c2804258a7d4d5fc13f6525618ecc93e2fb",
+      "bytes": 30571,
+      "source": "scenario/generated/final-v2-results/actuated-comparison.csv",
+      "source_sha256": "de5398ffba71c724d3097ed7d9583c2804258a7d4d5fc13f6525618ecc93e2fb"
+    },
+    "v2/pilot-comparison.csv": {
+      "sha256": "f7683799ad362097b18acb4a6e107ef8ebe79c00f8abcc9161f8ee5a48a4104a",
+      "bytes": 30171,
+      "source": "scenario/generated/final-v2-results/pilot-comparison.csv",
+      "source_sha256": "f7683799ad362097b18acb4a6e107ef8ebe79c00f8abcc9161f8ee5a48a4104a"
+    },
+    "v2/final-primary-results.csv": {
+      "sha256": "2d48bf159c4306b1e95005466359d5d6ab55d1fccd70ade4e1f207d3c075d1ae",
+      "bytes": 34750,
+      "source": "scenario/generated/final-v2-results/final-primary-results.csv",
+      "source_sha256": "9e2fc3b07ff8170e94ac6f5cc49f4843fb452eee53211c32f31cd9fdcd2aec70",
+      "transformation": "Metric cells are unchanged; checkpoint paths are relative to this version directory and CSV line endings are normalized."
+    },
+    "v2/final-demand-sweep.csv": {
+      "sha256": "48a5330cfd8ab6898e40af8d61e8881960f8bc64607739d2218072fedfd24bdf",
+      "bytes": 68199,
+      "source": "scenario/generated/final-v2-results/final-demand-sweep.csv",
+      "source_sha256": "605462a9c52a42e4745beeb70dd2eb2bd1b33118c25be7898a7a4c43a22a6303",
+      "transformation": "Metric cells are unchanged; checkpoint paths are relative to this version directory and CSV line endings are normalized."
+    },
+    "v2/final-slow-pedestrian-results.csv": {
+      "sha256": "e4ef270ddade791ad8eb6febfe8ac2798dd4e1dd5d3eeb022655cef9b3b81ea1",
+      "bytes": 34683,
+      "source": "scenario/generated/final-v2-results/final-slow-pedestrian-results.csv",
+      "source_sha256": "908fffeefb80ac81fda306336fad7279a8c82fe5233842e16a6d114d20e8d01a",
+      "transformation": "Metric cells are unchanged; checkpoint paths are relative to this version directory and CSV line endings are normalized."
+    },
+    "v2/validation-baseline.csv": {
+      "sha256": "858095ca42f27bfb43f84fe6b78461cd9714b2c2cf5f9f745b36c7ac933b4070",
+      "bytes": 3000,
+      "source": "scenario/generated/final-v2-results/validation-baseline/validation-baseline.csv",
+      "source_sha256": "858095ca42f27bfb43f84fe6b78461cd9714b2c2cf5f9f745b36c7ac933b4070"
+    },
+    "v2/training/v2-300ep-seed100/ippo-vehicle-actions4-seed100/checkpoint-metrics.csv": {
+      "sha256": "a064fa5d193154de9669890cbd7dcc6351acd79f0821167fb63ca4a00b697dc0",
+      "bytes": 13672,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed100/ippo-vehicle-actions4-seed100/checkpoint-metrics.csv",
+      "source_sha256": "a064fa5d193154de9669890cbd7dcc6351acd79f0821167fb63ca4a00b697dc0"
+    },
+    "v2/training/v2-300ep-seed100/ippo-vehicle-actions4-seed100/demand-schedule.jsonl": {
+      "sha256": "ffac4d2cd09d18d4ed27bbaf13e8158737223f70b8c99bb818ff07b2c4d176d0",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed100/ippo-vehicle-actions4-seed100/demand-schedule.jsonl",
+      "source_sha256": "ffac4d2cd09d18d4ed27bbaf13e8158737223f70b8c99bb818ff07b2c4d176d0"
+    },
+    "v2/training/v2-300ep-seed100/ippo-vehicle-actions4-seed100/training-complete.json": {
+      "sha256": "e048d98c08dc143c9c25f2eb5cedcf85bb18a94d3040265d6f8098a9fb9d7581",
+      "bytes": 208,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed100/ippo-vehicle-actions4-seed100/training-complete.json",
+      "source_sha256": "e048d98c08dc143c9c25f2eb5cedcf85bb18a94d3040265d6f8098a9fb9d7581"
+    },
+    "v2/training/v2-300ep-seed100/ippo-vehicle-actions4-seed100/training.log": {
+      "sha256": "cd655c61fec6b5ee7699d43168b69c0123e5179a60edd65491b965934f00e2bd",
+      "bytes": 9471,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed100/ippo-vehicle-actions4-seed100/training.log",
+      "source_sha256": "cd655c61fec6b5ee7699d43168b69c0123e5179a60edd65491b965934f00e2bd"
+    },
+    "v2/training/v2-300ep-seed100/ippo-vehicle_pedestrian-actions4-seed100/checkpoint-metrics.csv": {
+      "sha256": "17757dc2ee320dafdc078b17ebb82d023bc0cf4260bfac97bef34efee36d78fe",
+      "bytes": 13853,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed100/ippo-vehicle_pedestrian-actions4-seed100/checkpoint-metrics.csv",
+      "source_sha256": "17757dc2ee320dafdc078b17ebb82d023bc0cf4260bfac97bef34efee36d78fe"
+    },
+    "v2/training/v2-300ep-seed100/ippo-vehicle_pedestrian-actions4-seed100/demand-schedule.jsonl": {
+      "sha256": "ffac4d2cd09d18d4ed27bbaf13e8158737223f70b8c99bb818ff07b2c4d176d0",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed100/ippo-vehicle_pedestrian-actions4-seed100/demand-schedule.jsonl",
+      "source_sha256": "ffac4d2cd09d18d4ed27bbaf13e8158737223f70b8c99bb818ff07b2c4d176d0"
+    },
+    "v2/training/v2-300ep-seed100/ippo-vehicle_pedestrian-actions4-seed100/training-complete.json": {
+      "sha256": "03aa10231d0525ed60f09a449a498f239debf8faa3ca69aa5786d8a7e1895c00",
+      "bytes": 219,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed100/ippo-vehicle_pedestrian-actions4-seed100/training-complete.json",
+      "source_sha256": "03aa10231d0525ed60f09a449a498f239debf8faa3ca69aa5786d8a7e1895c00"
+    },
+    "v2/training/v2-300ep-seed100/ippo-vehicle_pedestrian-actions4-seed100/training.log": {
+      "sha256": "3072fb157a1b94599cd26b562467888e2f554efefe03cf7b0bd73b10444a68d0",
+      "bytes": 9487,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed100/ippo-vehicle_pedestrian-actions4-seed100/training.log",
+      "source_sha256": "3072fb157a1b94599cd26b562467888e2f554efefe03cf7b0bd73b10444a68d0"
+    },
+    "v2/training/v2-300ep-seed100/mappo-vehicle-actions4-seed100/checkpoint-metrics.csv": {
+      "sha256": "a86b8e7315f3ada4ac51edadaebb1b0cd1f16a30dbe0e15b2f56accd6429d108",
+      "bytes": 13700,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed100/mappo-vehicle-actions4-seed100/checkpoint-metrics.csv",
+      "source_sha256": "a86b8e7315f3ada4ac51edadaebb1b0cd1f16a30dbe0e15b2f56accd6429d108"
+    },
+    "v2/training/v2-300ep-seed100/mappo-vehicle-actions4-seed100/demand-schedule.jsonl": {
+      "sha256": "ffac4d2cd09d18d4ed27bbaf13e8158737223f70b8c99bb818ff07b2c4d176d0",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed100/mappo-vehicle-actions4-seed100/demand-schedule.jsonl",
+      "source_sha256": "ffac4d2cd09d18d4ed27bbaf13e8158737223f70b8c99bb818ff07b2c4d176d0"
+    },
+    "v2/training/v2-300ep-seed100/mappo-vehicle-actions4-seed100/training-complete.json": {
+      "sha256": "796f7b4c8c474623fe0ed5563a94c6581288b43fee49b68f4b935e0fecd26873",
+      "bytes": 210,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed100/mappo-vehicle-actions4-seed100/training-complete.json",
+      "source_sha256": "796f7b4c8c474623fe0ed5563a94c6581288b43fee49b68f4b935e0fecd26873"
+    },
+    "v2/training/v2-300ep-seed100/mappo-vehicle-actions4-seed100/training.log": {
+      "sha256": "3b9c10181025ce4da6eaf16255c544e5be53a258bd7f4b029e2ee92d3ce80833",
+      "bytes": 9472,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed100/mappo-vehicle-actions4-seed100/training.log",
+      "source_sha256": "3b9c10181025ce4da6eaf16255c544e5be53a258bd7f4b029e2ee92d3ce80833"
+    },
+    "v2/training/v2-300ep-seed100/mappo-vehicle_pedestrian-actions4-seed100/checkpoint-metrics.csv": {
+      "sha256": "c4dea4831c5ecf6cd561b9c27761fa8e33457e6aa588439a183677741ea7bc6b",
+      "bytes": 13896,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed100/mappo-vehicle_pedestrian-actions4-seed100/checkpoint-metrics.csv",
+      "source_sha256": "c4dea4831c5ecf6cd561b9c27761fa8e33457e6aa588439a183677741ea7bc6b"
+    },
+    "v2/training/v2-300ep-seed100/mappo-vehicle_pedestrian-actions4-seed100/demand-schedule.jsonl": {
+      "sha256": "ffac4d2cd09d18d4ed27bbaf13e8158737223f70b8c99bb818ff07b2c4d176d0",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed100/mappo-vehicle_pedestrian-actions4-seed100/demand-schedule.jsonl",
+      "source_sha256": "ffac4d2cd09d18d4ed27bbaf13e8158737223f70b8c99bb818ff07b2c4d176d0"
+    },
+    "v2/training/v2-300ep-seed100/mappo-vehicle_pedestrian-actions4-seed100/training-complete.json": {
+      "sha256": "36278d3ae5f091c993d1eec805aab940ac4209e2d46b31df24833a54efb998e7",
+      "bytes": 221,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed100/mappo-vehicle_pedestrian-actions4-seed100/training-complete.json",
+      "source_sha256": "36278d3ae5f091c993d1eec805aab940ac4209e2d46b31df24833a54efb998e7"
+    },
+    "v2/training/v2-300ep-seed100/mappo-vehicle_pedestrian-actions4-seed100/training.log": {
+      "sha256": "46d80c685d2b5396c07ddc994ebac939b79ec012b45c34a9dfbf086410a9700a",
+      "bytes": 9488,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed100/mappo-vehicle_pedestrian-actions4-seed100/training.log",
+      "source_sha256": "46d80c685d2b5396c07ddc994ebac939b79ec012b45c34a9dfbf086410a9700a"
+    },
+    "v2/training/v2-300ep-seed200/ippo-vehicle-actions4-seed200/checkpoint-metrics.csv": {
+      "sha256": "13f91fbeea91d43ad14e4ed73ce298f016e70fb73391634ae655280ea3e6085f",
+      "bytes": 13695,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed200/ippo-vehicle-actions4-seed200/checkpoint-metrics.csv",
+      "source_sha256": "13f91fbeea91d43ad14e4ed73ce298f016e70fb73391634ae655280ea3e6085f"
+    },
+    "v2/training/v2-300ep-seed200/ippo-vehicle-actions4-seed200/demand-schedule.jsonl": {
+      "sha256": "ac5fdfe3338738749753a17b936c259b5bb879ec18ef8e5a1d995babdfabb4e1",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed200/ippo-vehicle-actions4-seed200/demand-schedule.jsonl",
+      "source_sha256": "ac5fdfe3338738749753a17b936c259b5bb879ec18ef8e5a1d995babdfabb4e1"
+    },
+    "v2/training/v2-300ep-seed200/ippo-vehicle-actions4-seed200/training-complete.json": {
+      "sha256": "0bb33f6d5c658e6c127e72bc1c5c0a0a43e4ae9f238885e56ae579c5c1afeab4",
+      "bytes": 209,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed200/ippo-vehicle-actions4-seed200/training-complete.json",
+      "source_sha256": "0bb33f6d5c658e6c127e72bc1c5c0a0a43e4ae9f238885e56ae579c5c1afeab4"
+    },
+    "v2/training/v2-300ep-seed200/ippo-vehicle-actions4-seed200/training.log": {
+      "sha256": "b91c401e8860f504c8e0ea949885e122dbd9e8db38986a6085df21b450030b64",
+      "bytes": 9480,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed200/ippo-vehicle-actions4-seed200/training.log",
+      "source_sha256": "b91c401e8860f504c8e0ea949885e122dbd9e8db38986a6085df21b450030b64"
+    },
+    "v2/training/v2-300ep-seed200/ippo-vehicle_pedestrian-actions4-seed200/checkpoint-metrics.csv": {
+      "sha256": "ecac12afe832578817797195438eca92e6eadc6a4e797e4abf068d2f159da462",
+      "bytes": 13878,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed200/ippo-vehicle_pedestrian-actions4-seed200/checkpoint-metrics.csv",
+      "source_sha256": "ecac12afe832578817797195438eca92e6eadc6a4e797e4abf068d2f159da462"
+    },
+    "v2/training/v2-300ep-seed200/ippo-vehicle_pedestrian-actions4-seed200/demand-schedule.jsonl": {
+      "sha256": "ac5fdfe3338738749753a17b936c259b5bb879ec18ef8e5a1d995babdfabb4e1",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed200/ippo-vehicle_pedestrian-actions4-seed200/demand-schedule.jsonl",
+      "source_sha256": "ac5fdfe3338738749753a17b936c259b5bb879ec18ef8e5a1d995babdfabb4e1"
+    },
+    "v2/training/v2-300ep-seed200/ippo-vehicle_pedestrian-actions4-seed200/training-complete.json": {
+      "sha256": "593258eb652597a3d715d6245d5ec63c9261b745e0e2c8deaf78d6911a8dfc1d",
+      "bytes": 220,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed200/ippo-vehicle_pedestrian-actions4-seed200/training-complete.json",
+      "source_sha256": "593258eb652597a3d715d6245d5ec63c9261b745e0e2c8deaf78d6911a8dfc1d"
+    },
+    "v2/training/v2-300ep-seed200/ippo-vehicle_pedestrian-actions4-seed200/training.log": {
+      "sha256": "ce3855d00d0fcc5b209766bf653b28a281f6f0372fd6890da2979713c90c65a0",
+      "bytes": 9490,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed200/ippo-vehicle_pedestrian-actions4-seed200/training.log",
+      "source_sha256": "ce3855d00d0fcc5b209766bf653b28a281f6f0372fd6890da2979713c90c65a0"
+    },
+    "v2/training/v2-300ep-seed200/mappo-vehicle-actions4-seed200/checkpoint-metrics.csv": {
+      "sha256": "cca9cda0725c80e8dde621b59c1af9632186817ab9d368fd05208c241e27f84a",
+      "bytes": 13731,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed200/mappo-vehicle-actions4-seed200/checkpoint-metrics.csv",
+      "source_sha256": "cca9cda0725c80e8dde621b59c1af9632186817ab9d368fd05208c241e27f84a"
+    },
+    "v2/training/v2-300ep-seed200/mappo-vehicle-actions4-seed200/demand-schedule.jsonl": {
+      "sha256": "ac5fdfe3338738749753a17b936c259b5bb879ec18ef8e5a1d995babdfabb4e1",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed200/mappo-vehicle-actions4-seed200/demand-schedule.jsonl",
+      "source_sha256": "ac5fdfe3338738749753a17b936c259b5bb879ec18ef8e5a1d995babdfabb4e1"
+    },
+    "v2/training/v2-300ep-seed200/mappo-vehicle-actions4-seed200/training-complete.json": {
+      "sha256": "1ff10032723f5e2578131ae1b34299d323d1d54e2d702efd5b77cc6144c798c3",
+      "bytes": 209,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed200/mappo-vehicle-actions4-seed200/training-complete.json",
+      "source_sha256": "1ff10032723f5e2578131ae1b34299d323d1d54e2d702efd5b77cc6144c798c3"
+    },
+    "v2/training/v2-300ep-seed200/mappo-vehicle-actions4-seed200/training.log": {
+      "sha256": "7a69389665a9081fd8fdf9c95fa3119d0f026fe9d4f676114e8da67f12c7831a",
+      "bytes": 9475,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed200/mappo-vehicle-actions4-seed200/training.log",
+      "source_sha256": "7a69389665a9081fd8fdf9c95fa3119d0f026fe9d4f676114e8da67f12c7831a"
+    },
+    "v2/training/v2-300ep-seed200/mappo-vehicle_pedestrian-actions4-seed200/checkpoint-metrics.csv": {
+      "sha256": "03ff0e7ae49c68165936977a5d068c05fcc3a4a226bffc89c7e6e979e148dd4e",
+      "bytes": 13919,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed200/mappo-vehicle_pedestrian-actions4-seed200/checkpoint-metrics.csv",
+      "source_sha256": "03ff0e7ae49c68165936977a5d068c05fcc3a4a226bffc89c7e6e979e148dd4e"
+    },
+    "v2/training/v2-300ep-seed200/mappo-vehicle_pedestrian-actions4-seed200/demand-schedule.jsonl": {
+      "sha256": "ac5fdfe3338738749753a17b936c259b5bb879ec18ef8e5a1d995babdfabb4e1",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed200/mappo-vehicle_pedestrian-actions4-seed200/demand-schedule.jsonl",
+      "source_sha256": "ac5fdfe3338738749753a17b936c259b5bb879ec18ef8e5a1d995babdfabb4e1"
+    },
+    "v2/training/v2-300ep-seed200/mappo-vehicle_pedestrian-actions4-seed200/training-complete.json": {
+      "sha256": "0bd7cab19aed7df77b79b6af373896775edc3a217703f21f1a35dee5ae211857",
+      "bytes": 221,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed200/mappo-vehicle_pedestrian-actions4-seed200/training-complete.json",
+      "source_sha256": "0bd7cab19aed7df77b79b6af373896775edc3a217703f21f1a35dee5ae211857"
+    },
+    "v2/training/v2-300ep-seed200/mappo-vehicle_pedestrian-actions4-seed200/training.log": {
+      "sha256": "eb928c11f9be84b6e5b3d937fe144c2f2cfedc973c6b8f423da3e0a37c73326f",
+      "bytes": 9487,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed200/mappo-vehicle_pedestrian-actions4-seed200/training.log",
+      "source_sha256": "eb928c11f9be84b6e5b3d937fe144c2f2cfedc973c6b8f423da3e0a37c73326f"
+    },
+    "v2/training/v2-300ep-seed300/ippo-vehicle-actions4-seed300/checkpoint-metrics.csv": {
+      "sha256": "8fa3961a82d3aea20fcc70058ce49dd4cefd09cd1e667a881bd496ac5eb6db60",
+      "bytes": 13668,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed300/ippo-vehicle-actions4-seed300/checkpoint-metrics.csv",
+      "source_sha256": "8fa3961a82d3aea20fcc70058ce49dd4cefd09cd1e667a881bd496ac5eb6db60"
+    },
+    "v2/training/v2-300ep-seed300/ippo-vehicle-actions4-seed300/demand-schedule.jsonl": {
+      "sha256": "e48dadf085007e0f4f8bf4451faf951196ade5699101f5fb1e926f2ab9aadaf9",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed300/ippo-vehicle-actions4-seed300/demand-schedule.jsonl",
+      "source_sha256": "e48dadf085007e0f4f8bf4451faf951196ade5699101f5fb1e926f2ab9aadaf9"
+    },
+    "v2/training/v2-300ep-seed300/ippo-vehicle-actions4-seed300/training-complete.json": {
+      "sha256": "1f873e1134afa21526e90ac12ac2530c72410559a69783075ada9b45013288e0",
+      "bytes": 209,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed300/ippo-vehicle-actions4-seed300/training-complete.json",
+      "source_sha256": "1f873e1134afa21526e90ac12ac2530c72410559a69783075ada9b45013288e0"
+    },
+    "v2/training/v2-300ep-seed300/ippo-vehicle-actions4-seed300/training.log": {
+      "sha256": "4fd2cd3927ad71bc6af80788b42d6159c8fefdb29aab2413a0fa0b2ec5f2d224",
+      "bytes": 9484,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed300/ippo-vehicle-actions4-seed300/training.log",
+      "source_sha256": "4fd2cd3927ad71bc6af80788b42d6159c8fefdb29aab2413a0fa0b2ec5f2d224"
+    },
+    "v2/training/v2-300ep-seed300/ippo-vehicle_pedestrian-actions4-seed300/checkpoint-metrics.csv": {
+      "sha256": "806d86b9c6063324b38aae91454725e14d1e1ae7ef989dcb26c9f6b8d3f35c04",
+      "bytes": 13879,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed300/ippo-vehicle_pedestrian-actions4-seed300/checkpoint-metrics.csv",
+      "source_sha256": "806d86b9c6063324b38aae91454725e14d1e1ae7ef989dcb26c9f6b8d3f35c04"
+    },
+    "v2/training/v2-300ep-seed300/ippo-vehicle_pedestrian-actions4-seed300/demand-schedule.jsonl": {
+      "sha256": "e48dadf085007e0f4f8bf4451faf951196ade5699101f5fb1e926f2ab9aadaf9",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed300/ippo-vehicle_pedestrian-actions4-seed300/demand-schedule.jsonl",
+      "source_sha256": "e48dadf085007e0f4f8bf4451faf951196ade5699101f5fb1e926f2ab9aadaf9"
+    },
+    "v2/training/v2-300ep-seed300/ippo-vehicle_pedestrian-actions4-seed300/training-complete.json": {
+      "sha256": "db6824af50f1f15a377d800fd5492111713d1bde1545544123fa05191d249630",
+      "bytes": 218,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed300/ippo-vehicle_pedestrian-actions4-seed300/training-complete.json",
+      "source_sha256": "db6824af50f1f15a377d800fd5492111713d1bde1545544123fa05191d249630"
+    },
+    "v2/training/v2-300ep-seed300/ippo-vehicle_pedestrian-actions4-seed300/training.log": {
+      "sha256": "22b1c675f2287bc0bc759f957b20963866263ddda42fe11f73a9e9796e09b91b",
+      "bytes": 9487,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed300/ippo-vehicle_pedestrian-actions4-seed300/training.log",
+      "source_sha256": "22b1c675f2287bc0bc759f957b20963866263ddda42fe11f73a9e9796e09b91b"
+    },
+    "v2/training/v2-300ep-seed300/mappo-vehicle-actions4-seed300/checkpoint-metrics.csv": {
+      "sha256": "27c06990f29fe0d7899e9adc3389cada7ed0f9690b95a8a8c00aff487ffeac40",
+      "bytes": 13749,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed300/mappo-vehicle-actions4-seed300/checkpoint-metrics.csv",
+      "source_sha256": "27c06990f29fe0d7899e9adc3389cada7ed0f9690b95a8a8c00aff487ffeac40"
+    },
+    "v2/training/v2-300ep-seed300/mappo-vehicle-actions4-seed300/demand-schedule.jsonl": {
+      "sha256": "e48dadf085007e0f4f8bf4451faf951196ade5699101f5fb1e926f2ab9aadaf9",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed300/mappo-vehicle-actions4-seed300/demand-schedule.jsonl",
+      "source_sha256": "e48dadf085007e0f4f8bf4451faf951196ade5699101f5fb1e926f2ab9aadaf9"
+    },
+    "v2/training/v2-300ep-seed300/mappo-vehicle-actions4-seed300/training-complete.json": {
+      "sha256": "eeef213c65cf7019fdff37082f10649e3a50d19f8c9c8eb2130afa95a8eea34f",
+      "bytes": 210,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed300/mappo-vehicle-actions4-seed300/training-complete.json",
+      "source_sha256": "eeef213c65cf7019fdff37082f10649e3a50d19f8c9c8eb2130afa95a8eea34f"
+    },
+    "v2/training/v2-300ep-seed300/mappo-vehicle-actions4-seed300/training.log": {
+      "sha256": "6baee179f5fc490b632d778a0ba994855860d0af362420c549b24079e4a20883",
+      "bytes": 9482,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed300/mappo-vehicle-actions4-seed300/training.log",
+      "source_sha256": "6baee179f5fc490b632d778a0ba994855860d0af362420c549b24079e4a20883"
+    },
+    "v2/training/v2-300ep-seed300/mappo-vehicle_pedestrian-actions4-seed300/checkpoint-metrics.csv": {
+      "sha256": "6d7ee19d76b31799db5628549ebad3b743d64428c56e98e0e3e098229f920500",
+      "bytes": 13897,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed300/mappo-vehicle_pedestrian-actions4-seed300/checkpoint-metrics.csv",
+      "source_sha256": "6d7ee19d76b31799db5628549ebad3b743d64428c56e98e0e3e098229f920500"
+    },
+    "v2/training/v2-300ep-seed300/mappo-vehicle_pedestrian-actions4-seed300/demand-schedule.jsonl": {
+      "sha256": "e48dadf085007e0f4f8bf4451faf951196ade5699101f5fb1e926f2ab9aadaf9",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed300/mappo-vehicle_pedestrian-actions4-seed300/demand-schedule.jsonl",
+      "source_sha256": "e48dadf085007e0f4f8bf4451faf951196ade5699101f5fb1e926f2ab9aadaf9"
+    },
+    "v2/training/v2-300ep-seed300/mappo-vehicle_pedestrian-actions4-seed300/training-complete.json": {
+      "sha256": "b5a206c3e1aa8d95c1a6779cbe68011721bb1ec3ecf68dab7222c4bd76c50a7b",
+      "bytes": 221,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed300/mappo-vehicle_pedestrian-actions4-seed300/training-complete.json",
+      "source_sha256": "b5a206c3e1aa8d95c1a6779cbe68011721bb1ec3ecf68dab7222c4bd76c50a7b"
+    },
+    "v2/training/v2-300ep-seed300/mappo-vehicle_pedestrian-actions4-seed300/training.log": {
+      "sha256": "2dea4040c51b9b2410e886010355cbf55286ab77417bde04ea3f6fb980f7edf9",
+      "bytes": 9490,
+      "source": "scenario/generated/final-v2-results/training/v2-300ep-seed300/mappo-vehicle_pedestrian-actions4-seed300/training.log",
+      "source_sha256": "2dea4040c51b9b2410e886010355cbf55286ab77417bde04ea3f6fb980f7edf9"
+    },
+    "v2/source.zip": {
+      "sha256": "4ed088318a54ec27a5da6818dd7f1880f2dcc532d8635d5fed3e78eac171a26f",
+      "bytes": 47410,
+      "source": "scenario/generated/final-v2-results/reproducibility-source.zip",
+      "source_sha256": "4738a797e4b1dcc0a9703ec7e7904b80efbd3e52094db9925e38c05c0e0e82eb",
+      "transformation": "Python implementation, tests, and dependency files are preserved byte-for-byte from the archived version."
+    },
+    "v3/checkpoints/ippo-vehicle-actions2-seed100/episode-50.pt": {
+      "sha256": "1322110fe539faca291b9e2491f8abbd5c0fa0cc1ba8654902619201cab5d7ca",
+      "bytes": 63349,
+      "source": "scenario/generated/final-v3-results/checkpoints/ippo-vehicle-actions2-seed100/episode-50.pt",
+      "source_sha256": "1322110fe539faca291b9e2491f8abbd5c0fa0cc1ba8654902619201cab5d7ca"
+    },
+    "v3/checkpoints/ippo-vehicle_pedestrian-actions2-seed100/episode-150.pt": {
+      "sha256": "0e8d74b99fa7389b9486134c72aa10770b7007db00aa5be21ae1006056ffc965",
+      "bytes": 63379,
+      "source": "scenario/generated/final-v3-results/checkpoints/ippo-vehicle_pedestrian-actions2-seed100/episode-150.pt",
+      "source_sha256": "0e8d74b99fa7389b9486134c72aa10770b7007db00aa5be21ae1006056ffc965"
+    },
+    "v3/checkpoints/mappo-vehicle-actions2-seed100/episode-100.pt": {
+      "sha256": "bbe5ec0f6fe2a1e41440d5ab94615a617b4f0598d3913c665e391919a841be72",
+      "bytes": 58763,
+      "source": "scenario/generated/final-v3-results/checkpoints/mappo-vehicle-actions2-seed100/episode-100.pt",
+      "source_sha256": "bbe5ec0f6fe2a1e41440d5ab94615a617b4f0598d3913c665e391919a841be72"
+    },
+    "v3/checkpoints/mappo-vehicle_pedestrian-actions2-seed100/episode-50.pt": {
+      "sha256": "331e0bd38a954fa1869a9bddb0130d7df5e3df8efef0920dc4f8d72146ed00f4",
+      "bytes": 58741,
+      "source": "scenario/generated/final-v3-results/checkpoints/mappo-vehicle_pedestrian-actions2-seed100/episode-50.pt",
+      "source_sha256": "331e0bd38a954fa1869a9bddb0130d7df5e3df8efef0920dc4f8d72146ed00f4"
+    },
+    "v3/checkpoints/ippo-vehicle-actions2-seed200/episode-50.pt": {
+      "sha256": "e65e11944bb979772a7fac5dede8ec749c08b2be65f688c704b37789f6fc247f",
+      "bytes": 63349,
+      "source": "scenario/generated/final-v3-results/checkpoints/ippo-vehicle-actions2-seed200/episode-50.pt",
+      "source_sha256": "e65e11944bb979772a7fac5dede8ec749c08b2be65f688c704b37789f6fc247f"
+    },
+    "v3/checkpoints/ippo-vehicle_pedestrian-actions2-seed200/episode-300.pt": {
+      "sha256": "7f07197869f0cc78855b85a45bf838112c390a3840b64172784f75fbcd579d73",
+      "bytes": 63379,
+      "source": "scenario/generated/final-v3-results/checkpoints/ippo-vehicle_pedestrian-actions2-seed200/episode-300.pt",
+      "source_sha256": "7f07197869f0cc78855b85a45bf838112c390a3840b64172784f75fbcd579d73"
+    },
+    "v3/checkpoints/mappo-vehicle-actions2-seed200/episode-150.pt": {
+      "sha256": "ea4ec1aaacd0bbf44767ee110a678cebb559cb3b134156300d365d29ed351840",
+      "bytes": 58763,
+      "source": "scenario/generated/final-v3-results/checkpoints/mappo-vehicle-actions2-seed200/episode-150.pt",
+      "source_sha256": "ea4ec1aaacd0bbf44767ee110a678cebb559cb3b134156300d365d29ed351840"
+    },
+    "v3/checkpoints/mappo-vehicle_pedestrian-actions2-seed200/episode-250.pt": {
+      "sha256": "0cd7e10f73328306cd725bb757c3690fb8d8a6d4ce843ed0b0d4d324adb94b1e",
+      "bytes": 58763,
+      "source": "scenario/generated/final-v3-results/checkpoints/mappo-vehicle_pedestrian-actions2-seed200/episode-250.pt",
+      "source_sha256": "0cd7e10f73328306cd725bb757c3690fb8d8a6d4ce843ed0b0d4d324adb94b1e"
+    },
+    "v3/checkpoints/ippo-vehicle-actions2-seed300/episode-100.pt": {
+      "sha256": "b45f2ceee38f625d073bf7022c8d30cf2b80e29e0f89c21087c0cc4ba5a0c350",
+      "bytes": 63379,
+      "source": "scenario/generated/final-v3-results/checkpoints/ippo-vehicle-actions2-seed300/episode-100.pt",
+      "source_sha256": "b45f2ceee38f625d073bf7022c8d30cf2b80e29e0f89c21087c0cc4ba5a0c350"
+    },
+    "v3/checkpoints/ippo-vehicle_pedestrian-actions2-seed300/episode-50.pt": {
+      "sha256": "3df8c6a4d91576075e81abf51b7978ab41cc9c92afaf7c49fc9e31ac911439da",
+      "bytes": 63349,
+      "source": "scenario/generated/final-v3-results/checkpoints/ippo-vehicle_pedestrian-actions2-seed300/episode-50.pt",
+      "source_sha256": "3df8c6a4d91576075e81abf51b7978ab41cc9c92afaf7c49fc9e31ac911439da"
+    },
+    "v3/checkpoints/mappo-vehicle-actions2-seed300/episode-100.pt": {
+      "sha256": "2d9be2df48004c666b5354a495555ccc36e3cbf90f99eee67fa2db9c288bd7ea",
+      "bytes": 58763,
+      "source": "scenario/generated/final-v3-results/checkpoints/mappo-vehicle-actions2-seed300/episode-100.pt",
+      "source_sha256": "2d9be2df48004c666b5354a495555ccc36e3cbf90f99eee67fa2db9c288bd7ea"
+    },
+    "v3/checkpoints/mappo-vehicle_pedestrian-actions2-seed300/episode-100.pt": {
+      "sha256": "72c2739b4a381727eae666c7b810fb5bdf82c80ace8fab2c662933c763e22526",
+      "bytes": 58763,
+      "source": "scenario/generated/final-v3-results/checkpoints/mappo-vehicle_pedestrian-actions2-seed300/episode-100.pt",
+      "source_sha256": "72c2739b4a381727eae666c7b810fb5bdf82c80ace8fab2c662933c763e22526"
+    },
+    "v3/selected-checkpoints.json": {
+      "sha256": "1a71cc9f991f51aac3efa8dea50bab6027c79d2b6274c44560a0754c97351393",
+      "bytes": 5332,
+      "source": "scenario/generated/final-v3-results/selected-checkpoints-local.json",
+      "source_sha256": "1a45a01e91c936bf1ec6fb36da96c34dfb004f4f2fbedca4cde14090bcd02ade",
+      "transformation": "Checkpoint paths are relative to this version directory; selection metrics and model hashes are retained."
+    },
+    "v3/FINAL_RESULTS.md": {
+      "sha256": "de8763a2451733ff8de198f98d87f2a00c402c3a3c3ab02441bfb021910b3971",
+      "bytes": 8571,
+      "source": "scenario/generated/final-v3-results/FINAL_RESULTS.md",
+      "source_sha256": "de8763a2451733ff8de198f98d87f2a00c402c3a3c3ab02441bfb021910b3971"
+    },
+    "v3/KEY_TAKEAWAYS.md": {
+      "sha256": "b1643b52bc09f5fe195f265855852118a5cb42eb312e657d495d533c479c685d",
+      "bytes": 1426,
+      "source": "scenario/generated/final-v3-results/KEY_TAKEAWAYS.md",
+      "source_sha256": "7279145685b5bd28310f3c732a0a6e63fc924a10695832a8cc183cfeac2b3767",
+      "transformation": "Trailing blank lines at the end of the published Markdown copy are removed."
+    },
+    "v3/AUDIT_RESULTS.json": {
+      "sha256": "6600f28e4cdee1bc205446440eca21396b72721754a0010c2ceb06d670cf26b8",
+      "bytes": 421,
+      "source": "scenario/generated/final-v3-results/AUDIT_RESULTS.json",
+      "source_sha256": "6600f28e4cdee1bc205446440eca21396b72721754a0010c2ceb06d670cf26b8"
+    },
+    "v3/final-summary.csv": {
+      "sha256": "791c2058af94dc401e94224649c80ed92be6f7ebc3caca9a8061d9b0b423dba0",
+      "bytes": 28825,
+      "source": "scenario/generated/final-v3-results/final-summary.csv",
+      "source_sha256": "791c2058af94dc401e94224649c80ed92be6f7ebc3caca9a8061d9b0b423dba0"
+    },
+    "v3/per-crossing-p95.csv": {
+      "sha256": "bf22f2afe2c29b0e09633390bddce2d7c3a5e9d7eb39ef7497c3440093afff55",
+      "bytes": 36617,
+      "source": "scenario/generated/final-v3-results/per-crossing-p95.csv",
+      "source_sha256": "bf22f2afe2c29b0e09633390bddce2d7c3a5e9d7eb39ef7497c3440093afff55"
+    },
+    "v3/primary-crossing-p95.csv": {
+      "sha256": "9c8266f53e9786b39b9ea7721afd59adc0e4328c653432f93c43bfd28d7bea56",
+      "bytes": 1390,
+      "source": "scenario/generated/final-v3-results/primary-crossing-p95.csv",
+      "source_sha256": "9c8266f53e9786b39b9ea7721afd59adc0e4328c653432f93c43bfd28d7bea56"
+    },
+    "v3/actuated-comparison.csv": {
+      "sha256": "cdfb82b13fd642dce24cf579874ecd1703b3a833843a82ea3c17210ec149aa5d",
+      "bytes": 19703,
+      "source": "scenario/generated/final-v3-results/actuated-comparison.csv",
+      "source_sha256": "cdfb82b13fd642dce24cf579874ecd1703b3a833843a82ea3c17210ec149aa5d"
+    },
+    "v3/v2-comparison.csv": {
+      "sha256": "527985fc1d8bb8e47d51ffb66ce55f110e1a55db6b779d702c455423fd3dbc86",
+      "bytes": 29910,
+      "source": "scenario/generated/final-v3-results/v2-comparison.csv",
+      "source_sha256": "527985fc1d8bb8e47d51ffb66ce55f110e1a55db6b779d702c455423fd3dbc86"
+    },
+    "v3/final-primary-results.csv": {
+      "sha256": "d5e63cfc4b9e0ddffaf0f630b24b11cf2daac26b3199efa2260060e21b086c56",
+      "bytes": 35050,
+      "source": "scenario/generated/final-v3-results/final-primary-results.csv",
+      "source_sha256": "cb4e8e43f72f1c11cc171a16801ae45a88a468b538b8fa70a9691de1b6b9666b",
+      "transformation": "Metric cells are unchanged; checkpoint paths are relative to this version directory and CSV line endings are normalized."
+    },
+    "v3/final-demand-sweep.csv": {
+      "sha256": "1ac07fdd160b1a9885549b26d9aaf69768deaae5ec2d7af5fda7340c51e02c97",
+      "bytes": 68833,
+      "source": "scenario/generated/final-v3-results/final-demand-sweep.csv",
+      "source_sha256": "65365f510717b7d80e31249d62062782642b890047cf9b9e05e109c6b012d2e2",
+      "transformation": "Metric cells are unchanged; checkpoint paths are relative to this version directory and CSV line endings are normalized."
+    },
+    "v3/final-slow-pedestrian-results.csv": {
+      "sha256": "022e0d25052d80e05a36788b37ea1428d46dc424627c5d89ecdc9c59e24450aa",
+      "bytes": 34957,
+      "source": "scenario/generated/final-v3-results/final-slow-pedestrian-results.csv",
+      "source_sha256": "7ffc20d975fec06ac73b8672510ee1c5292301784984af1ab671b3b349984dbc",
+      "transformation": "Metric cells are unchanged; checkpoint paths are relative to this version directory and CSV line endings are normalized."
+    },
+    "v3/validation-baseline.csv": {
+      "sha256": "b993bf0cd05b0c9993c4df9fd6021d8c92765ac685274c2aed0307e65fbc7d4c",
+      "bytes": 3052,
+      "source": "scenario/generated/final-v3-results/validation-baseline/validation-baseline.csv",
+      "source_sha256": "b993bf0cd05b0c9993c4df9fd6021d8c92765ac685274c2aed0307e65fbc7d4c"
+    },
+    "v3/training/v3-300ep-seed100/ippo-vehicle-actions2-seed100/checkpoint-metrics.csv": {
+      "sha256": "dfefa0f45945e123d3dbd65238dfa1075b69b0c9146ec31927ada8055959ce97",
+      "bytes": 13746,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed100/ippo-vehicle-actions2-seed100/checkpoint-metrics.csv",
+      "source_sha256": "dfefa0f45945e123d3dbd65238dfa1075b69b0c9146ec31927ada8055959ce97"
+    },
+    "v3/training/v3-300ep-seed100/ippo-vehicle-actions2-seed100/demand-schedule.jsonl": {
+      "sha256": "ffac4d2cd09d18d4ed27bbaf13e8158737223f70b8c99bb818ff07b2c4d176d0",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed100/ippo-vehicle-actions2-seed100/demand-schedule.jsonl",
+      "source_sha256": "ffac4d2cd09d18d4ed27bbaf13e8158737223f70b8c99bb818ff07b2c4d176d0"
+    },
+    "v3/training/v3-300ep-seed100/ippo-vehicle-actions2-seed100/training-complete.json": {
+      "sha256": "2d341fa61eef237361adef2d8a354403d1143413889a810e4f70e8ba442cd7e9",
+      "bytes": 209,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed100/ippo-vehicle-actions2-seed100/training-complete.json",
+      "source_sha256": "2d341fa61eef237361adef2d8a354403d1143413889a810e4f70e8ba442cd7e9"
+    },
+    "v3/training/v3-300ep-seed100/ippo-vehicle-actions2-seed100/training.log": {
+      "sha256": "5fb16dd435ba68f965d5ef9efe47960c7a5dcbbce4e9de7dd3918c918a587ea3",
+      "bytes": 9471,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed100/ippo-vehicle-actions2-seed100/training.log",
+      "source_sha256": "5fb16dd435ba68f965d5ef9efe47960c7a5dcbbce4e9de7dd3918c918a587ea3"
+    },
+    "v3/training/v3-300ep-seed100/ippo-vehicle_pedestrian-actions2-seed100/checkpoint-metrics.csv": {
+      "sha256": "5ca53f0d693c4bb0190a798fd56ba2c4e77d42b8fd57e03d99a3edfd8887a4eb",
+      "bytes": 14004,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed100/ippo-vehicle_pedestrian-actions2-seed100/checkpoint-metrics.csv",
+      "source_sha256": "5ca53f0d693c4bb0190a798fd56ba2c4e77d42b8fd57e03d99a3edfd8887a4eb"
+    },
+    "v3/training/v3-300ep-seed100/ippo-vehicle_pedestrian-actions2-seed100/demand-schedule.jsonl": {
+      "sha256": "ffac4d2cd09d18d4ed27bbaf13e8158737223f70b8c99bb818ff07b2c4d176d0",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed100/ippo-vehicle_pedestrian-actions2-seed100/demand-schedule.jsonl",
+      "source_sha256": "ffac4d2cd09d18d4ed27bbaf13e8158737223f70b8c99bb818ff07b2c4d176d0"
+    },
+    "v3/training/v3-300ep-seed100/ippo-vehicle_pedestrian-actions2-seed100/training-complete.json": {
+      "sha256": "037686642494a56196a18e5a23be1370927d3b1dfa52e5bd14bc1a94489b7a97",
+      "bytes": 219,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed100/ippo-vehicle_pedestrian-actions2-seed100/training-complete.json",
+      "source_sha256": "037686642494a56196a18e5a23be1370927d3b1dfa52e5bd14bc1a94489b7a97"
+    },
+    "v3/training/v3-300ep-seed100/ippo-vehicle_pedestrian-actions2-seed100/training.log": {
+      "sha256": "45dd51fc3629feebfd4b9f13d5af1d5b60e5a60230e1ebb11f28470f1ef886a8",
+      "bytes": 9595,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed100/ippo-vehicle_pedestrian-actions2-seed100/training.log",
+      "source_sha256": "45dd51fc3629feebfd4b9f13d5af1d5b60e5a60230e1ebb11f28470f1ef886a8"
+    },
+    "v3/training/v3-300ep-seed100/mappo-vehicle-actions2-seed100/checkpoint-metrics.csv": {
+      "sha256": "b8bfa51c06ed3afd827f18d337a701c5cdc74da7380e39ccc73e2cf2f05ae2de",
+      "bytes": 13794,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed100/mappo-vehicle-actions2-seed100/checkpoint-metrics.csv",
+      "source_sha256": "b8bfa51c06ed3afd827f18d337a701c5cdc74da7380e39ccc73e2cf2f05ae2de"
+    },
+    "v3/training/v3-300ep-seed100/mappo-vehicle-actions2-seed100/demand-schedule.jsonl": {
+      "sha256": "ffac4d2cd09d18d4ed27bbaf13e8158737223f70b8c99bb818ff07b2c4d176d0",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed100/mappo-vehicle-actions2-seed100/demand-schedule.jsonl",
+      "source_sha256": "ffac4d2cd09d18d4ed27bbaf13e8158737223f70b8c99bb818ff07b2c4d176d0"
+    },
+    "v3/training/v3-300ep-seed100/mappo-vehicle-actions2-seed100/training-complete.json": {
+      "sha256": "399ab29000d9ecf6131268a87d178d520f4ef901f1405cbe3212fc414250e664",
+      "bytes": 210,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed100/mappo-vehicle-actions2-seed100/training-complete.json",
+      "source_sha256": "399ab29000d9ecf6131268a87d178d520f4ef901f1405cbe3212fc414250e664"
+    },
+    "v3/training/v3-300ep-seed100/mappo-vehicle-actions2-seed100/training.log": {
+      "sha256": "7356f38d28ff1d010d787788c4e00926658ba701a1e02ba115d064fcd7a11e11",
+      "bytes": 9481,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed100/mappo-vehicle-actions2-seed100/training.log",
+      "source_sha256": "7356f38d28ff1d010d787788c4e00926658ba701a1e02ba115d064fcd7a11e11"
+    },
+    "v3/training/v3-300ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/checkpoint-metrics.csv": {
+      "sha256": "b7623148f15bb196ba12eaa7d537ca304707765c9f78941d5e4a0cb1efd9c3f8",
+      "bytes": 14034,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/checkpoint-metrics.csv",
+      "source_sha256": "b7623148f15bb196ba12eaa7d537ca304707765c9f78941d5e4a0cb1efd9c3f8"
+    },
+    "v3/training/v3-300ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/demand-schedule.jsonl": {
+      "sha256": "ffac4d2cd09d18d4ed27bbaf13e8158737223f70b8c99bb818ff07b2c4d176d0",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/demand-schedule.jsonl",
+      "source_sha256": "ffac4d2cd09d18d4ed27bbaf13e8158737223f70b8c99bb818ff07b2c4d176d0"
+    },
+    "v3/training/v3-300ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/training-complete.json": {
+      "sha256": "6eaf37f84400163f7fa5d6b5771bbbe0718d6f4132b984f9d6c27080ec004fb8",
+      "bytes": 220,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/training-complete.json",
+      "source_sha256": "6eaf37f84400163f7fa5d6b5771bbbe0718d6f4132b984f9d6c27080ec004fb8"
+    },
+    "v3/training/v3-300ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/training.log": {
+      "sha256": "9e85e719bbcce0e8765909c4ba24abf91b8f83c05bde3a41ca607d001a7e5182",
+      "bytes": 9592,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/training.log",
+      "source_sha256": "9e85e719bbcce0e8765909c4ba24abf91b8f83c05bde3a41ca607d001a7e5182"
+    },
+    "v3/training/v3-300ep-seed200/ippo-vehicle-actions2-seed200/checkpoint-metrics.csv": {
+      "sha256": "73b87c337cfb7cb1e989deea90946f6685199c7307e4eb50abc26ef43941e3c8",
+      "bytes": 13760,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed200/ippo-vehicle-actions2-seed200/checkpoint-metrics.csv",
+      "source_sha256": "73b87c337cfb7cb1e989deea90946f6685199c7307e4eb50abc26ef43941e3c8"
+    },
+    "v3/training/v3-300ep-seed200/ippo-vehicle-actions2-seed200/demand-schedule.jsonl": {
+      "sha256": "ac5fdfe3338738749753a17b936c259b5bb879ec18ef8e5a1d995babdfabb4e1",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed200/ippo-vehicle-actions2-seed200/demand-schedule.jsonl",
+      "source_sha256": "ac5fdfe3338738749753a17b936c259b5bb879ec18ef8e5a1d995babdfabb4e1"
+    },
+    "v3/training/v3-300ep-seed200/ippo-vehicle-actions2-seed200/training-complete.json": {
+      "sha256": "31f1ccd0014aa9df8fb65b3bab4a1db4e2b6f9865de251691d8880f02709f3ad",
+      "bytes": 208,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed200/ippo-vehicle-actions2-seed200/training-complete.json",
+      "source_sha256": "31f1ccd0014aa9df8fb65b3bab4a1db4e2b6f9865de251691d8880f02709f3ad"
+    },
+    "v3/training/v3-300ep-seed200/ippo-vehicle-actions2-seed200/training.log": {
+      "sha256": "9fd495584da9f0f2210ff39c523eac3405f139230f13805c2f24282fa26e6097",
+      "bytes": 9465,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed200/ippo-vehicle-actions2-seed200/training.log",
+      "source_sha256": "9fd495584da9f0f2210ff39c523eac3405f139230f13805c2f24282fa26e6097"
+    },
+    "v3/training/v3-300ep-seed200/ippo-vehicle_pedestrian-actions2-seed200/checkpoint-metrics.csv": {
+      "sha256": "abf3cc6b54ba7ce8f7658187851ce803ecb21f688112e4c811ff40f54f9b2a86",
+      "bytes": 13998,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed200/ippo-vehicle_pedestrian-actions2-seed200/checkpoint-metrics.csv",
+      "source_sha256": "abf3cc6b54ba7ce8f7658187851ce803ecb21f688112e4c811ff40f54f9b2a86"
+    },
+    "v3/training/v3-300ep-seed200/ippo-vehicle_pedestrian-actions2-seed200/demand-schedule.jsonl": {
+      "sha256": "ac5fdfe3338738749753a17b936c259b5bb879ec18ef8e5a1d995babdfabb4e1",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed200/ippo-vehicle_pedestrian-actions2-seed200/demand-schedule.jsonl",
+      "source_sha256": "ac5fdfe3338738749753a17b936c259b5bb879ec18ef8e5a1d995babdfabb4e1"
+    },
+    "v3/training/v3-300ep-seed200/ippo-vehicle_pedestrian-actions2-seed200/training-complete.json": {
+      "sha256": "c85fbc2b05c0c71673f6b5f511543cfd4e6862686311cd43e5145114ae505313",
+      "bytes": 220,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed200/ippo-vehicle_pedestrian-actions2-seed200/training-complete.json",
+      "source_sha256": "c85fbc2b05c0c71673f6b5f511543cfd4e6862686311cd43e5145114ae505313"
+    },
+    "v3/training/v3-300ep-seed200/ippo-vehicle_pedestrian-actions2-seed200/training.log": {
+      "sha256": "d2479821c676e16036574dfe9acbc46be62caacabe1fefb5047febb714b76c06",
+      "bytes": 9596,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed200/ippo-vehicle_pedestrian-actions2-seed200/training.log",
+      "source_sha256": "d2479821c676e16036574dfe9acbc46be62caacabe1fefb5047febb714b76c06"
+    },
+    "v3/training/v3-300ep-seed200/mappo-vehicle-actions2-seed200/checkpoint-metrics.csv": {
+      "sha256": "f7bc6a61a2aae53d1fa654e27050556544394970b9b6bf447e98391bd9b42b54",
+      "bytes": 13816,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed200/mappo-vehicle-actions2-seed200/checkpoint-metrics.csv",
+      "source_sha256": "f7bc6a61a2aae53d1fa654e27050556544394970b9b6bf447e98391bd9b42b54"
+    },
+    "v3/training/v3-300ep-seed200/mappo-vehicle-actions2-seed200/demand-schedule.jsonl": {
+      "sha256": "ac5fdfe3338738749753a17b936c259b5bb879ec18ef8e5a1d995babdfabb4e1",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed200/mappo-vehicle-actions2-seed200/demand-schedule.jsonl",
+      "source_sha256": "ac5fdfe3338738749753a17b936c259b5bb879ec18ef8e5a1d995babdfabb4e1"
+    },
+    "v3/training/v3-300ep-seed200/mappo-vehicle-actions2-seed200/training-complete.json": {
+      "sha256": "1b8131d2353a74f8df5495314a815551752beee55f50d8e5a92d96b320f22bb6",
+      "bytes": 209,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed200/mappo-vehicle-actions2-seed200/training-complete.json",
+      "source_sha256": "1b8131d2353a74f8df5495314a815551752beee55f50d8e5a92d96b320f22bb6"
+    },
+    "v3/training/v3-300ep-seed200/mappo-vehicle-actions2-seed200/training.log": {
+      "sha256": "037bc306c172706e5e811c852f98948608447e0f5203b4511f573a680d26b60a",
+      "bytes": 9478,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed200/mappo-vehicle-actions2-seed200/training.log",
+      "source_sha256": "037bc306c172706e5e811c852f98948608447e0f5203b4511f573a680d26b60a"
+    },
+    "v3/training/v3-300ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/checkpoint-metrics.csv": {
+      "sha256": "10a9a422b18ee64f1cd29fc1f9f170b0832763826b19709f49bc5dfaddb9f7dd",
+      "bytes": 14050,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/checkpoint-metrics.csv",
+      "source_sha256": "10a9a422b18ee64f1cd29fc1f9f170b0832763826b19709f49bc5dfaddb9f7dd"
+    },
+    "v3/training/v3-300ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/demand-schedule.jsonl": {
+      "sha256": "ac5fdfe3338738749753a17b936c259b5bb879ec18ef8e5a1d995babdfabb4e1",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/demand-schedule.jsonl",
+      "source_sha256": "ac5fdfe3338738749753a17b936c259b5bb879ec18ef8e5a1d995babdfabb4e1"
+    },
+    "v3/training/v3-300ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/training-complete.json": {
+      "sha256": "1674f32d3726cb4ae451500ae661e755b93d2d162fdfcd2fdc7cc69a5e84bc5a",
+      "bytes": 221,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/training-complete.json",
+      "source_sha256": "1674f32d3726cb4ae451500ae661e755b93d2d162fdfcd2fdc7cc69a5e84bc5a"
+    },
+    "v3/training/v3-300ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/training.log": {
+      "sha256": "924440aa9bd810ae2c0d9961867ae53143440fe520f0edcdd5c9c6c38c6746ad",
+      "bytes": 9595,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/training.log",
+      "source_sha256": "924440aa9bd810ae2c0d9961867ae53143440fe520f0edcdd5c9c6c38c6746ad"
+    },
+    "v3/training/v3-300ep-seed300/ippo-vehicle-actions2-seed300/checkpoint-metrics.csv": {
+      "sha256": "26cd9488715819eedadcf99314f8abc3b11daf8cc06f8e6a9aab05f39d62ab8a",
+      "bytes": 13769,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed300/ippo-vehicle-actions2-seed300/checkpoint-metrics.csv",
+      "source_sha256": "26cd9488715819eedadcf99314f8abc3b11daf8cc06f8e6a9aab05f39d62ab8a"
+    },
+    "v3/training/v3-300ep-seed300/ippo-vehicle-actions2-seed300/demand-schedule.jsonl": {
+      "sha256": "e48dadf085007e0f4f8bf4451faf951196ade5699101f5fb1e926f2ab9aadaf9",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed300/ippo-vehicle-actions2-seed300/demand-schedule.jsonl",
+      "source_sha256": "e48dadf085007e0f4f8bf4451faf951196ade5699101f5fb1e926f2ab9aadaf9"
+    },
+    "v3/training/v3-300ep-seed300/ippo-vehicle-actions2-seed300/training-complete.json": {
+      "sha256": "5af3b9ab11142ffa518bd9dadf27f7038458097c2b261c6901f1cbcff1557110",
+      "bytes": 209,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed300/ippo-vehicle-actions2-seed300/training-complete.json",
+      "source_sha256": "5af3b9ab11142ffa518bd9dadf27f7038458097c2b261c6901f1cbcff1557110"
+    },
+    "v3/training/v3-300ep-seed300/ippo-vehicle-actions2-seed300/training.log": {
+      "sha256": "2b06fd46cba0d9fb0617e96168fa1616a580621542d262456f15680d023e3ad1",
+      "bytes": 9477,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed300/ippo-vehicle-actions2-seed300/training.log",
+      "source_sha256": "2b06fd46cba0d9fb0617e96168fa1616a580621542d262456f15680d023e3ad1"
+    },
+    "v3/training/v3-300ep-seed300/ippo-vehicle_pedestrian-actions2-seed300/checkpoint-metrics.csv": {
+      "sha256": "bee91bf393cb4aee3b449002f7ef396094bd3b9be51ef2eb053d859ab4607c8d",
+      "bytes": 13997,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed300/ippo-vehicle_pedestrian-actions2-seed300/checkpoint-metrics.csv",
+      "source_sha256": "bee91bf393cb4aee3b449002f7ef396094bd3b9be51ef2eb053d859ab4607c8d"
+    },
+    "v3/training/v3-300ep-seed300/ippo-vehicle_pedestrian-actions2-seed300/demand-schedule.jsonl": {
+      "sha256": "e48dadf085007e0f4f8bf4451faf951196ade5699101f5fb1e926f2ab9aadaf9",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed300/ippo-vehicle_pedestrian-actions2-seed300/demand-schedule.jsonl",
+      "source_sha256": "e48dadf085007e0f4f8bf4451faf951196ade5699101f5fb1e926f2ab9aadaf9"
+    },
+    "v3/training/v3-300ep-seed300/ippo-vehicle_pedestrian-actions2-seed300/training-complete.json": {
+      "sha256": "12ae358747c1add8f7760e2c98fae0fd796d848fb2191b9db4d8b654757e840c",
+      "bytes": 219,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed300/ippo-vehicle_pedestrian-actions2-seed300/training-complete.json",
+      "source_sha256": "12ae358747c1add8f7760e2c98fae0fd796d848fb2191b9db4d8b654757e840c"
+    },
+    "v3/training/v3-300ep-seed300/ippo-vehicle_pedestrian-actions2-seed300/training.log": {
+      "sha256": "7be3ecd8fe441f67d5fa9bb35972618dce64fb0e71fa1c09204125c6ae95f1f2",
+      "bytes": 9594,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed300/ippo-vehicle_pedestrian-actions2-seed300/training.log",
+      "source_sha256": "7be3ecd8fe441f67d5fa9bb35972618dce64fb0e71fa1c09204125c6ae95f1f2"
+    },
+    "v3/training/v3-300ep-seed300/mappo-vehicle-actions2-seed300/checkpoint-metrics.csv": {
+      "sha256": "3f4b19e7543328f8c2fbbefb11d54397ca230124d5decf3045a9facabc07de15",
+      "bytes": 13793,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed300/mappo-vehicle-actions2-seed300/checkpoint-metrics.csv",
+      "source_sha256": "3f4b19e7543328f8c2fbbefb11d54397ca230124d5decf3045a9facabc07de15"
+    },
+    "v3/training/v3-300ep-seed300/mappo-vehicle-actions2-seed300/demand-schedule.jsonl": {
+      "sha256": "e48dadf085007e0f4f8bf4451faf951196ade5699101f5fb1e926f2ab9aadaf9",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed300/mappo-vehicle-actions2-seed300/demand-schedule.jsonl",
+      "source_sha256": "e48dadf085007e0f4f8bf4451faf951196ade5699101f5fb1e926f2ab9aadaf9"
+    },
+    "v3/training/v3-300ep-seed300/mappo-vehicle-actions2-seed300/training-complete.json": {
+      "sha256": "cc87a87131cf313416deeecf5e4dad7ddc8cab098d2c1df110b5a7d5a565f6c3",
+      "bytes": 210,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed300/mappo-vehicle-actions2-seed300/training-complete.json",
+      "source_sha256": "cc87a87131cf313416deeecf5e4dad7ddc8cab098d2c1df110b5a7d5a565f6c3"
+    },
+    "v3/training/v3-300ep-seed300/mappo-vehicle-actions2-seed300/training.log": {
+      "sha256": "e375a5cb736303e903b71facaae92c1e9e8363f6e5d5e0657db35ba2eab4e18b",
+      "bytes": 9482,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed300/mappo-vehicle-actions2-seed300/training.log",
+      "source_sha256": "e375a5cb736303e903b71facaae92c1e9e8363f6e5d5e0657db35ba2eab4e18b"
+    },
+    "v3/training/v3-300ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/checkpoint-metrics.csv": {
+      "sha256": "7094a77266a2edabc6ac2d0b02ee09bba69b61bb6dcef0a97ac5e57e0903dd90",
+      "bytes": 14056,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/checkpoint-metrics.csv",
+      "source_sha256": "7094a77266a2edabc6ac2d0b02ee09bba69b61bb6dcef0a97ac5e57e0903dd90"
+    },
+    "v3/training/v3-300ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/demand-schedule.jsonl": {
+      "sha256": "e48dadf085007e0f4f8bf4451faf951196ade5699101f5fb1e926f2ab9aadaf9",
+      "bytes": 26592,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/demand-schedule.jsonl",
+      "source_sha256": "e48dadf085007e0f4f8bf4451faf951196ade5699101f5fb1e926f2ab9aadaf9"
+    },
+    "v3/training/v3-300ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/training-complete.json": {
+      "sha256": "69c1c9718a87dcd776ba76f4c974f99ce26091aff7c56509cc21f00139ef1a18",
+      "bytes": 220,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/training-complete.json",
+      "source_sha256": "69c1c9718a87dcd776ba76f4c974f99ce26091aff7c56509cc21f00139ef1a18"
+    },
+    "v3/training/v3-300ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/training.log": {
+      "sha256": "4da3fee70bd0b0dd5954100b46d220b8134e83c9ba7a1c9747fdaf13e719247b",
+      "bytes": 9591,
+      "source": "scenario/generated/final-v3-results/training/v3-300ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/training.log",
+      "source_sha256": "4da3fee70bd0b0dd5954100b46d220b8134e83c9ba7a1c9747fdaf13e719247b"
+    },
+    "v3/source.zip": {
+      "sha256": "b27a91e34262dc41d388f416fa2f769cfe85ac24642f74da45d6a32e681ee9b4",
+      "bytes": 56735,
+      "source": "scenario/generated/final-v3-results/v3-source-upload.zip",
+      "source_sha256": "9d93ef6e40511c191e5e811ba9182bb1671a76b17575eb9f1b262c6febcee51e",
+      "transformation": "Python implementation, tests, and dependency files are preserved byte-for-byte from the archived version."
+    },
+    "v4/checkpoints/mappo-vehicle-actions2-seed100/episode-200.pt": {
+      "sha256": "9a79c72a64d00b6a91d7db66cd29ee7924c57f44ff6114fceabeb6ec320aa421",
+      "bytes": 68299,
+      "source": "scenario/generated/final-v4-results/checkpoints/mappo-vehicle-actions2-seed100/episode-200.pt",
+      "source_sha256": "9a79c72a64d00b6a91d7db66cd29ee7924c57f44ff6114fceabeb6ec320aa421"
+    },
+    "v4/checkpoints/mappo-vehicle_pedestrian-actions2-seed100/episode-150.pt": {
+      "sha256": "e833373e68b97cd67aa7cbbaf6e4a6435563957b0126a34f53897fcd6d6a0ef7",
+      "bytes": 68299,
+      "source": "scenario/generated/final-v4-results/checkpoints/mappo-vehicle_pedestrian-actions2-seed100/episode-150.pt",
+      "source_sha256": "e833373e68b97cd67aa7cbbaf6e4a6435563957b0126a34f53897fcd6d6a0ef7"
+    },
+    "v4/checkpoints/mappo-vehicle-actions2-seed200/episode-50.pt": {
+      "sha256": "0c19011e4fbde15975817f0641d0e04ef5f65abc6852685456dcf0e2c35c500c",
+      "bytes": 68277,
+      "source": "scenario/generated/final-v4-results/checkpoints/mappo-vehicle-actions2-seed200/episode-50.pt",
+      "source_sha256": "0c19011e4fbde15975817f0641d0e04ef5f65abc6852685456dcf0e2c35c500c"
+    },
+    "v4/checkpoints/mappo-vehicle_pedestrian-actions2-seed200/episode-400.pt": {
+      "sha256": "865a5d50be0bb29b6e8cba19d035c0859f2a8550515c2a22f532694928b3ff96",
+      "bytes": 68299,
+      "source": "scenario/generated/final-v4-results/checkpoints/mappo-vehicle_pedestrian-actions2-seed200/episode-400.pt",
+      "source_sha256": "865a5d50be0bb29b6e8cba19d035c0859f2a8550515c2a22f532694928b3ff96"
+    },
+    "v4/checkpoints/mappo-vehicle-actions2-seed300/episode-100.pt": {
+      "sha256": "d47c1876f337d35e0c931793ad338c8cfa63448eca13dd0b460a6fb2b56278f6",
+      "bytes": 68299,
+      "source": "scenario/generated/final-v4-results/checkpoints/mappo-vehicle-actions2-seed300/episode-100.pt",
+      "source_sha256": "d47c1876f337d35e0c931793ad338c8cfa63448eca13dd0b460a6fb2b56278f6"
+    },
+    "v4/checkpoints/mappo-vehicle_pedestrian-actions2-seed300/episode-400.pt": {
+      "sha256": "c2234e2fc576c684b9fb9a5a81976b39402abbbd65d6187f198926fcc9bb60b7",
+      "bytes": 68299,
+      "source": "scenario/generated/final-v4-results/checkpoints/mappo-vehicle_pedestrian-actions2-seed300/episode-400.pt",
+      "source_sha256": "c2234e2fc576c684b9fb9a5a81976b39402abbbd65d6187f198926fcc9bb60b7"
+    },
+    "v4/selected-checkpoints.json": {
+      "sha256": "1174c952c23634b6c6ac71859e728ec701b04be6ae7a381c5129a6f29e5ce9e5",
+      "bytes": 2712,
+      "source": "scenario/generated/final-v4-results/selected-checkpoints-local.json",
+      "source_sha256": "453dbda178e1caa5a0b92fad2c4d8f8095e812a8b29f8753ebc1ac5c857a7c89",
+      "transformation": "Checkpoint paths are relative to this version directory; selection metrics and model hashes are retained."
+    },
+    "v4/FINAL_RESULTS.md": {
+      "sha256": "cfbd4cf4a1d04e546f8afa89f9c69e3fae52c698192abf51a2d395aa12a175df",
+      "bytes": 6150,
+      "source": "scenario/generated/final-v4-results/FINAL_RESULTS.md",
+      "source_sha256": "cfbd4cf4a1d04e546f8afa89f9c69e3fae52c698192abf51a2d395aa12a175df"
+    },
+    "v4/KEY_TAKEAWAYS.md": {
+      "sha256": "e82f12546c78188ce0c9409ff514cd3e9c9adecc7222dad1490e86f0dbcfbd36",
+      "bytes": 3080,
+      "source": "scenario/generated/final-v4-results/KEY_TAKEAWAYS.md",
+      "source_sha256": "e82f12546c78188ce0c9409ff514cd3e9c9adecc7222dad1490e86f0dbcfbd36"
+    },
+    "v4/AUDIT_RESULTS.json": {
+      "sha256": "694da07469d0b8dbaf29c8814422cb26ef8f40af84dc7104bf3701e0214ea963",
+      "bytes": 588,
+      "source": "scenario/generated/final-v4-results/AUDIT_RESULTS.json",
+      "source_sha256": "694da07469d0b8dbaf29c8814422cb26ef8f40af84dc7104bf3701e0214ea963"
+    },
+    "v4/final-summary.csv": {
+      "sha256": "772a93cd75517dfb22ad140e8ef0828dacddb840c16be5d51a1c5a33c38dc3a9",
+      "bytes": 19520,
+      "source": "scenario/generated/final-v4-results/final-summary.csv",
+      "source_sha256": "772a93cd75517dfb22ad140e8ef0828dacddb840c16be5d51a1c5a33c38dc3a9"
+    },
+    "v4/per-crossing-p95.csv": {
+      "sha256": "9ec1028de1dcc3f0d6212c2695d5b12566112459abd724bcd673fe93c3a7c184",
+      "bytes": 17755,
+      "source": "scenario/generated/final-v4-results/per-crossing-p95.csv",
+      "source_sha256": "9ec1028de1dcc3f0d6212c2695d5b12566112459abd724bcd673fe93c3a7c184"
+    },
+    "v4/actuated-comparison.csv": {
+      "sha256": "3ff4b5653435e9cf4e4cf348f9c72b6ff5d54c59b162dc539795930dab24a583",
+      "bytes": 12951,
+      "source": "scenario/generated/final-v4-results/actuated-comparison.csv",
+      "source_sha256": "3ff4b5653435e9cf4e4cf348f9c72b6ff5d54c59b162dc539795930dab24a583"
+    },
+    "v4/v3-comparison.csv": {
+      "sha256": "c6a28f6a294bebb2c093476c94b049b9969f3ea7c5425bafe77077778ff94df8",
+      "bytes": 24844,
+      "source": "scenario/generated/final-v4-results/v3-comparison.csv",
+      "source_sha256": "c6a28f6a294bebb2c093476c94b049b9969f3ea7c5425bafe77077778ff94df8"
+    },
+    "v4/comparison-summary.csv": {
+      "sha256": "1040730a5d94d57773e2a53ee557648318e6bbc0b56aae4cbd414e6badb51f83",
+      "bytes": 11116,
+      "source": "scenario/generated/final-v4-results/comparison-summary.csv",
+      "source_sha256": "1040730a5d94d57773e2a53ee557648318e6bbc0b56aae4cbd414e6badb51f83"
+    },
+    "v4/per-crossing-v3-comparison.csv": {
+      "sha256": "115acda45ba03aac73e803c46ed6fd3ebe04195db0b6a0a15bcf8db0d8feed6e",
+      "bytes": 17465,
+      "source": "scenario/generated/final-v4-results/per-crossing-v3-comparison.csv",
+      "source_sha256": "115acda45ba03aac73e803c46ed6fd3ebe04195db0b6a0a15bcf8db0d8feed6e"
+    },
+    "v4/baseline-reuse.csv": {
+      "sha256": "7d6e5901a16daffe25164ab50a50d8a3dae2586292ade34c960df62cc75c22bd",
+      "bytes": 20056,
+      "source": "scenario/generated/final-v4-results/baseline-reuse.csv",
+      "source_sha256": "7d6e5901a16daffe25164ab50a50d8a3dae2586292ade34c960df62cc75c22bd"
+    },
+    "v4/final-primary-results.csv": {
+      "sha256": "930f3164e15ad8cda165ba7cca6e239b67a9901803d508693df316327d2d7c09",
+      "bytes": 20372,
+      "source": "scenario/generated/final-v4-results/final-primary-results.csv",
+      "source_sha256": "2113df7eaedb85a29c8db9ae792764f649e3cc8068809acbfd392ea5a7d41613",
+      "transformation": "Metric cells are unchanged; checkpoint paths are relative to this version directory and CSV line endings are normalized."
+    },
+    "v4/final-demand-sweep.csv": {
+      "sha256": "c59abfadd9852093ff9995a1f492b73bd0f716eb6765489785e2219155c40448",
+      "bytes": 39694,
+      "source": "scenario/generated/final-v4-results/final-demand-sweep.csv",
+      "source_sha256": "8921e6acbcca39a5a22d6954aa2de3905d39920d8a065f0a0799005cd530f187",
+      "transformation": "Metric cells are unchanged; checkpoint paths are relative to this version directory and CSV line endings are normalized."
+    },
+    "v4/final-slow-pedestrian-results.csv": {
+      "sha256": "ba18e735e314c36054604dead730fd003c4868c2098a3e4638b3fbdd490eb7f0",
+      "bytes": 20348,
+      "source": "scenario/generated/final-v4-results/final-slow-pedestrian-results.csv",
+      "source_sha256": "d75f2dc00a318c8bccc460d54e390795452dc027ee49ef14cd73a8b226d1284f",
+      "transformation": "Metric cells are unchanged; checkpoint paths are relative to this version directory and CSV line endings are normalized."
+    },
+    "v4/validation-baseline.csv": {
+      "sha256": "b993bf0cd05b0c9993c4df9fd6021d8c92765ac685274c2aed0307e65fbc7d4c",
+      "bytes": 3052,
+      "source": "scenario/generated/final-v4-results/validation-baseline/validation-baseline.csv",
+      "source_sha256": "b993bf0cd05b0c9993c4df9fd6021d8c92765ac685274c2aed0307e65fbc7d4c"
+    },
+    "v4/training/v4-400ep-seed100/mappo-vehicle-actions2-seed100/checkpoint-metrics.csv": {
+      "sha256": "15e39bcd1cbdd7b72bef41317806518e95394925ccc1d9d5fd54bb9a82b9ff06",
+      "bytes": 18171,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed100/mappo-vehicle-actions2-seed100/checkpoint-metrics.csv",
+      "source_sha256": "15e39bcd1cbdd7b72bef41317806518e95394925ccc1d9d5fd54bb9a82b9ff06"
+    },
+    "v4/training/v4-400ep-seed100/mappo-vehicle-actions2-seed100/training-complete.json": {
+      "sha256": "67b7d5e349dceeb082d8f04d5ad697b30a743c820e51d7db22315b33b2196d12",
+      "bytes": 211,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed100/mappo-vehicle-actions2-seed100/training-complete.json",
+      "source_sha256": "67b7d5e349dceeb082d8f04d5ad697b30a743c820e51d7db22315b33b2196d12"
+    },
+    "v4/training/v4-400ep-seed100/mappo-vehicle-actions2-seed100/training.log": {
+      "sha256": "45ee5dbef77c30cc3acc9c8f2e1701bb50594f7be0bc40592c71413d53f68f20",
+      "bytes": 12692,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed100/mappo-vehicle-actions2-seed100/training.log",
+      "source_sha256": "45ee5dbef77c30cc3acc9c8f2e1701bb50594f7be0bc40592c71413d53f68f20"
+    },
+    "v4/training/v4-400ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/checkpoint-metrics.csv": {
+      "sha256": "4d3dfaf817f33e7d3aaf42c998b39df83942f62bfc0f7543687a6afc834f8c1c",
+      "bytes": 18444,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/checkpoint-metrics.csv",
+      "source_sha256": "4d3dfaf817f33e7d3aaf42c998b39df83942f62bfc0f7543687a6afc834f8c1c"
+    },
+    "v4/training/v4-400ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/training-complete.json": {
+      "sha256": "b170bbe11622b355b5643e4d69e438a95363e17714c6754fd41bdfe158a1629e",
+      "bytes": 220,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/training-complete.json",
+      "source_sha256": "b170bbe11622b355b5643e4d69e438a95363e17714c6754fd41bdfe158a1629e"
+    },
+    "v4/training/v4-400ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/training.log": {
+      "sha256": "c202c6c08b36c105c84cd7cd849570eb5d4629e62c12a69d48e340c347250009",
+      "bytes": 12694,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/training.log",
+      "source_sha256": "c202c6c08b36c105c84cd7cd849570eb5d4629e62c12a69d48e340c347250009"
+    },
+    "v4/training/v4-400ep-seed200/mappo-vehicle-actions2-seed200/checkpoint-metrics.csv": {
+      "sha256": "0153c5503ac80294d3de1acb2c643e5b29659fab3f245541330cc07cccaf3276",
+      "bytes": 18170,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed200/mappo-vehicle-actions2-seed200/checkpoint-metrics.csv",
+      "source_sha256": "0153c5503ac80294d3de1acb2c643e5b29659fab3f245541330cc07cccaf3276"
+    },
+    "v4/training/v4-400ep-seed200/mappo-vehicle-actions2-seed200/training-complete.json": {
+      "sha256": "9375f2c100564e0f2e9547639f64820f78fb7aa28535722c1eeab00b48943ac4",
+      "bytes": 211,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed200/mappo-vehicle-actions2-seed200/training-complete.json",
+      "source_sha256": "9375f2c100564e0f2e9547639f64820f78fb7aa28535722c1eeab00b48943ac4"
+    },
+    "v4/training/v4-400ep-seed200/mappo-vehicle-actions2-seed200/training.log": {
+      "sha256": "2c273997a068ecea20454f2af2005eed302b4d857f1eba0f48a13ff64be634fe",
+      "bytes": 12692,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed200/mappo-vehicle-actions2-seed200/training.log",
+      "source_sha256": "2c273997a068ecea20454f2af2005eed302b4d857f1eba0f48a13ff64be634fe"
+    },
+    "v4/training/v4-400ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/checkpoint-metrics.csv": {
+      "sha256": "75566f40e030a19b5b06159dbb4c4b30d4ce493ed0ab0dd06bd986d6649584bb",
+      "bytes": 18464,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/checkpoint-metrics.csv",
+      "source_sha256": "75566f40e030a19b5b06159dbb4c4b30d4ce493ed0ab0dd06bd986d6649584bb"
+    },
+    "v4/training/v4-400ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/training-complete.json": {
+      "sha256": "53412c7049fd51a96e4c2f44840423097c40e221b779d87af81d33ba74c479a7",
+      "bytes": 222,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/training-complete.json",
+      "source_sha256": "53412c7049fd51a96e4c2f44840423097c40e221b779d87af81d33ba74c479a7"
+    },
+    "v4/training/v4-400ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/training.log": {
+      "sha256": "349f58cb5411d95288472bf5a08367cddfb4f448eb433903c05acfc473a6497f",
+      "bytes": 12693,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/training.log",
+      "source_sha256": "349f58cb5411d95288472bf5a08367cddfb4f448eb433903c05acfc473a6497f"
+    },
+    "v4/training/v4-400ep-seed300/mappo-vehicle-actions2-seed300/checkpoint-metrics.csv": {
+      "sha256": "05eb6764486f9e163d2ad5d36fb51e1fe447625898a7749b0cd02bf1602fb257",
+      "bytes": 18208,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed300/mappo-vehicle-actions2-seed300/checkpoint-metrics.csv",
+      "source_sha256": "05eb6764486f9e163d2ad5d36fb51e1fe447625898a7749b0cd02bf1602fb257"
+    },
+    "v4/training/v4-400ep-seed300/mappo-vehicle-actions2-seed300/training-complete.json": {
+      "sha256": "553266efd15cb879356121f11f40e963701ff8beaf361ea416724499512672dd",
+      "bytes": 211,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed300/mappo-vehicle-actions2-seed300/training-complete.json",
+      "source_sha256": "553266efd15cb879356121f11f40e963701ff8beaf361ea416724499512672dd"
+    },
+    "v4/training/v4-400ep-seed300/mappo-vehicle-actions2-seed300/training.log": {
+      "sha256": "609f746af45f07c77261ff6c008bdf725f73d163791445821158871ea1a8a0e7",
+      "bytes": 12692,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed300/mappo-vehicle-actions2-seed300/training.log",
+      "source_sha256": "609f746af45f07c77261ff6c008bdf725f73d163791445821158871ea1a8a0e7"
+    },
+    "v4/training/v4-400ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/checkpoint-metrics.csv": {
+      "sha256": "ee7aaba11b668f0d9d04a2a6f4c790c49d76d7e3f3776015eda7d21c0055a2dc",
+      "bytes": 18472,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/checkpoint-metrics.csv",
+      "source_sha256": "ee7aaba11b668f0d9d04a2a6f4c790c49d76d7e3f3776015eda7d21c0055a2dc"
+    },
+    "v4/training/v4-400ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/training-complete.json": {
+      "sha256": "90df6e4b4cfd33c37c4bb89fc9c4cfc84569311774f3025629b301cf1ee0e199",
+      "bytes": 222,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/training-complete.json",
+      "source_sha256": "90df6e4b4cfd33c37c4bb89fc9c4cfc84569311774f3025629b301cf1ee0e199"
+    },
+    "v4/training/v4-400ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/training.log": {
+      "sha256": "027475b66a061ed28e3fb8114245ca068b3d1bb35b1eb8337fa4ddd269fb2ae5",
+      "bytes": 12697,
+      "source": "scenario/generated/final-v4-results/training/v4-400ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/training.log",
+      "source_sha256": "027475b66a061ed28e3fb8114245ca068b3d1bb35b1eb8337fa4ddd269fb2ae5"
+    },
+    "v4/source.zip": {
+      "sha256": "6e9416509311ea07d52d4d3f0177d8242a23eb9e42fd2a444ea4fd5f523375e4",
+      "bytes": 64704,
+      "source": "scenario/generated/final-v4-results/v4-source-upload.zip",
+      "source_sha256": "cdde6e986b1dca8e914a0491f4f5a4ae62cafe2f10648a0af68422c8b9b528b1",
+      "transformation": "Python implementation, tests, and dependency files are preserved byte-for-byte from the archived version."
+    },
+    "v5/checkpoints/mappo-vehicle-actions2-seed100/episode-250.pt": {
+      "sha256": "5cf6ed4f87181f84c796b1df5de5e3aaaaf5818302d4e8583a5b604a4d2e3a73",
+      "bytes": 183819,
+      "source": "scenario/generated/final-v5-results/checkpoints/mappo-vehicle-actions2-seed100/episode-250.pt",
+      "source_sha256": "5cf6ed4f87181f84c796b1df5de5e3aaaaf5818302d4e8583a5b604a4d2e3a73"
+    },
+    "v5/checkpoints/mappo-vehicle_pedestrian-actions2-seed100/episode-200.pt": {
+      "sha256": "ac4474bc5436c2631099e9da4a4aa3c59ccb7cbba2540a0a5bcf6fab34d7a44e",
+      "bytes": 183819,
+      "source": "scenario/generated/final-v5-results/checkpoints/mappo-vehicle_pedestrian-actions2-seed100/episode-200.pt",
+      "source_sha256": "ac4474bc5436c2631099e9da4a4aa3c59ccb7cbba2540a0a5bcf6fab34d7a44e"
+    },
+    "v5/checkpoints/mappo-vehicle-actions2-seed200/episode-0-bc.pt": {
+      "sha256": "e784cacb864b88c16ba8a17f1aa600d621f95c7cae7fe47f62ac2b240283217a",
+      "bytes": 183841,
+      "source": "scenario/generated/final-v5-results/checkpoints/mappo-vehicle-actions2-seed200/episode-0-bc.pt",
+      "source_sha256": "e784cacb864b88c16ba8a17f1aa600d621f95c7cae7fe47f62ac2b240283217a"
+    },
+    "v5/checkpoints/mappo-vehicle_pedestrian-actions2-seed200/episode-0-bc.pt": {
+      "sha256": "771265d9e0145df7b03e61a657f41852d2af996cd084c95ae541e8e382c18578",
+      "bytes": 183841,
+      "source": "scenario/generated/final-v5-results/checkpoints/mappo-vehicle_pedestrian-actions2-seed200/episode-0-bc.pt",
+      "source_sha256": "771265d9e0145df7b03e61a657f41852d2af996cd084c95ae541e8e382c18578"
+    },
+    "v5/checkpoints/mappo-vehicle-actions2-seed300/episode-100.pt": {
+      "sha256": "03b2498fb98462c10fcb9a379a73f3193ceb762644c1535da37f104f8563f097",
+      "bytes": 183819,
+      "source": "scenario/generated/final-v5-results/checkpoints/mappo-vehicle-actions2-seed300/episode-100.pt",
+      "source_sha256": "03b2498fb98462c10fcb9a379a73f3193ceb762644c1535da37f104f8563f097"
+    },
+    "v5/checkpoints/mappo-vehicle_pedestrian-actions2-seed300/episode-100.pt": {
+      "sha256": "cb5a74bb1257ebf04e625c6e2eb3e4ba1e1d9e6e337fc65c86b3d5aa4f20f265",
+      "bytes": 183819,
+      "source": "scenario/generated/final-v5-results/checkpoints/mappo-vehicle_pedestrian-actions2-seed300/episode-100.pt",
+      "source_sha256": "cb5a74bb1257ebf04e625c6e2eb3e4ba1e1d9e6e337fc65c86b3d5aa4f20f265"
+    },
+    "v5/selected-checkpoints.json": {
+      "sha256": "b36680013bf91dbeb0b178d13f4176b347c521b2f079f00a882ec47729f7392f",
+      "bytes": 2712,
+      "source": "scenario/generated/final-v5-results/selected-checkpoints-local.json",
+      "source_sha256": "4fa2c63b94a2069f23af7c7e048d6b5d242ccd4d2acdc619f75dac26f65984fe",
+      "transformation": "Checkpoint paths are relative to this version directory; selection metrics and model hashes are retained."
+    },
+    "v5/FINAL_RESULTS.md": {
+      "sha256": "b3f6391379eee848b9cd6069a929fea0ac1777aaa7d57bd86eb325f013844699",
+      "bytes": 11477,
+      "source": "scenario/generated/final-v5-results/FINAL_RESULTS.md",
+      "source_sha256": "b3f6391379eee848b9cd6069a929fea0ac1777aaa7d57bd86eb325f013844699"
+    },
+    "v5/KEY_TAKEAWAYS.md": {
+      "sha256": "8adc3f61b44d32a9a91ded4e5446b32d1179ef49959257bfb60697964f9512cc",
+      "bytes": 4043,
+      "source": "scenario/generated/final-v5-results/KEY_TAKEAWAYS.md",
+      "source_sha256": "8adc3f61b44d32a9a91ded4e5446b32d1179ef49959257bfb60697964f9512cc"
+    },
+    "v5/AUDIT_RESULTS.json": {
+      "sha256": "77f9c9bcd70975cb1dae332d0d6086cf8575ecc9016625d687f853208e963cc1",
+      "bytes": 1762,
+      "source": "scenario/generated/final-v5-results/AUDIT_RESULTS.json",
+      "source_sha256": "77f9c9bcd70975cb1dae332d0d6086cf8575ecc9016625d687f853208e963cc1"
+    },
+    "v5/final-summary.csv": {
+      "sha256": "08e423c91a51f4ae63f6017ef9aacc2c64b0bd7596ead0f34cfeb2a54722cca0",
+      "bytes": 19500,
+      "source": "scenario/generated/final-v5-results/final-summary.csv",
+      "source_sha256": "08e423c91a51f4ae63f6017ef9aacc2c64b0bd7596ead0f34cfeb2a54722cca0"
+    },
+    "v5/per-crossing-p95.csv": {
+      "sha256": "c34c66320ab2f693cfd6dd425c9ce5d2a7468690ca8c650c759f98c0b8be3cd1",
+      "bytes": 17752,
+      "source": "scenario/generated/final-v5-results/per-crossing-p95.csv",
+      "source_sha256": "c34c66320ab2f693cfd6dd425c9ce5d2a7468690ca8c650c759f98c0b8be3cd1"
+    },
+    "v5/actuated-comparison.csv": {
+      "sha256": "1c9dcacba0b496c820f630db5c01a4cc02818a4b55bcaf376f243f0dba04ddd6",
+      "bytes": 12938,
+      "source": "scenario/generated/final-v5-results/actuated-comparison.csv",
+      "source_sha256": "1c9dcacba0b496c820f630db5c01a4cc02818a4b55bcaf376f243f0dba04ddd6"
+    },
+    "v5/comparison-summary.csv": {
+      "sha256": "faf659603a3908e16b51d1b8d72d5fe91c5e86cb0f9e74b2bcb415dc14d3c2f0",
+      "bytes": 14913,
+      "source": "scenario/generated/final-v5-results/comparison-summary.csv",
+      "source_sha256": "faf659603a3908e16b51d1b8d72d5fe91c5e86cb0f9e74b2bcb415dc14d3c2f0"
+    },
+    "v5/prior-comparison.csv": {
+      "sha256": "09d6ebb05483a32458e72884e56bde9828e6509c4da1e200bc4eda324fab6ee0",
+      "bytes": 28587,
+      "source": "scenario/generated/final-v5-results/prior-comparison.csv",
+      "source_sha256": "09d6ebb05483a32458e72884e56bde9828e6509c4da1e200bc4eda324fab6ee0"
+    },
+    "v5/per-crossing-v4-comparison.csv": {
+      "sha256": "7c5fc4991bafb4c9829edc2c33668036545fcc4a0c290e366dd5792ec57a0799",
+      "bytes": 23008,
+      "source": "scenario/generated/final-v5-results/per-crossing-v4-comparison.csv",
+      "source_sha256": "7c5fc4991bafb4c9829edc2c33668036545fcc4a0c290e366dd5792ec57a0799"
+    },
+    "v5/bc-primary-summary.csv": {
+      "sha256": "aac58b30ae52df435b96c38063d489308124348d454a74c8dd1f4e9fa4e7457d",
+      "bytes": 2709,
+      "source": "scenario/generated/final-v5-results/bc-primary-summary.csv",
+      "source_sha256": "aac58b30ae52df435b96c38063d489308124348d454a74c8dd1f4e9fa4e7457d"
+    },
+    "v5/bc-quality.csv": {
+      "sha256": "6eb762740f5cffac859b29dfaf54e47dd63a18a33cb72a09a64e2a7e00831394",
+      "bytes": 967,
+      "source": "scenario/generated/final-v5-results/bc-quality.csv",
+      "source_sha256": "6eb762740f5cffac859b29dfaf54e47dd63a18a33cb72a09a64e2a7e00831394"
+    },
+    "v5/bc-vs-rl-validation.csv": {
+      "sha256": "160f32cb9f66c622e52607cdbec57612a8f94e37789ce6a592fa8f78f077da6f",
+      "bytes": 4610,
+      "source": "scenario/generated/final-v5-results/bc-vs-rl-validation.csv",
+      "source_sha256": "160f32cb9f66c622e52607cdbec57612a8f94e37789ce6a592fa8f78f077da6f"
+    },
+    "v5/bc-vs-selected-primary.csv": {
+      "sha256": "47c8b1b97771f9db451fa090736d2150fb459e871c5c82cf4c53e094aee24b1c",
+      "bytes": 1716,
+      "source": "scenario/generated/final-v5-results/bc-vs-selected-primary.csv",
+      "source_sha256": "47c8b1b97771f9db451fa090736d2150fb459e871c5c82cf4c53e094aee24b1c"
+    },
+    "v5/bc-vs-selected-validation.csv": {
+      "sha256": "900ec4135ef16967c379dce9e9a95c510910aad00921d05952656cb7afed9583",
+      "bytes": 1194,
+      "source": "scenario/generated/final-v5-results/bc-vs-selected-validation.csv",
+      "source_sha256": "900ec4135ef16967c379dce9e9a95c510910aad00921d05952656cb7afed9583"
+    },
+    "v5/validation-candidates.csv": {
+      "sha256": "68034c94b6c5b37d1732b86fd27cbf93c397c3809f1bcff950f1654cc567ff69",
+      "bytes": 7939,
+      "source": "scenario/generated/final-v5-results/validation-candidates.csv",
+      "source_sha256": "68034c94b6c5b37d1732b86fd27cbf93c397c3809f1bcff950f1654cc567ff69"
+    },
+    "v5/baseline-reuse.csv": {
+      "sha256": "7d6e5901a16daffe25164ab50a50d8a3dae2586292ade34c960df62cc75c22bd",
+      "bytes": 20056,
+      "source": "scenario/generated/final-v5-results/baseline-reuse.csv",
+      "source_sha256": "7d6e5901a16daffe25164ab50a50d8a3dae2586292ade34c960df62cc75c22bd"
+    },
+    "v5/final-primary-results.csv": {
+      "sha256": "9bea6d5f727519df0ce3dc39e70863844fef0a1639d6113636b0262a4508cfc1",
+      "bytes": 20431,
+      "source": "scenario/generated/final-v5-results/final-primary-results.csv",
+      "source_sha256": "6562983a5e6f989f77fd4665f22cd5d4c0a0592151f72e44a499bde8904ba068",
+      "transformation": "Metric cells are unchanged; checkpoint paths are relative to this version directory and CSV line endings are normalized."
+    },
+    "v5/final-demand-sweep.csv": {
+      "sha256": "0906cdd2dbc455f772fd15e0868a7cf209e6aba84e2d805276154be49ac2adfa",
+      "bytes": 39746,
+      "source": "scenario/generated/final-v5-results/final-demand-sweep.csv",
+      "source_sha256": "ce2e2fb74a67b67b531deeced7ea69dbede75a025ebf69ea6491bd43e22df365",
+      "transformation": "Metric cells are unchanged; checkpoint paths are relative to this version directory and CSV line endings are normalized."
+    },
+    "v5/final-slow-pedestrian-results.csv": {
+      "sha256": "4158a997662d1762d3396914cd083c32ef03a6bc182aeca45618361fcc49d0dd",
+      "bytes": 20348,
+      "source": "scenario/generated/final-v5-results/final-slow-pedestrian-results.csv",
+      "source_sha256": "d98f556298d8d53a227ed87ab13ec7133895e573a26ccf5f1f3b2d070613f153",
+      "transformation": "Metric cells are unchanged; checkpoint paths are relative to this version directory and CSV line endings are normalized."
+    },
+    "v5/bc-primary-results.csv": {
+      "sha256": "048a92104591a3471e18800f7911cf197d3c695e0850cbb931fa478c19a82a54",
+      "bytes": 15864,
+      "source": "scenario/generated/final-v5-results/bc-primary-results.csv",
+      "source_sha256": "c51ab341dd486ba1b970f8c1095156ea32a42cf6fa0068503ed8dc0ea6359625",
+      "transformation": "Metric cells are unchanged; checkpoint paths are relative to this version directory and CSV line endings are normalized."
+    },
+    "v5/validation-baseline.csv": {
+      "sha256": "b993bf0cd05b0c9993c4df9fd6021d8c92765ac685274c2aed0307e65fbc7d4c",
+      "bytes": 3052,
+      "source": "scenario/generated/final-v5-results/validation-baseline/validation-baseline.csv",
+      "source_sha256": "b993bf0cd05b0c9993c4df9fd6021d8c92765ac685274c2aed0307e65fbc7d4c"
+    },
+    "v5/training/v5-250ep-seed100/mappo-vehicle-actions2-seed100/bc-metrics.json": {
+      "sha256": "92aced20d56aa0cc626f3d15e5c985feded1cf3db9c50371f43e19a3ec70d99f",
+      "bytes": 3990,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed100/mappo-vehicle-actions2-seed100/bc-metrics.json",
+      "source_sha256": "92aced20d56aa0cc626f3d15e5c985feded1cf3db9c50371f43e19a3ec70d99f"
+    },
+    "v5/training/v5-250ep-seed100/mappo-vehicle-actions2-seed100/checkpoint-metrics.csv": {
+      "sha256": "29d9b82703f5d2b1d7d8d08d106d6dd45300d92725134a7305025806a11f2d9d",
+      "bytes": 13813,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed100/mappo-vehicle-actions2-seed100/checkpoint-metrics.csv",
+      "source_sha256": "29d9b82703f5d2b1d7d8d08d106d6dd45300d92725134a7305025806a11f2d9d"
+    },
+    "v5/training/v5-250ep-seed100/mappo-vehicle-actions2-seed100/training-complete.json": {
+      "sha256": "3292ef3d36124646ed31a3481469e7a027709d3641dc80ba63c490519ded60b2",
+      "bytes": 279,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed100/mappo-vehicle-actions2-seed100/training-complete.json",
+      "source_sha256": "3292ef3d36124646ed31a3481469e7a027709d3641dc80ba63c490519ded60b2"
+    },
+    "v5/training/v5-250ep-seed100/mappo-vehicle-actions2-seed100/training.log": {
+      "sha256": "ee14405e367a0786bc554f5364a128f2983e5a5c3a144eb5b4ae0f6eeda57fda",
+      "bytes": 8353,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed100/mappo-vehicle-actions2-seed100/training.log",
+      "source_sha256": "ee14405e367a0786bc554f5364a128f2983e5a5c3a144eb5b4ae0f6eeda57fda"
+    },
+    "v5/training/v5-250ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/bc-metrics.json": {
+      "sha256": "e24d5533050c95f0e19cdaffd2e205d292bb11f4d15caf71702d06dcd50398c0",
+      "bytes": 3988,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/bc-metrics.json",
+      "source_sha256": "e24d5533050c95f0e19cdaffd2e205d292bb11f4d15caf71702d06dcd50398c0"
+    },
+    "v5/training/v5-250ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/checkpoint-metrics.csv": {
+      "sha256": "bc6b45637cace302272f940250fbd5a350013a687506f76226522f6a47a7d308",
+      "bytes": 14050,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/checkpoint-metrics.csv",
+      "source_sha256": "bc6b45637cace302272f940250fbd5a350013a687506f76226522f6a47a7d308"
+    },
+    "v5/training/v5-250ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/training-complete.json": {
+      "sha256": "da976812eb98a4fbc692ac0739ef5f6bb0f8cd822a140aed180cad88144cd723",
+      "bytes": 289,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/training-complete.json",
+      "source_sha256": "da976812eb98a4fbc692ac0739ef5f6bb0f8cd822a140aed180cad88144cd723"
+    },
+    "v5/training/v5-250ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/training.log": {
+      "sha256": "2a4b403af17b24f83efb84efb35bb7ac83b212fed327668f11513c5659bfaef8",
+      "bytes": 8353,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/training.log",
+      "source_sha256": "2a4b403af17b24f83efb84efb35bb7ac83b212fed327668f11513c5659bfaef8"
+    },
+    "v5/training/v5-250ep-seed200/mappo-vehicle-actions2-seed200/bc-metrics.json": {
+      "sha256": "dea12f1499083d9c8ad5448bbbcb39715290145c06e281a3aa28009969f7427e",
+      "bytes": 3989,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed200/mappo-vehicle-actions2-seed200/bc-metrics.json",
+      "source_sha256": "dea12f1499083d9c8ad5448bbbcb39715290145c06e281a3aa28009969f7427e"
+    },
+    "v5/training/v5-250ep-seed200/mappo-vehicle-actions2-seed200/checkpoint-metrics.csv": {
+      "sha256": "2d52abc2e0102fb78cd84735739688275d82db93a1ab0dbbe3d96d300b83ca8c",
+      "bytes": 13847,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed200/mappo-vehicle-actions2-seed200/checkpoint-metrics.csv",
+      "source_sha256": "2d52abc2e0102fb78cd84735739688275d82db93a1ab0dbbe3d96d300b83ca8c"
+    },
+    "v5/training/v5-250ep-seed200/mappo-vehicle-actions2-seed200/training-complete.json": {
+      "sha256": "084e97613390784388756375c79b8c036bcc93877591647f035824d0b1386413",
+      "bytes": 279,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed200/mappo-vehicle-actions2-seed200/training-complete.json",
+      "source_sha256": "084e97613390784388756375c79b8c036bcc93877591647f035824d0b1386413"
+    },
+    "v5/training/v5-250ep-seed200/mappo-vehicle-actions2-seed200/training.log": {
+      "sha256": "85292490dde31bf0d88a335fa4a0e485af6f846a9cd83c08fdc6c40d4dd6802a",
+      "bytes": 8353,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed200/mappo-vehicle-actions2-seed200/training.log",
+      "source_sha256": "85292490dde31bf0d88a335fa4a0e485af6f846a9cd83c08fdc6c40d4dd6802a"
+    },
+    "v5/training/v5-250ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/bc-metrics.json": {
+      "sha256": "a82b30d0b038f87c363dd1e43bb37ecdedeea55fc63c2ac4d432150b81fc3e39",
+      "bytes": 3991,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/bc-metrics.json",
+      "source_sha256": "a82b30d0b038f87c363dd1e43bb37ecdedeea55fc63c2ac4d432150b81fc3e39"
+    },
+    "v5/training/v5-250ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/checkpoint-metrics.csv": {
+      "sha256": "9969da7365dced005821e9b8fb4ef53433da153de5d367168de4d30e668fe607",
+      "bytes": 14021,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/checkpoint-metrics.csv",
+      "source_sha256": "9969da7365dced005821e9b8fb4ef53433da153de5d367168de4d30e668fe607"
+    },
+    "v5/training/v5-250ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/training-complete.json": {
+      "sha256": "f2d23b67cb49b855d3aa6490f5f3caad9df80e41d2360bc1eb985774a5f290e3",
+      "bytes": 290,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/training-complete.json",
+      "source_sha256": "f2d23b67cb49b855d3aa6490f5f3caad9df80e41d2360bc1eb985774a5f290e3"
+    },
+    "v5/training/v5-250ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/training.log": {
+      "sha256": "f833c64e1f605caa68a1018282e0ccc96f76e78ca4c42441d8fc0326f67436e7",
+      "bytes": 8358,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/training.log",
+      "source_sha256": "f833c64e1f605caa68a1018282e0ccc96f76e78ca4c42441d8fc0326f67436e7"
+    },
+    "v5/training/v5-250ep-seed300/mappo-vehicle-actions2-seed300/bc-metrics.json": {
+      "sha256": "10dacd35886e693a3db93363d6e4397524ae1221bdc7bb6c2fa416234fe36575",
+      "bytes": 4000,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed300/mappo-vehicle-actions2-seed300/bc-metrics.json",
+      "source_sha256": "10dacd35886e693a3db93363d6e4397524ae1221bdc7bb6c2fa416234fe36575"
+    },
+    "v5/training/v5-250ep-seed300/mappo-vehicle-actions2-seed300/checkpoint-metrics.csv": {
+      "sha256": "370ebc899e238f13def3762af4dc249406129240efd596225ad4b00a1f002757",
+      "bytes": 13839,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed300/mappo-vehicle-actions2-seed300/checkpoint-metrics.csv",
+      "source_sha256": "370ebc899e238f13def3762af4dc249406129240efd596225ad4b00a1f002757"
+    },
+    "v5/training/v5-250ep-seed300/mappo-vehicle-actions2-seed300/training-complete.json": {
+      "sha256": "0a418427fbfccf534d3a35a14b86c7368329c8090afeb77268752a04082bfe85",
+      "bytes": 278,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed300/mappo-vehicle-actions2-seed300/training-complete.json",
+      "source_sha256": "0a418427fbfccf534d3a35a14b86c7368329c8090afeb77268752a04082bfe85"
+    },
+    "v5/training/v5-250ep-seed300/mappo-vehicle-actions2-seed300/training.log": {
+      "sha256": "1432314cdb0aee3baa7282ec286b05a58e98ee69cb7adfc8754b177e7e4f44d3",
+      "bytes": 8353,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed300/mappo-vehicle-actions2-seed300/training.log",
+      "source_sha256": "1432314cdb0aee3baa7282ec286b05a58e98ee69cb7adfc8754b177e7e4f44d3"
+    },
+    "v5/training/v5-250ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/bc-metrics.json": {
+      "sha256": "1ed4b30b2417473176165384ddd210d5e4e3c3b9b4c5d4c626749441bee69a00",
+      "bytes": 3994,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/bc-metrics.json",
+      "source_sha256": "1ed4b30b2417473176165384ddd210d5e4e3c3b9b4c5d4c626749441bee69a00"
+    },
+    "v5/training/v5-250ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/checkpoint-metrics.csv": {
+      "sha256": "1b6853a579b996783c2c8e265223adc17a5248ea8ccdacf198be55dec1377ecd",
+      "bytes": 14036,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/checkpoint-metrics.csv",
+      "source_sha256": "1b6853a579b996783c2c8e265223adc17a5248ea8ccdacf198be55dec1377ecd"
+    },
+    "v5/training/v5-250ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/training-complete.json": {
+      "sha256": "a26f2a87c749a80b27258e14e69af247fb231ca8df6f10f6737add6ef192a951",
+      "bytes": 289,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/training-complete.json",
+      "source_sha256": "a26f2a87c749a80b27258e14e69af247fb231ca8df6f10f6737add6ef192a951"
+    },
+    "v5/training/v5-250ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/training.log": {
+      "sha256": "e420e8866652c4b0f0f9537e326d32eae64938de145bc6bfe7b359e556324ac6",
+      "bytes": 8354,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/training.log",
+      "source_sha256": "e420e8866652c4b0f0f9537e326d32eae64938de145bc6bfe7b359e556324ac6"
+    },
+    "v5/bc-checkpoints/mappo-vehicle-actions2-seed100/episode-0-bc.pt": {
+      "sha256": "737b42649581154f747a8691d7f3be762ab17d7c789407066de8f820f1f33269",
+      "bytes": 183841,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed100/mappo-vehicle-actions2-seed100/snapshots/episode-0-bc.pt",
+      "source_sha256": "737b42649581154f747a8691d7f3be762ab17d7c789407066de8f820f1f33269"
+    },
+    "v5/bc-checkpoints/mappo-vehicle_pedestrian-actions2-seed100/episode-0-bc.pt": {
+      "sha256": "e64812f5cdc3ce68c81de16f5dba15b91022721ff9239fb73681dbe303630c45",
+      "bytes": 183841,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/snapshots/episode-0-bc.pt",
+      "source_sha256": "e64812f5cdc3ce68c81de16f5dba15b91022721ff9239fb73681dbe303630c45"
+    },
+    "v5/bc-checkpoints/mappo-vehicle-actions2-seed200/episode-0-bc.pt": {
+      "sha256": "e784cacb864b88c16ba8a17f1aa600d621f95c7cae7fe47f62ac2b240283217a",
+      "bytes": 183841,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed200/mappo-vehicle-actions2-seed200/snapshots/episode-0-bc.pt",
+      "source_sha256": "e784cacb864b88c16ba8a17f1aa600d621f95c7cae7fe47f62ac2b240283217a"
+    },
+    "v5/bc-checkpoints/mappo-vehicle_pedestrian-actions2-seed200/episode-0-bc.pt": {
+      "sha256": "771265d9e0145df7b03e61a657f41852d2af996cd084c95ae541e8e382c18578",
+      "bytes": 183841,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/snapshots/episode-0-bc.pt",
+      "source_sha256": "771265d9e0145df7b03e61a657f41852d2af996cd084c95ae541e8e382c18578"
+    },
+    "v5/bc-checkpoints/mappo-vehicle-actions2-seed300/episode-0-bc.pt": {
+      "sha256": "38343c13f18bd660d8b15874041093e7b8eb3db3aa3e8712f7678bb7efb19341",
+      "bytes": 183841,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed300/mappo-vehicle-actions2-seed300/snapshots/episode-0-bc.pt",
+      "source_sha256": "38343c13f18bd660d8b15874041093e7b8eb3db3aa3e8712f7678bb7efb19341"
+    },
+    "v5/bc-checkpoints/mappo-vehicle_pedestrian-actions2-seed300/episode-0-bc.pt": {
+      "sha256": "00641f8ecc86eb1968d5289edc7224df104dc220be9c8486ef66fa1249ac0e6e",
+      "bytes": 183841,
+      "source": "scenario/generated/final-v5-results/training/v5-250ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/snapshots/episode-0-bc.pt",
+      "source_sha256": "00641f8ecc86eb1968d5289edc7224df104dc220be9c8486ef66fa1249ac0e6e"
+    },
+    "v5/source.zip": {
+      "sha256": "a3ecfb0b78cb11923780c589385e2d010dab1d6ca0937ef59d1ccc0364b8e833",
+      "bytes": 97821,
+      "source": "scenario/generated/final-v5-results/v5-reproducibility-source.zip",
+      "source_sha256": "3738efb621df39a859720d9d273019c4459b4743366b8005141885f2e79aa4ba",
+      "transformation": "Python implementation, tests, and dependency files are preserved byte-for-byte from the archived version."
+    },
+    "diagnostics/v2/REPORT.md": {
+      "sha256": "3ac575b67815a642d72221b57566c826acc5419b72c8d6e7fb9728aeb09a7839",
+      "bytes": 4825,
+      "source": "scenario/generated/v2-local-diagnostics/REPORT.md",
+      "source_sha256": "3ac575b67815a642d72221b57566c826acc5419b72c8d6e7fb9728aeb09a7839"
+    },
+    "diagnostics/v2/diagnostics.json": {
+      "sha256": "b0cc674b2bcf530c8bcd639252728426cc7169cfe9e72e126bfb5079f1cfb074",
+      "bytes": 43873,
+      "source": "scenario/generated/v2-local-diagnostics/diagnostics.json",
+      "source_sha256": "b0cc674b2bcf530c8bcd639252728426cc7169cfe9e72e126bfb5079f1cfb074"
+    },
+    "diagnostics/v2/mappo-vehicle-decisions.csv": {
+      "sha256": "eb0dd140ae746463d8ca3b332b13578ebbd0d01e517f37e54970a97232cd68af",
+      "bytes": 193243,
+      "source": "scenario/generated/v2-local-diagnostics/mappo-vehicle-decisions.csv",
+      "source_sha256": "eb0dd140ae746463d8ca3b332b13578ebbd0d01e517f37e54970a97232cd68af"
+    },
+    "diagnostics/v2/mappo-vehicle_pedestrian-decisions.csv": {
+      "sha256": "f6c0905b5ece6c2d35871769832d5038052634264f6a4f665d8322c92ae42d82",
+      "bytes": 196024,
+      "source": "scenario/generated/v2-local-diagnostics/mappo-vehicle_pedestrian-decisions.csv",
+      "source_sha256": "f6c0905b5ece6c2d35871769832d5038052634264f6a4f665d8322c92ae42d82"
+    },
+    "diagnostics/v4/CONVERGENCE_REPORT.md": {
+      "sha256": "9744df9914c82254617e6db86e64f774685347fab19aad2d461e3b9d40c1afad",
+      "bytes": 10673,
+      "source": "scenario/generated/final-v4-results/convergence-diagnostics/CONVERGENCE_REPORT.md",
+      "source_sha256": "9744df9914c82254617e6db86e64f774685347fab19aad2d461e3b9d40c1afad"
+    },
+    "diagnostics/v4/diagnostics.json": {
+      "sha256": "1dac4d19a63eb83304435df4eec4840235382c2dfb71e52b3a0c967450be2a0d",
+      "bytes": 28937,
+      "source": "scenario/generated/final-v4-results/convergence-diagnostics/diagnostics.json",
+      "source_sha256": "1dac4d19a63eb83304435df4eec4840235382c2dfb71e52b3a0c967450be2a0d"
+    },
+    "diagnostics/v4/primary-by-traffic-seed.csv": {
+      "sha256": "daa3778de0f486350ab364499c40e7ceac26f703bffc4e0413e6bba41b7c6450",
+      "bytes": 597,
+      "source": "scenario/generated/final-v4-results/convergence-diagnostics/primary-by-traffic-seed.csv",
+      "source_sha256": "daa3778de0f486350ab364499c40e7ceac26f703bffc4e0413e6bba41b7c6450"
+    },
+    "diagnostics/v4/primary-uncertainty-by-unit.csv": {
+      "sha256": "62461efe5fbada6e8719fa233fb9c227d4a733e513b2b696bd15bca9feea0cc1",
+      "bytes": 561,
+      "source": "scenario/generated/final-v4-results/convergence-diagnostics/primary-uncertainty-by-unit.csv",
+      "source_sha256": "62461efe5fbada6e8719fa233fb9c227d4a733e513b2b696bd15bca9feea0cc1"
+    },
+    "diagnostics/v4/reward-slope-summary.csv": {
+      "sha256": "d6ef9dff7c08f94f384a75abd2f50be01fd3f66c950ac1f45462841d9eceb1e4",
+      "bytes": 741,
+      "source": "scenario/generated/final-v4-results/convergence-diagnostics/reward-slope-summary.csv",
+      "source_sha256": "d6ef9dff7c08f94f384a75abd2f50be01fd3f66c950ac1f45462841d9eceb1e4"
+    },
+    "diagnostics/v4/reward-slopes-by-run.csv": {
+      "sha256": "aae0ade823256077c7f6491ab05d757a180eefecc3cb248b3fd65ed44f0fcdb3",
+      "bytes": 1087,
+      "source": "scenario/generated/final-v4-results/convergence-diagnostics/reward-slopes-by-run.csv",
+      "source_sha256": "aae0ade823256077c7f6491ab05d757a180eefecc3cb248b3fd65ed44f0fcdb3"
+    },
+    "diagnostics/v4/reward-trailing25-by-run.csv": {
+      "sha256": "5918c0a974380de0ceaaccd6bc6493ecbe442a200d388c7f08ef37daf0f452a7",
+      "bytes": 2858,
+      "source": "scenario/generated/final-v4-results/convergence-diagnostics/reward-trailing25-by-run.csv",
+      "source_sha256": "5918c0a974380de0ceaaccd6bc6493ecbe442a200d388c7f08ef37daf0f452a7"
+    },
+    "diagnostics/v4/validation-by-run.csv": {
+      "sha256": "1c9905fbf3160477513eb4a4604186d4364c2f47841e2d1d67bc03de6085719b",
+      "bytes": 6208,
+      "source": "scenario/generated/final-v4-results/convergence-diagnostics/validation-by-run.csv",
+      "source_sha256": "1c9905fbf3160477513eb4a4604186d4364c2f47841e2d1d67bc03de6085719b"
+    },
+    "diagnostics/v4/validation-trajectory.csv": {
+      "sha256": "d104c8f2b99cdd180c8837b57d51e9b309f309c78482e041221444be4c39239f",
+      "bytes": 2336,
+      "source": "scenario/generated/final-v4-results/convergence-diagnostics/validation-trajectory.csv",
+      "source_sha256": "d104c8f2b99cdd180c8837b57d51e9b309f309c78482e041221444be4c39239f"
+    }
+  },
+  "versions": {
+    "v1": {
+      "source_files": {
+        "requirements.txt": "e33cf543bad6e9b3cd6d8ff24fda0295f25dcb2cc9612086e567a59768232cb1",
+        "scripts/__init__.py": "d16612c5151f153a4c0a2bb0dc5637e8c5fbcf9b795125287b564bdf7aa65b76",
+        "scripts/build_network.py": "e6202e7e317b2fdd1a53c6a0ae60eefdaeb86e5f5f135cb345864baadc08521a",
+        "scripts/evaluate_marl.py": "cc6bbf27e42a3d7547bd2fd7a51bd2459108c5c69b8ca1bfe8e50fd14ef9f48e",
+        "scripts/package_pilot_artifacts.py": "ab063b28966c21bf33a8382e374198b9a0bf87d6ba23ae21c45adbf0cfbf3389",
+        "scripts/run_baseline.py": "31a485c79f8f5e7402b7602717930d3f6bbb4558c170cb88e2914aef27eb8363",
+        "scripts/run_experiment.py": "b0c75b1b3ad8489098a905d21213b423867bbcebd3a0fa09054f1c3d66a10b34",
+        "scripts/run_marl_sweep.py": "00a10385345a5a6900d3929310b563126e4df9ffc553fd9f6ae56d5767c8348f",
+        "scripts/run_proposal_pilot.py": "890fda44246303d7a6955555856c2ed2485531d99ac41df35ff6d01bb73ebe1f",
+        "scripts/run_selected_evaluations.py": "ccfc271a83806a23c1deedf7d8bd467d73e7b02af732e8d6dc6602aa5972fc99",
+        "scripts/run_simulation.py": "4f215a85dd95162783db8c5cbe62d06f20b920c91bc47267cefff486bae00998",
+        "scripts/select_checkpoint.py": "e320900b568cb936330a9218cd1c98f5c6e28307a339e72c6092fe2cd79acaf3",
+        "scripts/summarize_experiment.py": "080295a2d41f136d0b934f5bdb563e3ce588bc54b5a49823480a900a035b1db8",
+        "scripts/summarize_proposal_pilot.py": "e6bed13870c667163cf647adae52183114838e069f6a34d51e4424ca53cb4a62",
+        "scripts/train_marl.py": "25e80bce59af3ebaf40ca79fd8d9bad25aeebd7f21c8f04514021872ab03b18c",
+        "tests/test_metric_population.py": "405f4b8e260823d778726b6892110dd2edf00be3f7571bc0b66a94b3be730bbe",
+        "tests/test_network_definition.py": "1ff9e268fac6ce3b89104f392df9912109a91d937bd1a6845ff120bc5e0822a3",
+        "tests/test_proposal_summary.py": "2b8da12ba20a8ac633fe5f76571d1dd10e2571d5a98061729720d88390a90e4e",
+        "tests/test_selected_evaluations.py": "f0d44f1bd8c9f27acdb65549acba48575defe762f8e192bf6180458b4ef4caa6"
+      },
+      "selected_checkpoints": 12,
+      "test_seeds": [
+        11,
+        12,
+        13
+      ],
+      "training_seeds": [
+        100,
+        200,
+        300
+      ],
+      "validation_seeds": [
+        21,
+        22,
+        23
+      ]
+    },
+    "v2": {
+      "source_files": {
+        "requirements.txt": "e33cf543bad6e9b3cd6d8ff24fda0295f25dcb2cc9612086e567a59768232cb1",
+        "scripts/__init__.py": "d16612c5151f153a4c0a2bb0dc5637e8c5fbcf9b795125287b564bdf7aa65b76",
+        "scripts/archive_pilot.py": "db6467ddba6fef2bb185bcae2dfd0caa10e0ba099b9c8fbeb96c96aa95437dd2",
+        "scripts/audit_v2_results.py": "cdb212e6f39408bf9bbd711170c2e7483dfc99d374f1f5f8a46906593b2d14ca",
+        "scripts/build_network.py": "9318c9da1e6dd0929eeadae14f8d5221bce39bd07c278edf07371befe003d6c7",
+        "scripts/cloud_artifacts.py": "0198688f1dcb4047a10ec2a614372e9810ee8d255ff703479153399e8881783f",
+        "scripts/evaluate_marl.py": "1ddd1017dff25f5d616b1f9ed653f6f16c98278ea57753f700f720f41fa2b395",
+        "scripts/package_pilot_artifacts.py": "ab063b28966c21bf33a8382e374198b9a0bf87d6ba23ae21c45adbf0cfbf3389",
+        "scripts/report_v2_results.py": "a3cca0a9dfb2e33c84b270cf8c5bf01b2706e5a848cced83271bbdf92b5be32e",
+        "scripts/run_baseline.py": "53a5f9c6198cead3021201c5ea2adb346570adbbbeee91a5ffadc6005d9af1bd",
+        "scripts/run_experiment.py": "b0c75b1b3ad8489098a905d21213b423867bbcebd3a0fa09054f1c3d66a10b34",
+        "scripts/run_marl_sweep.py": "9179cdf674cb15b4fe91797952a2457d8c344de0cf8d51ff25312a922231089d",
+        "scripts/run_proposal_pilot.py": "890fda44246303d7a6955555856c2ed2485531d99ac41df35ff6d01bb73ebe1f",
+        "scripts/run_selected_evaluations.py": "f47f19f001f01afd0203542bd9a0cbef709eed5228880dd00ef2a8009a254fe7",
+        "scripts/run_simulation.py": "4f215a85dd95162783db8c5cbe62d06f20b920c91bc47267cefff486bae00998",
+        "scripts/select_checkpoint.py": "e320900b568cb936330a9218cd1c98f5c6e28307a339e72c6092fe2cd79acaf3",
+        "scripts/select_v2_checkpoints.py": "34d2527a583288f5f397ebbd819976815022db3a03140a12bd94e22b3540dd7f",
+        "scripts/summarize_experiment.py": "080295a2d41f136d0b934f5bdb563e3ce588bc54b5a49823480a900a035b1db8",
+        "scripts/summarize_proposal_pilot.py": "e6bed13870c667163cf647adae52183114838e069f6a34d51e4424ca53cb4a62",
+        "scripts/train_marl.py": "e32e3eb88ff489976dec66b56d778695b4308f95b3468d1879cd6a32a51e2f03",
+        "scripts/v2_finalize.py": "529d02d33ab0e93f6a76c7e81a6f718d07f97eecfbacb9e05fbbbe07dd2efa54",
+        "tests/test_metric_population.py": "405f4b8e260823d778726b6892110dd2edf00be3f7571bc0b66a94b3be730bbe",
+        "tests/test_network_definition.py": "50e0f1be43f617a0512d9d9682a5fb84488b7dfb1fbc49e29ade6c3880d82b92",
+        "tests/test_proposal_summary.py": "2b8da12ba20a8ac633fe5f76571d1dd10e2571d5a98061729720d88390a90e4e",
+        "tests/test_selected_evaluations.py": "f0d44f1bd8c9f27acdb65549acba48575defe762f8e192bf6180458b4ef4caa6",
+        "tests/test_v2_training.py": "f49241d0aabb39fa95c618b6439bca6283e4037a8098599b12118948ca252fa6"
+      },
+      "selected_checkpoints": 12,
+      "test_seeds": [
+        11,
+        12,
+        13
+      ],
+      "training_seeds": [
+        100,
+        200,
+        300
+      ],
+      "validation_seeds": [
+        21,
+        22,
+        23
+      ]
+    },
+    "v3": {
+      "source_files": {
+        "requirements.txt": "e33cf543bad6e9b3cd6d8ff24fda0295f25dcb2cc9612086e567a59768232cb1",
+        "scripts/__init__.py": "d16612c5151f153a4c0a2bb0dc5637e8c5fbcf9b795125287b564bdf7aa65b76",
+        "scripts/archive_pilot.py": "db6467ddba6fef2bb185bcae2dfd0caa10e0ba099b9c8fbeb96c96aa95437dd2",
+        "scripts/audit_v2_results.py": "cdb212e6f39408bf9bbd711170c2e7483dfc99d374f1f5f8a46906593b2d14ca",
+        "scripts/build_network.py": "9318c9da1e6dd0929eeadae14f8d5221bce39bd07c278edf07371befe003d6c7",
+        "scripts/cloud_artifacts.py": "0198688f1dcb4047a10ec2a614372e9810ee8d255ff703479153399e8881783f",
+        "scripts/diagnose_v2.py": "97fc6cd673564519182805c13a17ec8e72c266ee7cfaaba7fb7e29cc5680516d",
+        "scripts/evaluate_marl.py": "1ddd1017dff25f5d616b1f9ed653f6f16c98278ea57753f700f720f41fa2b395",
+        "scripts/package_pilot_artifacts.py": "ab063b28966c21bf33a8382e374198b9a0bf87d6ba23ae21c45adbf0cfbf3389",
+        "scripts/report_v2_results.py": "a3cca0a9dfb2e33c84b270cf8c5bf01b2706e5a848cced83271bbdf92b5be32e",
+        "scripts/run_baseline.py": "829ef42b753d1ffeface3dcfdf1a84a501840f7cd0a471a177d8531d6a41f8e8",
+        "scripts/run_experiment.py": "b0c75b1b3ad8489098a905d21213b423867bbcebd3a0fa09054f1c3d66a10b34",
+        "scripts/run_marl_sweep.py": "01cc942bc52ad87dd44b887052ff31c49d88ce3644925fd96bef398eb8673fc2",
+        "scripts/run_proposal_pilot.py": "890fda44246303d7a6955555856c2ed2485531d99ac41df35ff6d01bb73ebe1f",
+        "scripts/run_selected_evaluations.py": "f47f19f001f01afd0203542bd9a0cbef709eed5228880dd00ef2a8009a254fe7",
+        "scripts/run_simulation.py": "4f215a85dd95162783db8c5cbe62d06f20b920c91bc47267cefff486bae00998",
+        "scripts/select_checkpoint.py": "e320900b568cb936330a9218cd1c98f5c6e28307a339e72c6092fe2cd79acaf3",
+        "scripts/select_v2_checkpoints.py": "a04e85f14d35a791e410dc6ae7199ca0a4511c6eb0aef1934e1fe03bef6ccc0d",
+        "scripts/smoke_v3.py": "49b1c61baffe802c3f84f3806b1911985e3b439daef1bad82d5324e4949ed4a1",
+        "scripts/summarize_experiment.py": "080295a2d41f136d0b934f5bdb563e3ce588bc54b5a49823480a900a035b1db8",
+        "scripts/summarize_proposal_pilot.py": "446fac106bfbf078f19001f94515962411a2eb90ebc077b6e4c2f6d0cefef182",
+        "scripts/train_marl.py": "5a5b9c2348e95a6c5ae6869dbcaba1a4e0644a14c87bca9c35c422390540cca2",
+        "scripts/v2_finalize.py": "31c89c44efb868b01a008378a32b8f60aed463ac53f229c41e547f73f7b7fec9",
+        "tests/test_metric_population.py": "e3957053a8d916062645b6f3d4c920e7bf9cb384cde00c137320af4216cd48e3",
+        "tests/test_network_definition.py": "57641a9ac7a352b2e9cba6b0aa2a45540fb18d738226b4ec383005ae4d982667",
+        "tests/test_proposal_summary.py": "2b8da12ba20a8ac633fe5f76571d1dd10e2571d5a98061729720d88390a90e4e",
+        "tests/test_selected_evaluations.py": "f0d44f1bd8c9f27acdb65549acba48575defe762f8e192bf6180458b4ef4caa6",
+        "tests/test_v2_training.py": "b6e6e685cd98f9fe3011c6405a27b9ee00410ea3b747923199c7105bc703f660",
+        "tests/test_v3_training.py": "474f3f955e6967c19b926af5606d6305dd6c424e97d404b048ad2411ce1b42e3"
+      },
+      "selected_checkpoints": 12,
+      "test_seeds": [
+        41,
+        42,
+        43
+      ],
+      "training_seeds": [
+        100,
+        200,
+        300
+      ],
+      "validation_seeds": [
+        21,
+        22,
+        23
+      ]
+    },
+    "v4": {
+      "source_files": {
+        "requirements.txt": "e33cf543bad6e9b3cd6d8ff24fda0295f25dcb2cc9612086e567a59768232cb1",
+        "scripts/__init__.py": "d16612c5151f153a4c0a2bb0dc5637e8c5fbcf9b795125287b564bdf7aa65b76",
+        "scripts/archive_pilot.py": "db6467ddba6fef2bb185bcae2dfd0caa10e0ba099b9c8fbeb96c96aa95437dd2",
+        "scripts/audit_v2_results.py": "a0eb18ceeb74ec5ca4dc0db56045bb1d648cffcd373dc9695926682a0f2434e5",
+        "scripts/build_network.py": "9318c9da1e6dd0929eeadae14f8d5221bce39bd07c278edf07371befe003d6c7",
+        "scripts/cloud_artifacts.py": "0198688f1dcb4047a10ec2a614372e9810ee8d255ff703479153399e8881783f",
+        "scripts/diagnose_v2.py": "97fc6cd673564519182805c13a17ec8e72c266ee7cfaaba7fb7e29cc5680516d",
+        "scripts/evaluate_marl.py": "1ddd1017dff25f5d616b1f9ed653f6f16c98278ea57753f700f720f41fa2b395",
+        "scripts/package_pilot_artifacts.py": "ab063b28966c21bf33a8382e374198b9a0bf87d6ba23ae21c45adbf0cfbf3389",
+        "scripts/report_v2_results.py": "a3cca0a9dfb2e33c84b270cf8c5bf01b2706e5a848cced83271bbdf92b5be32e",
+        "scripts/report_v3_results.py": "221ff53b079890d15b36ae525feae8b92a12192f1befebe7d6cec82afdbfcd6c",
+        "scripts/run_baseline.py": "829ef42b753d1ffeface3dcfdf1a84a501840f7cd0a471a177d8531d6a41f8e8",
+        "scripts/run_experiment.py": "b0c75b1b3ad8489098a905d21213b423867bbcebd3a0fa09054f1c3d66a10b34",
+        "scripts/run_marl_sweep.py": "01cc942bc52ad87dd44b887052ff31c49d88ce3644925fd96bef398eb8673fc2",
+        "scripts/run_proposal_pilot.py": "890fda44246303d7a6955555856c2ed2485531d99ac41df35ff6d01bb73ebe1f",
+        "scripts/run_selected_evaluations.py": "681018e99c666488fad07412fecb8b9a82df4eb031667248b45d1214cb3f39ed",
+        "scripts/run_simulation.py": "4f215a85dd95162783db8c5cbe62d06f20b920c91bc47267cefff486bae00998",
+        "scripts/select_checkpoint.py": "e320900b568cb936330a9218cd1c98f5c6e28307a339e72c6092fe2cd79acaf3",
+        "scripts/select_v2_checkpoints.py": "32ff3c0115ddd0497e62879f9472d1e1f346a33426a060af363adfc054c65e96",
+        "scripts/smoke_v3.py": "49b1c61baffe802c3f84f3806b1911985e3b439daef1bad82d5324e4949ed4a1",
+        "scripts/smoke_v4.py": "e11a12e00b9de27aa795a5d69191ba48eac014422878a9d80c79d56edc5e583b",
+        "scripts/summarize_experiment.py": "080295a2d41f136d0b934f5bdb563e3ce588bc54b5a49823480a900a035b1db8",
+        "scripts/summarize_proposal_pilot.py": "f83955bf6fb8bc056a1a22bab97042f0c3c8b2172be104021fcd55029d1197be",
+        "scripts/train_marl.py": "7b8bc9b3c9796e05222928cbf324f66778c3fc517a409eb1a464ca7f2167cfa0",
+        "scripts/v2_finalize.py": "31c89c44efb868b01a008378a32b8f60aed463ac53f229c41e547f73f7b7fec9",
+        "scripts/v4_finalize.py": "88cf4eaf13b4036232723d889b13d01c81a21777e102ca316135d08137505bbd",
+        "tests/test_metric_population.py": "e3957053a8d916062645b6f3d4c920e7bf9cb384cde00c137320af4216cd48e3",
+        "tests/test_network_definition.py": "57641a9ac7a352b2e9cba6b0aa2a45540fb18d738226b4ec383005ae4d982667",
+        "tests/test_proposal_summary.py": "896f42649bb35730e40d1927eae91ff07c70b7bcd401994d8b2329707c3317f1",
+        "tests/test_selected_evaluations.py": "c09c7b22fff5df8ff9d35f91c0791a40f08d3c539aa04c35f7c37b919c6932b8",
+        "tests/test_v2_training.py": "8dd3c8f0d707b5cb007482f774b5e5e438d2e0d6a3f7e306900e298e94b88d7b",
+        "tests/test_v3_training.py": "9164289c4916bbfa3d732165ecbbf44e6e4057523a041dcc68a995e8c0d8dd31",
+        "tests/test_v4_training.py": "7e27fac0dec6f756e8e77062d428e707c09ba2c5e858f691910977b3a401586a"
+      },
+      "selected_checkpoints": 6,
+      "test_seeds": [
+        41,
+        42,
+        43
+      ],
+      "training_seeds": [
+        100,
+        200,
+        300
+      ],
+      "validation_seeds": [
+        21,
+        22,
+        23
+      ]
+    },
+    "v5": {
+      "source_files": {
+        "requirements.txt": "e33cf543bad6e9b3cd6d8ff24fda0295f25dcb2cc9612086e567a59768232cb1",
+        "scripts/__init__.py": "d16612c5151f153a4c0a2bb0dc5637e8c5fbcf9b795125287b564bdf7aa65b76",
+        "scripts/archive_pilot.py": "db6467ddba6fef2bb185bcae2dfd0caa10e0ba099b9c8fbeb96c96aa95437dd2",
+        "scripts/audit_v2_results.py": "a0eb18ceeb74ec5ca4dc0db56045bb1d648cffcd373dc9695926682a0f2434e5",
+        "scripts/audit_v4_results.py": "9a870e0646e0465a411a71c79f58f86ca0e1fe708fb7790e69047f129020e97f",
+        "scripts/audit_v5_results.py": "daa4e11d1264a512781e45d733f8dad89093662d4a733e7ec4d33982ce0f7b6f",
+        "scripts/build_network.py": "9318c9da1e6dd0929eeadae14f8d5221bce39bd07c278edf07371befe003d6c7",
+        "scripts/cloud_artifacts.py": "0198688f1dcb4047a10ec2a614372e9810ee8d255ff703479153399e8881783f",
+        "scripts/diagnose_v2.py": "97fc6cd673564519182805c13a17ec8e72c266ee7cfaaba7fb7e29cc5680516d",
+        "scripts/diagnose_v4_convergence.py": "02b5a59ac22d103fb77e8fb228176899d574d038053d23b6c8fa3ed4b0380411",
+        "scripts/diagnose_v4_training.py": "5f65ed47ce25cbf70a18babac1b1ad383982ee95dd535f96758672cbebff5ea5",
+        "scripts/evaluate_marl.py": "08c042e952742dd064e3cd093db14ab11fe71123720ff0fa6933c864c4630c31",
+        "scripts/marl_bc.py": "b3701361011c6e4667eaafe82256d524471d96469d218ad9626df2dc58acf11b",
+        "scripts/package_pilot_artifacts.py": "ab063b28966c21bf33a8382e374198b9a0bf87d6ba23ae21c45adbf0cfbf3389",
+        "scripts/report_v2_results.py": "a3cca0a9dfb2e33c84b270cf8c5bf01b2706e5a848cced83271bbdf92b5be32e",
+        "scripts/report_v3_results.py": "221ff53b079890d15b36ae525feae8b92a12192f1befebe7d6cec82afdbfcd6c",
+        "scripts/report_v4_results.py": "ce1d64d9e0be1ebf90a5a7a6ceb810a0b878b006f5162f3f373e1ca8e01440da",
+        "scripts/report_v5_results.py": "77c0e6c35c7fb8ca375b8647f2bd2c1a8494d685baa75062ca01ad2a78427992",
+        "scripts/run_baseline.py": "829ef42b753d1ffeface3dcfdf1a84a501840f7cd0a471a177d8531d6a41f8e8",
+        "scripts/run_experiment.py": "b0c75b1b3ad8489098a905d21213b423867bbcebd3a0fa09054f1c3d66a10b34",
+        "scripts/run_marl_sweep.py": "69694e93665c161e59c7b5753b03a8b694ad8b90157e98c5c2b0a1c30874e792",
+        "scripts/run_proposal_pilot.py": "890fda44246303d7a6955555856c2ed2485531d99ac41df35ff6d01bb73ebe1f",
+        "scripts/run_selected_evaluations.py": "681018e99c666488fad07412fecb8b9a82df4eb031667248b45d1214cb3f39ed",
+        "scripts/run_simulation.py": "4f215a85dd95162783db8c5cbe62d06f20b920c91bc47267cefff486bae00998",
+        "scripts/select_checkpoint.py": "e320900b568cb936330a9218cd1c98f5c6e28307a339e72c6092fe2cd79acaf3",
+        "scripts/select_v2_checkpoints.py": "32ff3c0115ddd0497e62879f9472d1e1f346a33426a060af363adfc054c65e96",
+        "scripts/select_v5_checkpoints.py": "7b2b78abd004558a88d093edcd798d8a0f1da888f01d4a503149667d69eff545",
+        "scripts/smoke_v3.py": "49b1c61baffe802c3f84f3806b1911985e3b439daef1bad82d5324e4949ed4a1",
+        "scripts/smoke_v4.py": "e11a12e00b9de27aa795a5d69191ba48eac014422878a9d80c79d56edc5e583b",
+        "scripts/smoke_v5.py": "2e8d58557b13a0d6798f4ec0e5b07609d996f92154081886babc1ff460a5dd24",
+        "scripts/summarize_experiment.py": "080295a2d41f136d0b934f5bdb563e3ce588bc54b5a49823480a900a035b1db8",
+        "scripts/summarize_proposal_pilot.py": "f83955bf6fb8bc056a1a22bab97042f0c3c8b2172be104021fcd55029d1197be",
+        "scripts/train_marl.py": "500d5d595e19a6ff2bc58fa9a26c05cf4dc1d4baef537d9adeac18dc93d88a73",
+        "scripts/v2_finalize.py": "31c89c44efb868b01a008378a32b8f60aed463ac53f229c41e547f73f7b7fec9",
+        "scripts/v4_finalize.py": "88cf4eaf13b4036232723d889b13d01c81a21777e102ca316135d08137505bbd",
+        "scripts/v5_finalize.py": "8cec1eaedab520a6e809e9839c6126e1126db371e8471bc5a32b6e2b030bdf72",
+        "tests/test_metric_population.py": "e3957053a8d916062645b6f3d4c920e7bf9cb384cde00c137320af4216cd48e3",
+        "tests/test_network_definition.py": "57641a9ac7a352b2e9cba6b0aa2a45540fb18d738226b4ec383005ae4d982667",
+        "tests/test_proposal_summary.py": "896f42649bb35730e40d1927eae91ff07c70b7bcd401994d8b2329707c3317f1",
+        "tests/test_selected_evaluations.py": "c09c7b22fff5df8ff9d35f91c0791a40f08d3c539aa04c35f7c37b919c6932b8",
+        "tests/test_v2_training.py": "6528db394334afb8c507b34da580c50bf3135b540b4a01db9c1ea2b6e4104227",
+        "tests/test_v3_training.py": "9164289c4916bbfa3d732165ecbbf44e6e4057523a041dcc68a995e8c0d8dd31",
+        "tests/test_v4_training.py": "7e27fac0dec6f756e8e77062d428e707c09ba2c5e858f691910977b3a401586a",
+        "tests/test_v5_training.py": "31967587180f644083f8a3a90549d8748788ab5a5d37f34dd5a675814c0731db"
+      },
+      "selected_checkpoints": 6,
+      "test_seeds": [
+        41,
+        42,
+        43
+      ],
+      "training_seeds": [
+        100,
+        200,
+        300
+      ],
+      "validation_seeds": [
+        21,
+        22,
+        23
+      ]
+    }
+  }
+}

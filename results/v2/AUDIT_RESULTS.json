@@ -1,0 +1,13 @@
+{
+  "training_runs": 12,
+  "training_episodes": 3600,
+  "validation_checkpoint_evaluations": 216,
+  "selected_checkpoints": 12,
+  "accepted_test_evaluations": 168,
+  "validation_feasible_runs": 2,
+  "verified_manifest_entries": 334,
+  "archived_pilot_files_unchanged": 490,
+  "all_demand_schedules_reproducible": true,
+  "all_test_demands_matched": true,
+  "selection_unchanged_during_test": true
+}

@@ -1,0 +1,73 @@
+{
+  "training_runs": 6,
+  "accepted_rl_episodes": 1500,
+  "accepted_bc_episodes": 120,
+  "accepted_critic_warmup_episodes": 30,
+  "snapshots_including_bc": 36,
+  "validation_evaluations": 108,
+  "selected_checkpoints": 6,
+  "bc_checkpoints_selected": 2,
+  "validation_feasible_runs": 0,
+  "new_policy_test_evaluations": 72,
+  "reused_baseline_rows": 24,
+  "accepted_test_rows": 96,
+  "primary_bc_reference_rows": 18,
+  "additional_bc_reference_evaluations": 12,
+  "reused_selected_bc_reference_rows": 6,
+  "verified_manifest_entries": 282,
+  "prior_artifact_files_unchanged": 4841,
+  "verified_transfer_archive_sha256_count": 4,
+  "baseline_reuse_exact": true,
+  "selection_unchanged_during_test": true,
+  "discarded_uniform_bc_attempt_excluded": true,
+  "bc_quality": [
+    {
+      "controller": "mappo-vehicle-actions2-seed100",
+      "training_switch_recall": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian-actions2-seed100",
+      "training_switch_recall": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "controller": "mappo-vehicle-actions2-seed200",
+      "training_switch_recall": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian-actions2-seed200",
+      "training_switch_recall": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "controller": "mappo-vehicle-actions2-seed300",
+      "training_switch_recall": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian-actions2-seed300",
+      "training_switch_recall": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ]
+}

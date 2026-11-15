@@ -1,0 +1,10 @@
+{
+  "algorithm": "mappo",
+  "reward_mode": "vehicle_pedestrian",
+  "training_seed": 300,
+  "episodes": 400,
+  "horizon": 3600,
+  "randomize_demand": false,
+  "switch_penalty": 3.0,
+  "elapsed_seconds": 1480.3813943862915
+}

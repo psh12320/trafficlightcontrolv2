@@ -1,0 +1,17 @@
+scenario,controller,metric,independent_n,evaluation_n,uncertainty_unit,mean,ci95_half_width,ci95_low,ci95_high,maximum_observed
+bc-primary,mappo-vehicle,vehicle_time_loss_seconds,3,9,training_seed,440416.1108104451,9031.261633322221,431384.8491771229,449447.3724437673,452652.2705888765
+bc-primary,mappo-vehicle,vehicle_mean_time_loss_seconds,3,9,training_seed,181.69151880941348,16.533874107679527,165.15764470173394,198.22539291709302,224.07370718357345
+bc-primary,mappo-vehicle,vehicle_throughput_per_hour,3,9,training_seed,2302.222222222222,172.5861681615018,2129.63605406072,2474.808390383724,2521.0
+bc-primary,mappo-vehicle,vehicle_unfinished,3,9,training_seed,138.0,13.013762895646117,124.98623710435388,151.01376289564612,156.0
+bc-primary,mappo-vehicle,pedestrian_unfinished,3,9,training_seed,139.33333333333334,33.15287333745013,106.18045999588321,172.48620667078347,182.0
+bc-primary,mappo-vehicle,pedestrian_average_waiting_seconds,3,9,training_seed,192.88149182702256,38.80553653000889,154.07595529701368,231.68702835703144,243.08333333333334
+bc-primary,mappo-vehicle,worst_crossing_p95_waiting_seconds,3,9,training_seed,947.2444444444444,437.0985414199976,510.1459030244468,1384.342985864442,1420.7
+bc-primary,mappo-vehicle,pedestrian_max_waiting_seconds,3,9,training_seed,1428.6666666666667,664.9765428211698,763.6901238454969,2093.6432094878364,2169.0
+bc-primary,mappo-vehicle_pedestrian,vehicle_time_loss_seconds,3,9,training_seed,440416.1108104451,9031.261633322221,431384.8491771229,449447.3724437673,452652.2705888765
+bc-primary,mappo-vehicle_pedestrian,vehicle_mean_time_loss_seconds,3,9,training_seed,181.69151880941348,16.533874107679527,165.15764470173394,198.22539291709302,224.07370718357345
+bc-primary,mappo-vehicle_pedestrian,vehicle_throughput_per_hour,3,9,training_seed,2302.222222222222,172.5861681615018,2129.63605406072,2474.808390383724,2521.0
+bc-primary,mappo-vehicle_pedestrian,vehicle_unfinished,3,9,training_seed,138.0,13.013762895646117,124.98623710435388,151.01376289564612,156.0
+bc-primary,mappo-vehicle_pedestrian,pedestrian_unfinished,3,9,training_seed,139.33333333333334,33.15287333745013,106.18045999588321,172.48620667078347,182.0
+bc-primary,mappo-vehicle_pedestrian,pedestrian_average_waiting_seconds,3,9,training_seed,192.88149182702256,38.80553653000889,154.07595529701368,231.68702835703144,243.08333333333334
+bc-primary,mappo-vehicle_pedestrian,worst_crossing_p95_waiting_seconds,3,9,training_seed,947.2444444444444,437.0985414199976,510.1459030244468,1384.342985864442,1420.7
+bc-primary,mappo-vehicle_pedestrian,pedestrian_max_waiting_seconds,3,9,training_seed,1428.6666666666667,664.9765428211698,763.6901238454969,2093.6432094878364,2169.0

@@ -1,0 +1,810 @@
+{
+  "source_sha256": {
+    "v4-source-upload.zip": "cdde6e986b1dca8e914a0491f4f5a4ae62cafe2f10648a0af68422c8b9b528b1",
+    "v4-source-upload.zip::scripts/train_marl.py": "7b8bc9b3c9796e05222928cbf324f66778c3fc517a409eb1a464ca7f2167cfa0",
+    "v4-source-upload.zip::scripts/evaluate_marl.py": "1ddd1017dff25f5d616b1f9ed653f6f16c98278ea57753f700f720f41fa2b395",
+    "validation-baseline/validation-baseline.csv": "b993bf0cd05b0c9993c4df9fd6021d8c92765ac685274c2aed0307e65fbc7d4c",
+    "training/v4-400ep-seed100/mappo-vehicle-actions2-seed100/checkpoint-metrics.csv": "15e39bcd1cbdd7b72bef41317806518e95394925ccc1d9d5fd54bb9a82b9ff06",
+    "training/v4-400ep-seed100/mappo-vehicle-actions2-seed100/training.log": "45ee5dbef77c30cc3acc9c8f2e1701bb50594f7be0bc40592c71413d53f68f20",
+    "training/v4-400ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/checkpoint-metrics.csv": "4d3dfaf817f33e7d3aaf42c998b39df83942f62bfc0f7543687a6afc834f8c1c",
+    "training/v4-400ep-seed100/mappo-vehicle_pedestrian-actions2-seed100/training.log": "c202c6c08b36c105c84cd7cd849570eb5d4629e62c12a69d48e340c347250009",
+    "training/v4-400ep-seed200/mappo-vehicle-actions2-seed200/checkpoint-metrics.csv": "0153c5503ac80294d3de1acb2c643e5b29659fab3f245541330cc07cccaf3276",
+    "training/v4-400ep-seed200/mappo-vehicle-actions2-seed200/training.log": "2c273997a068ecea20454f2af2005eed302b4d857f1eba0f48a13ff64be634fe",
+    "training/v4-400ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/checkpoint-metrics.csv": "75566f40e030a19b5b06159dbb4c4b30d4ce493ed0ab0dd06bd986d6649584bb",
+    "training/v4-400ep-seed200/mappo-vehicle_pedestrian-actions2-seed200/training.log": "349f58cb5411d95288472bf5a08367cddfb4f448eb433903c05acfc473a6497f",
+    "training/v4-400ep-seed300/mappo-vehicle-actions2-seed300/checkpoint-metrics.csv": "05eb6764486f9e163d2ad5d36fb51e1fe447625898a7749b0cd02bf1602fb257",
+    "training/v4-400ep-seed300/mappo-vehicle-actions2-seed300/training.log": "609f746af45f07c77261ff6c008bdf725f73d163791445821158871ea1a8a0e7",
+    "training/v4-400ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/checkpoint-metrics.csv": "ee7aaba11b668f0d9d04a2a6f4c790c49d76d7e3f3776015eda7d21c0055a2dc",
+    "training/v4-400ep-seed300/mappo-vehicle_pedestrian-actions2-seed300/training.log": "027475b66a061ed28e3fb8114245ca068b3d1bb35b1eb8337fa4ddd269fb2ae5",
+    "selected-checkpoints.json": "29b5f31ec1ac6cc85258812e552b526fe2a15de81014b5e52ba2ea66252783d2",
+    "validation-trajectory.csv": "85066735d2e3973ac8392338370b9a4a3687970a9660b3939e34c035956eb90a",
+    "final-primary-results.csv": "2113df7eaedb85a29c8db9ae792764f649e3cc8068809acbfd392ea5a7d41613"
+  },
+  "original_manifest_files_unchanged": 271,
+  "training_runs": 6,
+  "reward_log_episodes": 2400,
+  "validation_rows": 144,
+  "combined_late_validation_monotonic_decreasing": {
+    "vehicle_time_loss_s_per_vehicle": false,
+    "pedestrian_mean_wait_s": true,
+    "worst_crossing_p95_s": true,
+    "normalized_positive_crossing_violation": true,
+    "largest_crossing_excess_s": true
+  },
+  "validation_trajectory": [
+    {
+      "controller": "mappo-vehicle",
+      "episode": 50,
+      "vehicle_time_loss_s_per_vehicle": 203.72173994859213,
+      "pedestrian_mean_wait_s": 190.91470101386304,
+      "worst_crossing_p95_s": 958.1444444444445,
+      "normalized_positive_crossing_violation": 0.46136485752234413,
+      "largest_crossing_excess_s": 93.35555555555555,
+      "largest_excess_any_training_seed_s": 136.0
+    },
+    {
+      "controller": "mappo-vehicle",
+      "episode": 100,
+      "vehicle_time_loss_s_per_vehicle": 185.85700161162418,
+      "pedestrian_mean_wait_s": 182.43565073453343,
+      "worst_crossing_p95_s": 858.4666666666666,
+      "normalized_positive_crossing_violation": 0.3995651633043552,
+      "largest_crossing_excess_s": 53.699999999999996,
+      "largest_excess_any_training_seed_s": 139.56666666666666
+    },
+    {
+      "controller": "mappo-vehicle",
+      "episode": 150,
+      "vehicle_time_loss_s_per_vehicle": 196.7098893521105,
+      "pedestrian_mean_wait_s": 199.81605627974344,
+      "worst_crossing_p95_s": 979.6666666666666,
+      "normalized_positive_crossing_violation": 2.7593512363055797,
+      "largest_crossing_excess_s": 161.1222222222222,
+      "largest_excess_any_training_seed_s": 354.8333333333333
+    },
+    {
+      "controller": "mappo-vehicle",
+      "episode": 200,
+      "vehicle_time_loss_s_per_vehicle": 183.16984577521768,
+      "pedestrian_mean_wait_s": 184.71813573349885,
+      "worst_crossing_p95_s": 919.1888888888889,
+      "normalized_positive_crossing_violation": 0.3211061307156688,
+      "largest_crossing_excess_s": 96.9222222222222,
+      "largest_excess_any_training_seed_s": 276.69999999999993
+    },
+    {
+      "controller": "mappo-vehicle",
+      "episode": 250,
+      "vehicle_time_loss_s_per_vehicle": 185.01722876513406,
+      "pedestrian_mean_wait_s": 173.2508793709911,
+      "worst_crossing_p95_s": 741.9888888888889,
+      "normalized_positive_crossing_violation": 0.17846236133736734,
+      "largest_crossing_excess_s": 17.666666666666668,
+      "largest_excess_any_training_seed_s": 35.099999999999994
+    },
+    {
+      "controller": "mappo-vehicle",
+      "episode": 300,
+      "vehicle_time_loss_s_per_vehicle": 180.8603046186766,
+      "pedestrian_mean_wait_s": 187.49813780260706,
+      "worst_crossing_p95_s": 933.6222222222221,
+      "normalized_positive_crossing_violation": 1.091547345105418,
+      "largest_crossing_excess_s": 100.94444444444441,
+      "largest_excess_any_training_seed_s": 162.19999999999993
+    },
+    {
+      "controller": "mappo-vehicle",
+      "episode": 350,
+      "vehicle_time_loss_s_per_vehicle": 181.54589146839575,
+      "pedestrian_mean_wait_s": 187.89944134078212,
+      "worst_crossing_p95_s": 913.2222222222222,
+      "normalized_positive_crossing_violation": 0.6706252395190755,
+      "largest_crossing_excess_s": 86.45555555555556,
+      "largest_excess_any_training_seed_s": 145.5
+    },
+    {
+      "controller": "mappo-vehicle",
+      "episode": 400,
+      "vehicle_time_loss_s_per_vehicle": 193.5128407429049,
+      "pedestrian_mean_wait_s": 208.09817918477137,
+      "worst_crossing_p95_s": 1004.3222222222222,
+      "normalized_positive_crossing_violation": 1.25951509655796,
+      "largest_crossing_excess_s": 120.53333333333335,
+      "largest_excess_any_training_seed_s": 171.63333333333333
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "episode": 50,
+      "vehicle_time_loss_s_per_vehicle": 240.3790608051517,
+      "pedestrian_mean_wait_s": 198.9981378026071,
+      "worst_crossing_p95_s": 996.7333333333333,
+      "normalized_positive_crossing_violation": 1.0599199079387476,
+      "largest_crossing_excess_s": 137.68888888888887,
+      "largest_excess_any_training_seed_s": 172.09999999999997
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "episode": 100,
+      "vehicle_time_loss_s_per_vehicle": 225.85355579430654,
+      "pedestrian_mean_wait_s": 196.70494516863232,
+      "worst_crossing_p95_s": 1083.1777777777777,
+      "normalized_positive_crossing_violation": 1.1873488905760128,
+      "largest_crossing_excess_s": 197.55555555555554,
+      "largest_excess_any_training_seed_s": 405.76666666666665
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "episode": 150,
+      "vehicle_time_loss_s_per_vehicle": 211.3203640390586,
+      "pedestrian_mean_wait_s": 175.37140492447756,
+      "worst_crossing_p95_s": 818.9222222222222,
+      "normalized_positive_crossing_violation": 2.7008818537184074,
+      "largest_crossing_excess_s": 133.96666666666664,
+      "largest_excess_any_training_seed_s": 384.49999999999994
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "episode": 200,
+      "vehicle_time_loss_s_per_vehicle": 197.46930633662834,
+      "pedestrian_mean_wait_s": 181.46549762052555,
+      "worst_crossing_p95_s": 955.3111111111111,
+      "normalized_positive_crossing_violation": 0.17928887564518028,
+      "largest_crossing_excess_s": 24.23333333333332,
+      "largest_excess_any_training_seed_s": 35.53333333333333
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "episode": 250,
+      "vehicle_time_loss_s_per_vehicle": 228.1653392346854,
+      "pedestrian_mean_wait_s": 199.4784295468653,
+      "worst_crossing_p95_s": 1085.888888888889,
+      "normalized_positive_crossing_violation": 5.023419865354416,
+      "largest_crossing_excess_s": 287.4666666666667,
+      "largest_excess_any_training_seed_s": 528.6333333333334
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "episode": 300,
+      "vehicle_time_loss_s_per_vehicle": 221.60924435134993,
+      "pedestrian_mean_wait_s": 215.5326401820815,
+      "worst_crossing_p95_s": 1134.4333333333334,
+      "normalized_positive_crossing_violation": 2.5734223061227715,
+      "largest_crossing_excess_s": 157.61111111111106,
+      "largest_excess_any_training_seed_s": 247.96666666666664
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "episode": 350,
+      "vehicle_time_loss_s_per_vehicle": 230.2155955597873,
+      "pedestrian_mean_wait_s": 186.7926236292158,
+      "worst_crossing_p95_s": 1000.8000000000001,
+      "normalized_positive_crossing_violation": 0.3841729744368776,
+      "largest_crossing_excess_s": 33.822222222222216,
+      "largest_excess_any_training_seed_s": 67.83333333333331
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "episode": 400,
+      "vehicle_time_loss_s_per_vehicle": 210.82088525512455,
+      "pedestrian_mean_wait_s": 163.91490792468446,
+      "worst_crossing_p95_s": 897.1,
+      "normalized_positive_crossing_violation": 0.08257481841156922,
+      "largest_crossing_excess_s": 31.699999999999942,
+      "largest_excess_any_training_seed_s": 89.96666666666658
+    }
+  ],
+  "reward_trailing25": [
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 100,
+      "episode": 50,
+      "trailing25_mean_reward": -20557.728,
+      "trailing25_sample_sd_reward": 1008.5843996744477
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 100,
+      "episode": 100,
+      "trailing25_mean_reward": -19943.092,
+      "trailing25_sample_sd_reward": 776.2563429263126
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 100,
+      "episode": 150,
+      "trailing25_mean_reward": -19961.832,
+      "trailing25_sample_sd_reward": 745.1383147443163
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 100,
+      "episode": 200,
+      "trailing25_mean_reward": -19508.344,
+      "trailing25_sample_sd_reward": 851.0282369385083
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 100,
+      "episode": 250,
+      "trailing25_mean_reward": -19251.484,
+      "trailing25_sample_sd_reward": 620.001973572128
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 100,
+      "episode": 300,
+      "trailing25_mean_reward": -19658.172,
+      "trailing25_sample_sd_reward": 1349.3941234618346
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 100,
+      "episode": 350,
+      "trailing25_mean_reward": -19468.212,
+      "trailing25_sample_sd_reward": 1373.049459633556
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 100,
+      "episode": 400,
+      "trailing25_mean_reward": -18938.432,
+      "trailing25_sample_sd_reward": 827.388961694156
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 100,
+      "episode": 50,
+      "trailing25_mean_reward": -56033.784,
+      "trailing25_sample_sd_reward": 12583.419374904952
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 100,
+      "episode": 100,
+      "trailing25_mean_reward": -60730.928,
+      "trailing25_sample_sd_reward": 15289.786985613415
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 100,
+      "episode": 150,
+      "trailing25_mean_reward": -56923.264,
+      "trailing25_sample_sd_reward": 13745.2176476002
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 100,
+      "episode": 200,
+      "trailing25_mean_reward": -57559.308,
+      "trailing25_sample_sd_reward": 11539.37281531222
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 100,
+      "episode": 250,
+      "trailing25_mean_reward": -56829.476,
+      "trailing25_sample_sd_reward": 11649.434828432664
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 100,
+      "episode": 300,
+      "trailing25_mean_reward": -61319.176,
+      "trailing25_sample_sd_reward": 13889.938046456507
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 100,
+      "episode": 350,
+      "trailing25_mean_reward": -57673.404,
+      "trailing25_sample_sd_reward": 14744.358089268135
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 100,
+      "episode": 400,
+      "trailing25_mean_reward": -55916.416,
+      "trailing25_sample_sd_reward": 11277.343594817296
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 200,
+      "episode": 50,
+      "trailing25_mean_reward": -20538.136,
+      "trailing25_sample_sd_reward": 1126.6968473077986
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 200,
+      "episode": 100,
+      "trailing25_mean_reward": -19641.108,
+      "trailing25_sample_sd_reward": 576.8766404238144
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 200,
+      "episode": 150,
+      "trailing25_mean_reward": -19051.2,
+      "trailing25_sample_sd_reward": 1055.1497488508444
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 200,
+      "episode": 200,
+      "trailing25_mean_reward": -19425.824,
+      "trailing25_sample_sd_reward": 884.1311159739453
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 200,
+      "episode": 250,
+      "trailing25_mean_reward": -19195.988,
+      "trailing25_sample_sd_reward": 934.9181864027819
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 200,
+      "episode": 300,
+      "trailing25_mean_reward": -19070.924,
+      "trailing25_sample_sd_reward": 1125.1407187103307
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 200,
+      "episode": 350,
+      "trailing25_mean_reward": -18752.376,
+      "trailing25_sample_sd_reward": 701.0230133407412
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 200,
+      "episode": 400,
+      "trailing25_mean_reward": -19022.648,
+      "trailing25_sample_sd_reward": 1008.9677654745303
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 200,
+      "episode": 50,
+      "trailing25_mean_reward": -54272.928,
+      "trailing25_sample_sd_reward": 9412.49544530744
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 200,
+      "episode": 100,
+      "trailing25_mean_reward": -57154.056,
+      "trailing25_sample_sd_reward": 11012.95660029888
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 200,
+      "episode": 150,
+      "trailing25_mean_reward": -52262.768,
+      "trailing25_sample_sd_reward": 9494.905054893035
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 200,
+      "episode": 200,
+      "trailing25_mean_reward": -58909.5,
+      "trailing25_sample_sd_reward": 13331.314473074288
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 200,
+      "episode": 250,
+      "trailing25_mean_reward": -58073.036,
+      "trailing25_sample_sd_reward": 15209.058874206077
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 200,
+      "episode": 300,
+      "trailing25_mean_reward": -53215.5,
+      "trailing25_sample_sd_reward": 10701.033574846871
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 200,
+      "episode": 350,
+      "trailing25_mean_reward": -60999.74,
+      "trailing25_sample_sd_reward": 17526.6984501265
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 200,
+      "episode": 400,
+      "trailing25_mean_reward": -60320.708,
+      "trailing25_sample_sd_reward": 12536.154456873926
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 300,
+      "episode": 50,
+      "trailing25_mean_reward": -20297.332,
+      "trailing25_sample_sd_reward": 928.6254383585812
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 300,
+      "episode": 100,
+      "trailing25_mean_reward": -19626.6,
+      "trailing25_sample_sd_reward": 764.8220452061597
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 300,
+      "episode": 150,
+      "trailing25_mean_reward": -19614.984,
+      "trailing25_sample_sd_reward": 963.7716187285588
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 300,
+      "episode": 200,
+      "trailing25_mean_reward": -19826.648,
+      "trailing25_sample_sd_reward": 1036.9670981279971
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 300,
+      "episode": 250,
+      "trailing25_mean_reward": -19437.824,
+      "trailing25_sample_sd_reward": 1224.0305450573255
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 300,
+      "episode": 300,
+      "trailing25_mean_reward": -19466.644,
+      "trailing25_sample_sd_reward": 971.6338855590959
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 300,
+      "episode": 350,
+      "trailing25_mean_reward": -19362.66,
+      "trailing25_sample_sd_reward": 1163.3628296165098
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 300,
+      "episode": 400,
+      "trailing25_mean_reward": -19473.28,
+      "trailing25_sample_sd_reward": 1029.9925266719174
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 300,
+      "episode": 50,
+      "trailing25_mean_reward": -52527.796,
+      "trailing25_sample_sd_reward": 10936.486801089277
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 300,
+      "episode": 100,
+      "trailing25_mean_reward": -55437.176,
+      "trailing25_sample_sd_reward": 19592.911425633847
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 300,
+      "episode": 150,
+      "trailing25_mean_reward": -54846.172,
+      "trailing25_sample_sd_reward": 10363.487450922748
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 300,
+      "episode": 200,
+      "trailing25_mean_reward": -55337.804000000004,
+      "trailing25_sample_sd_reward": 15689.6382759578
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 300,
+      "episode": 250,
+      "trailing25_mean_reward": -57474.916,
+      "trailing25_sample_sd_reward": 12704.247044121374
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 300,
+      "episode": 300,
+      "trailing25_mean_reward": -60311.924,
+      "trailing25_sample_sd_reward": 15863.740967462036
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 300,
+      "episode": 350,
+      "trailing25_mean_reward": -57950.808,
+      "trailing25_sample_sd_reward": 13845.318964091559
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 300,
+      "episode": 400,
+      "trailing25_mean_reward": -62127.544,
+      "trailing25_sample_sd_reward": 14366.540125353773
+    }
+  ],
+  "reward_slopes": [
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 100,
+      "first_episode": 250,
+      "last_episode": 400,
+      "episodes_in_fit": 151,
+      "reward_slope_per_episode": 2.7047270826071808
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 100,
+      "first_episode": 300,
+      "last_episode": 400,
+      "episodes_in_fit": 101,
+      "reward_slope_per_episode": 1.5139580663948722
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 100,
+      "first_episode": 350,
+      "last_episode": 400,
+      "episodes_in_fit": 51,
+      "reward_slope_per_episode": 9.233438914027158
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 100,
+      "first_episode": 250,
+      "last_episode": 400,
+      "episodes_in_fit": 151,
+      "reward_slope_per_episode": 9.440930637852915
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 100,
+      "first_episode": 300,
+      "last_episode": 400,
+      "episodes_in_fit": 101,
+      "reward_slope_per_episode": -4.301244030285386
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 100,
+      "first_episode": 350,
+      "last_episode": 400,
+      "episodes_in_fit": 51,
+      "reward_slope_per_episode": 15.512742081447923
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 200,
+      "first_episode": 250,
+      "last_episode": 400,
+      "episodes_in_fit": 151,
+      "reward_slope_per_episode": -0.4299895433949119
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 200,
+      "first_episode": 300,
+      "last_episode": 400,
+      "episodes_in_fit": 101,
+      "reward_slope_per_episode": 0.48465928945835834
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 200,
+      "first_episode": 350,
+      "last_episode": 400,
+      "episodes_in_fit": 51,
+      "reward_slope_per_episode": -6.519819004524887
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 200,
+      "first_episode": 250,
+      "last_episode": 400,
+      "episodes_in_fit": 151,
+      "reward_slope_per_episode": -44.30522934820495
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 200,
+      "first_episode": 300,
+      "last_episode": 400,
+      "episodes_in_fit": 101,
+      "reward_slope_per_episode": -14.331521258008147
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 200,
+      "first_episode": 350,
+      "last_episode": 400,
+      "episodes_in_fit": 51,
+      "reward_slope_per_episode": -89.1214389140272
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 300,
+      "first_episode": 250,
+      "last_episode": 400,
+      "episodes_in_fit": 151,
+      "reward_slope_per_episode": 1.1911836876960624
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 300,
+      "first_episode": 300,
+      "last_episode": 400,
+      "episodes_in_fit": 101,
+      "reward_slope_per_episode": -4.565511939429236
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 300,
+      "first_episode": 350,
+      "last_episode": 400,
+      "episodes_in_fit": 51,
+      "reward_slope_per_episode": -6.658651583710413
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 300,
+      "first_episode": 250,
+      "last_episode": 400,
+      "episodes_in_fit": 151,
+      "reward_slope_per_episode": -4.051096549320325
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 300,
+      "first_episode": 300,
+      "last_episode": 400,
+      "episodes_in_fit": 101,
+      "reward_slope_per_episode": 33.440153756552135
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 300,
+      "first_episode": 350,
+      "last_episode": 400,
+      "episodes_in_fit": 51,
+      "reward_slope_per_episode": -166.8249321266969
+    }
+  ],
+  "reward_slope_summary": [
+    {
+      "controller": "mappo-vehicle",
+      "first_episode": 250,
+      "last_episode": 400,
+      "independent_training_seeds": 3,
+      "mean": 1.1553070756361103,
+      "ci95_half_width": 3.894298818260984,
+      "ci95_low": -2.7389917426248735,
+      "ci95_high": 5.049605893897095
+    },
+    {
+      "controller": "mappo-vehicle",
+      "first_episode": 300,
+      "last_episode": 400,
+      "independent_training_seeds": 3,
+      "mean": -0.8556315278586684,
+      "ci95_half_width": 8.082909829436382,
+      "ci95_low": -8.93854135729505,
+      "ci95_high": 7.227278301577713
+    },
+    {
+      "controller": "mappo-vehicle",
+      "first_episode": 350,
+      "last_episode": 400,
+      "independent_training_seeds": 3,
+      "mean": -1.315010558069381,
+      "ci95_half_width": 22.693812612030055,
+      "ci95_low": -24.008823170099436,
+      "ci95_high": 21.378802053960673
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "first_episode": 250,
+      "last_episode": 400,
+      "independent_training_seeds": 3,
+      "mean": -12.971798419890789,
+      "ci95_half_width": 69.46026715642263,
+      "ci95_low": -82.43206557631342,
+      "ci95_high": 56.48846873653184
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "first_episode": 300,
+      "last_episode": 400,
+      "independent_training_seeds": 3,
+      "mean": 4.935796156086201,
+      "ci95_half_width": 62.574902200519645,
+      "ci95_low": -57.63910604443345,
+      "ci95_high": 67.51069835660584
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "first_episode": 350,
+      "last_episode": 400,
+      "independent_training_seeds": 3,
+      "mean": -80.14454298642539,
+      "ci95_half_width": 227.29785884291095,
+      "ci95_low": -307.44240182933635,
+      "ci95_high": 147.15331585648556
+    }
+  ],
+  "primary_by_traffic_seed": [
+    {
+      "traffic_seed": 41,
+      "v4_training_seed_100_loss_s_per_vehicle": 170.56915788958952,
+      "v4_training_seed_200_loss_s_per_vehicle": 180.8862423720765,
+      "v4_training_seed_300_loss_s_per_vehicle": 166.49821011655345,
+      "v4_mean_across_training_seeds_s_per_vehicle": 172.6512034594065,
+      "pedestrian_actuated_loss_s_per_vehicle": 197.3442759814868,
+      "v4_minus_actuated_s_per_vehicle": -24.693072522080286
+    },
+    {
+      "traffic_seed": 42,
+      "v4_training_seed_100_loss_s_per_vehicle": 187.22207496159217,
+      "v4_training_seed_200_loss_s_per_vehicle": 175.38139072771233,
+      "v4_training_seed_300_loss_s_per_vehicle": 158.00326706902788,
+      "v4_mean_across_training_seeds_s_per_vehicle": 173.5355775861108,
+      "pedestrian_actuated_loss_s_per_vehicle": 148.97697242777195,
+      "v4_minus_actuated_s_per_vehicle": 24.55860515833885
+    },
+    {
+      "traffic_seed": 43,
+      "v4_training_seed_100_loss_s_per_vehicle": 189.6905814031337,
+      "v4_training_seed_200_loss_s_per_vehicle": 178.4664238884901,
+      "v4_training_seed_300_loss_s_per_vehicle": 196.5628139405365,
+      "v4_mean_across_training_seeds_s_per_vehicle": 188.23993974405343,
+      "pedestrian_actuated_loss_s_per_vehicle": 187.78168147266186,
+      "v4_minus_actuated_s_per_vehicle": 0.45825827139157127
+    }
+  ],
+  "primary_uncertainty": [
+    {
+      "estimate": "V4 vehicle",
+      "uncertainty_unit": "training_seed_average_of_traffic_seeds",
+      "mean": 178.14224026319025,
+      "ci95_half_width": 10.93968118521576,
+      "ci95_low": 167.20255907797448,
+      "ci95_high": 189.081921448406
+    },
+    {
+      "estimate": "V4 vehicle",
+      "uncertainty_unit": "traffic_seed_average_of_training_seeds",
+      "mean": 178.14224026319025,
+      "ci95_half_width": 21.751201229741056,
+      "ci95_low": 156.3910390334492,
+      "ci95_high": 199.8934414929313
+    },
+    {
+      "estimate": "pedestrian_actuated",
+      "uncertainty_unit": "traffic_seed",
+      "mean": 178.0343099606402,
+      "ci95_half_width": 63.630180190911766,
+      "ci95_low": 114.40412976972843,
+      "ci95_high": 241.66449015155197
+    },
+    {
+      "estimate": "V4 minus actuated",
+      "uncertainty_unit": "paired_traffic_seed_average_of_training_seeds",
+      "mean": 0.1079303025500451,
+      "ci95_half_width": 61.17861741810996,
+      "ci95_low": -61.07068711555991,
+      "ci95_high": 61.28654772066
+    }
+  ],
+  "training_seed_primary_means": {
+    "100": 182.4939380847718,
+    "200": 178.24468566275965,
+    "300": 173.6880970420393
+  }
+}

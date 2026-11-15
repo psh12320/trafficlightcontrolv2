@@ -1,0 +1,1251 @@
+{
+  "saved": {
+    "crossings": [
+      {
+        "crossing": ":J0_c0",
+        "approach": "North",
+        "pedestrian_actuated": 166.13333333333333,
+        "ippo-vehicle": 175.64444444444445,
+        "ippo-vehicle_pedestrian": 170.36666666666667,
+        "mappo-vehicle": 175.11111111111111,
+        "mappo-vehicle_pedestrian": 439.4555555555556
+      },
+      {
+        "crossing": ":J0_c1",
+        "approach": "East",
+        "pedestrian_actuated": 95.73333333333333,
+        "ippo-vehicle": 86.65555555555555,
+        "ippo-vehicle_pedestrian": 88.14444444444445,
+        "mappo-vehicle": 99.11111111111111,
+        "mappo-vehicle_pedestrian": 214.25555555555556
+      },
+      {
+        "crossing": ":J0_c2",
+        "approach": "South",
+        "pedestrian_actuated": 186.8,
+        "ippo-vehicle": 196.25555555555556,
+        "ippo-vehicle_pedestrian": 210.23333333333332,
+        "mappo-vehicle": 197.15555555555554,
+        "mappo-vehicle_pedestrian": 489.81111111111113
+      },
+      {
+        "crossing": ":J0_c3",
+        "approach": "West",
+        "pedestrian_actuated": 165.46666666666667,
+        "ippo-vehicle": 178.35555555555555,
+        "ippo-vehicle_pedestrian": 189.54444444444445,
+        "mappo-vehicle": 180.61111111111111,
+        "mappo-vehicle_pedestrian": 461.4888888888889
+      },
+      {
+        "crossing": ":J1_c0",
+        "approach": "North",
+        "pedestrian_actuated": 213.4,
+        "ippo-vehicle": 382.4,
+        "ippo-vehicle_pedestrian": 450.61111111111114,
+        "mappo-vehicle": 576.8444444444444,
+        "mappo-vehicle_pedestrian": 187.97777777777776
+      },
+      {
+        "crossing": ":J1_c1",
+        "approach": "East",
+        "pedestrian_actuated": 98.76666666666667,
+        "ippo-vehicle": 187.5,
+        "ippo-vehicle_pedestrian": 197.9,
+        "mappo-vehicle": 343.82222222222225,
+        "mappo-vehicle_pedestrian": 99.02222222222223
+      },
+      {
+        "crossing": ":J1_c2",
+        "approach": "South",
+        "pedestrian_actuated": 252.9,
+        "ippo-vehicle": 455.55555555555554,
+        "ippo-vehicle_pedestrian": 457.7888888888889,
+        "mappo-vehicle": 674.6222222222223,
+        "mappo-vehicle_pedestrian": 250.3111111111111
+      },
+      {
+        "crossing": ":J1_c3",
+        "approach": "West",
+        "pedestrian_actuated": 296.29999999999995,
+        "ippo-vehicle": 433.34444444444443,
+        "ippo-vehicle_pedestrian": 439.8666666666667,
+        "mappo-vehicle": 624.3222222222222,
+        "mappo-vehicle_pedestrian": 280.6
+      },
+      {
+        "crossing": ":J2_c0",
+        "approach": "North",
+        "pedestrian_actuated": 572.1666666666667,
+        "ippo-vehicle": 649.1222222222223,
+        "ippo-vehicle_pedestrian": 790.1444444444444,
+        "mappo-vehicle": 577.7222222222223,
+        "mappo-vehicle_pedestrian": 767.5444444444445
+      },
+      {
+        "crossing": ":J2_c1",
+        "approach": "East",
+        "pedestrian_actuated": 634.0,
+        "ippo-vehicle": 721.6111111111111,
+        "ippo-vehicle_pedestrian": 805.8888888888889,
+        "mappo-vehicle": 605.6777777777778,
+        "mappo-vehicle_pedestrian": 675.3333333333334
+      },
+      {
+        "crossing": ":J2_c2",
+        "approach": "South",
+        "pedestrian_actuated": 597.7666666666667,
+        "ippo-vehicle": 671.7777777777778,
+        "ippo-vehicle_pedestrian": 835.9555555555555,
+        "mappo-vehicle": 623.3888888888889,
+        "mappo-vehicle_pedestrian": 737.5555555555555
+      },
+      {
+        "crossing": ":J2_c3",
+        "approach": "West",
+        "pedestrian_actuated": 670.3333333333334,
+        "ippo-vehicle": 694.1555555555556,
+        "ippo-vehicle_pedestrian": 767.1333333333333,
+        "mappo-vehicle": 618.4555555555555,
+        "mappo-vehicle_pedestrian": 694.9666666666667
+      }
+    ],
+    "ranked_excess": [
+      {
+        "controller": "mappo-vehicle",
+        "crossing": ":J1_c2",
+        "approach": "South",
+        "p95_seconds": 674.6222222222223,
+        "actuated_p95_seconds": 252.9,
+        "excess_seconds": 421.7222222222223,
+        "excess_percent": 166.75453626817804
+      },
+      {
+        "controller": "mappo-vehicle",
+        "crossing": ":J1_c0",
+        "approach": "North",
+        "p95_seconds": 576.8444444444444,
+        "actuated_p95_seconds": 213.4,
+        "excess_seconds": 363.44444444444446,
+        "excess_percent": 170.3113610330105
+      },
+      {
+        "controller": "mappo-vehicle",
+        "crossing": ":J1_c3",
+        "approach": "West",
+        "p95_seconds": 624.3222222222222,
+        "actuated_p95_seconds": 296.29999999999995,
+        "excess_seconds": 328.02222222222224,
+        "excess_percent": 110.70611617354785
+      },
+      {
+        "controller": "mappo-vehicle_pedestrian",
+        "crossing": ":J0_c2",
+        "approach": "South",
+        "p95_seconds": 489.81111111111113,
+        "actuated_p95_seconds": 186.8,
+        "excess_seconds": 303.0111111111111,
+        "excess_percent": 162.2115155841066
+      },
+      {
+        "controller": "mappo-vehicle_pedestrian",
+        "crossing": ":J0_c3",
+        "approach": "West",
+        "p95_seconds": 461.4888888888889,
+        "actuated_p95_seconds": 165.46666666666667,
+        "excess_seconds": 296.02222222222224,
+        "excess_percent": 178.90142358313187
+      },
+      {
+        "controller": "mappo-vehicle_pedestrian",
+        "crossing": ":J0_c0",
+        "approach": "North",
+        "p95_seconds": 439.4555555555556,
+        "actuated_p95_seconds": 166.13333333333333,
+        "excess_seconds": 273.32222222222225,
+        "excess_percent": 164.51979668271807
+      },
+      {
+        "controller": "mappo-vehicle",
+        "crossing": ":J1_c1",
+        "approach": "East",
+        "p95_seconds": 343.82222222222225,
+        "actuated_p95_seconds": 98.76666666666667,
+        "excess_seconds": 245.0555555555556,
+        "excess_percent": 248.1156485543931
+      },
+      {
+        "controller": "ippo-vehicle_pedestrian",
+        "crossing": ":J2_c2",
+        "approach": "South",
+        "p95_seconds": 835.9555555555555,
+        "actuated_p95_seconds": 597.7666666666667,
+        "excess_seconds": 238.18888888888887,
+        "excess_percent": 39.846465547686755
+      },
+      {
+        "controller": "ippo-vehicle_pedestrian",
+        "crossing": ":J1_c0",
+        "approach": "North",
+        "p95_seconds": 450.61111111111114,
+        "actuated_p95_seconds": 213.4,
+        "excess_seconds": 237.21111111111114,
+        "excess_percent": 111.15797146724982
+      },
+      {
+        "controller": "ippo-vehicle_pedestrian",
+        "crossing": ":J2_c0",
+        "approach": "North",
+        "p95_seconds": 790.1444444444444,
+        "actuated_p95_seconds": 572.1666666666667,
+        "excess_seconds": 217.97777777777765,
+        "excess_percent": 38.09690261190404
+      },
+      {
+        "controller": "ippo-vehicle_pedestrian",
+        "crossing": ":J1_c2",
+        "approach": "South",
+        "p95_seconds": 457.7888888888889,
+        "actuated_p95_seconds": 252.9,
+        "excess_seconds": 204.88888888888889,
+        "excess_percent": 81.01577259347128
+      },
+      {
+        "controller": "ippo-vehicle",
+        "crossing": ":J1_c2",
+        "approach": "South",
+        "p95_seconds": 455.55555555555554,
+        "actuated_p95_seconds": 252.9,
+        "excess_seconds": 202.65555555555554,
+        "excess_percent": 80.13268309828214
+      },
+      {
+        "controller": "mappo-vehicle_pedestrian",
+        "crossing": ":J2_c0",
+        "approach": "North",
+        "p95_seconds": 767.5444444444445,
+        "actuated_p95_seconds": 572.1666666666667,
+        "excess_seconds": 195.37777777777774,
+        "excess_percent": 34.14700456354985
+      },
+      {
+        "controller": "ippo-vehicle_pedestrian",
+        "crossing": ":J2_c1",
+        "approach": "East",
+        "p95_seconds": 805.8888888888889,
+        "actuated_p95_seconds": 634.0,
+        "excess_seconds": 171.8888888888889,
+        "excess_percent": 27.111812127585
+      },
+      {
+        "controller": "ippo-vehicle",
+        "crossing": ":J1_c0",
+        "approach": "North",
+        "p95_seconds": 382.4,
+        "actuated_p95_seconds": 213.4,
+        "excess_seconds": 168.99999999999997,
+        "excess_percent": 79.19400187441423
+      },
+      {
+        "controller": "ippo-vehicle_pedestrian",
+        "crossing": ":J1_c3",
+        "approach": "West",
+        "p95_seconds": 439.8666666666667,
+        "actuated_p95_seconds": 296.29999999999995,
+        "excess_seconds": 143.56666666666672,
+        "excess_percent": 48.453144335695825
+      },
+      {
+        "controller": "mappo-vehicle_pedestrian",
+        "crossing": ":J2_c2",
+        "approach": "South",
+        "p95_seconds": 737.5555555555555,
+        "actuated_p95_seconds": 597.7666666666667,
+        "excess_seconds": 139.7888888888889,
+        "excess_percent": 23.385193033327756
+      },
+      {
+        "controller": "ippo-vehicle",
+        "crossing": ":J1_c3",
+        "approach": "West",
+        "p95_seconds": 433.34444444444443,
+        "actuated_p95_seconds": 296.29999999999995,
+        "excess_seconds": 137.04444444444448,
+        "excess_percent": 46.251921850976885
+      },
+      {
+        "controller": "mappo-vehicle_pedestrian",
+        "crossing": ":J0_c1",
+        "approach": "East",
+        "p95_seconds": 214.25555555555556,
+        "actuated_p95_seconds": 95.73333333333333,
+        "excess_seconds": 118.52222222222223,
+        "excess_percent": 123.80454967502321
+      },
+      {
+        "controller": "ippo-vehicle_pedestrian",
+        "crossing": ":J1_c1",
+        "approach": "East",
+        "p95_seconds": 197.9,
+        "actuated_p95_seconds": 98.76666666666667,
+        "excess_seconds": 99.13333333333334,
+        "excess_percent": 100.37124535943302
+      },
+      {
+        "controller": "ippo-vehicle_pedestrian",
+        "crossing": ":J2_c3",
+        "approach": "West",
+        "p95_seconds": 767.1333333333333,
+        "actuated_p95_seconds": 670.3333333333334,
+        "excess_seconds": 96.79999999999995,
+        "excess_percent": 14.440576827449025
+      },
+      {
+        "controller": "ippo-vehicle",
+        "crossing": ":J1_c1",
+        "approach": "East",
+        "p95_seconds": 187.5,
+        "actuated_p95_seconds": 98.76666666666667,
+        "excess_seconds": 88.73333333333333,
+        "excess_percent": 89.84137698278772
+      },
+      {
+        "controller": "ippo-vehicle",
+        "crossing": ":J2_c1",
+        "approach": "East",
+        "p95_seconds": 721.6111111111111,
+        "actuated_p95_seconds": 634.0,
+        "excess_seconds": 87.61111111111109,
+        "excess_percent": 13.818787241500173
+      },
+      {
+        "controller": "ippo-vehicle",
+        "crossing": ":J2_c0",
+        "approach": "North",
+        "p95_seconds": 649.1222222222223,
+        "actuated_p95_seconds": 572.1666666666667,
+        "excess_seconds": 76.95555555555552,
+        "excess_percent": 13.449849499951444
+      },
+      {
+        "controller": "ippo-vehicle",
+        "crossing": ":J2_c2",
+        "approach": "South",
+        "p95_seconds": 671.7777777777778,
+        "actuated_p95_seconds": 597.7666666666667,
+        "excess_seconds": 74.01111111111118,
+        "excess_percent": 12.381271027342526
+      },
+      {
+        "controller": "mappo-vehicle_pedestrian",
+        "crossing": ":J2_c1",
+        "approach": "East",
+        "p95_seconds": 675.3333333333334,
+        "actuated_p95_seconds": 634.0,
+        "excess_seconds": 41.33333333333337,
+        "excess_percent": 6.519453207150375
+      },
+      {
+        "controller": "mappo-vehicle",
+        "crossing": ":J2_c2",
+        "approach": "South",
+        "p95_seconds": 623.3888888888889,
+        "actuated_p95_seconds": 597.7666666666667,
+        "excess_seconds": 25.622222222222263,
+        "excess_percent": 4.2863250246287175
+      },
+      {
+        "controller": "mappo-vehicle_pedestrian",
+        "crossing": ":J2_c3",
+        "approach": "West",
+        "p95_seconds": 694.9666666666667,
+        "actuated_p95_seconds": 670.3333333333334,
+        "excess_seconds": 24.633333333333326,
+        "excess_percent": 3.674788662357035
+      },
+      {
+        "controller": "ippo-vehicle_pedestrian",
+        "crossing": ":J0_c3",
+        "approach": "West",
+        "p95_seconds": 189.54444444444445,
+        "actuated_p95_seconds": 165.46666666666667,
+        "excess_seconds": 24.077777777777783,
+        "excess_percent": 14.551437013161431
+      },
+      {
+        "controller": "ippo-vehicle",
+        "crossing": ":J2_c3",
+        "approach": "West",
+        "p95_seconds": 694.1555555555556,
+        "actuated_p95_seconds": 670.3333333333334,
+        "excess_seconds": 23.822222222222194,
+        "excess_percent": 3.553787502071933
+      },
+      {
+        "controller": "ippo-vehicle_pedestrian",
+        "crossing": ":J0_c2",
+        "approach": "South",
+        "p95_seconds": 210.23333333333332,
+        "actuated_p95_seconds": 186.8,
+        "excess_seconds": 23.43333333333331,
+        "excess_percent": 12.544610992148451
+      },
+      {
+        "controller": "mappo-vehicle",
+        "crossing": ":J0_c3",
+        "approach": "West",
+        "p95_seconds": 180.61111111111111,
+        "actuated_p95_seconds": 165.46666666666667,
+        "excess_seconds": 15.144444444444446,
+        "excess_percent": 9.152565135643298
+      },
+      {
+        "controller": "ippo-vehicle",
+        "crossing": ":J0_c3",
+        "approach": "West",
+        "p95_seconds": 178.35555555555555,
+        "actuated_p95_seconds": 165.46666666666667,
+        "excess_seconds": 12.888888888888886,
+        "excess_percent": 7.7894171367177
+      },
+      {
+        "controller": "mappo-vehicle",
+        "crossing": ":J0_c2",
+        "approach": "South",
+        "p95_seconds": 197.15555555555554,
+        "actuated_p95_seconds": 186.8,
+        "excess_seconds": 10.355555555555526,
+        "excess_percent": 5.543659290982615
+      },
+      {
+        "controller": "ippo-vehicle",
+        "crossing": ":J0_c0",
+        "approach": "North",
+        "p95_seconds": 175.64444444444445,
+        "actuated_p95_seconds": 166.13333333333333,
+        "excess_seconds": 9.51111111111112,
+        "excess_percent": 5.724986623863034
+      },
+      {
+        "controller": "ippo-vehicle",
+        "crossing": ":J0_c2",
+        "approach": "South",
+        "p95_seconds": 196.25555555555556,
+        "actuated_p95_seconds": 186.8,
+        "excess_seconds": 9.455555555555549,
+        "excess_percent": 5.0618605757792015
+      },
+      {
+        "controller": "mappo-vehicle",
+        "crossing": ":J0_c0",
+        "approach": "North",
+        "p95_seconds": 175.11111111111111,
+        "actuated_p95_seconds": 166.13333333333333,
+        "excess_seconds": 8.977777777777789,
+        "excess_percent": 5.403959336543613
+      },
+      {
+        "controller": "mappo-vehicle",
+        "crossing": ":J2_c0",
+        "approach": "North",
+        "p95_seconds": 577.7222222222223,
+        "actuated_p95_seconds": 572.1666666666667,
+        "excess_seconds": 5.555555555555543,
+        "excess_percent": 0.9709680551509832
+      },
+      {
+        "controller": "ippo-vehicle_pedestrian",
+        "crossing": ":J0_c0",
+        "approach": "North",
+        "p95_seconds": 170.36666666666667,
+        "actuated_p95_seconds": 166.13333333333333,
+        "excess_seconds": 4.2333333333333485,
+        "excess_percent": 2.5481540930979225
+      },
+      {
+        "controller": "mappo-vehicle",
+        "crossing": ":J0_c1",
+        "approach": "East",
+        "p95_seconds": 99.11111111111111,
+        "actuated_p95_seconds": 95.73333333333333,
+        "excess_seconds": 3.37777777777778,
+        "excess_percent": 3.5283194057567338
+      },
+      {
+        "controller": "mappo-vehicle_pedestrian",
+        "crossing": ":J1_c1",
+        "approach": "East",
+        "p95_seconds": 99.02222222222223,
+        "actuated_p95_seconds": 98.76666666666667,
+        "excess_seconds": 0.25555555555556,
+        "excess_percent": 0.25874676566543364
+      },
+      {
+        "controller": "mappo-vehicle_pedestrian",
+        "crossing": ":J1_c2",
+        "approach": "South",
+        "p95_seconds": 250.3111111111111,
+        "actuated_p95_seconds": 252.9,
+        "excess_seconds": -2.588888888888903,
+        "excess_percent": -1.0236808576073162
+      },
+      {
+        "controller": "ippo-vehicle_pedestrian",
+        "crossing": ":J0_c1",
+        "approach": "East",
+        "p95_seconds": 88.14444444444445,
+        "actuated_p95_seconds": 95.73333333333333,
+        "excess_seconds": -7.588888888888889,
+        "excess_percent": -7.9271123491179205
+      },
+      {
+        "controller": "ippo-vehicle",
+        "crossing": ":J0_c1",
+        "approach": "East",
+        "p95_seconds": 86.65555555555555,
+        "actuated_p95_seconds": 95.73333333333333,
+        "excess_seconds": -9.077777777777783,
+        "excess_percent": -9.482358402971222
+      },
+      {
+        "controller": "mappo-vehicle_pedestrian",
+        "crossing": ":J1_c3",
+        "approach": "West",
+        "p95_seconds": 280.6,
+        "actuated_p95_seconds": 296.29999999999995,
+        "excess_seconds": -15.699999999999932,
+        "excess_percent": -5.298683766452897
+      },
+      {
+        "controller": "mappo-vehicle_pedestrian",
+        "crossing": ":J1_c0",
+        "approach": "North",
+        "p95_seconds": 187.97777777777776,
+        "actuated_p95_seconds": 213.4,
+        "excess_seconds": -25.422222222222246,
+        "excess_percent": -11.91294387170677
+      },
+      {
+        "controller": "mappo-vehicle",
+        "crossing": ":J2_c1",
+        "approach": "East",
+        "p95_seconds": 605.6777777777778,
+        "actuated_p95_seconds": 634.0,
+        "excess_seconds": -28.322222222222194,
+        "excess_percent": -4.467227479845772
+      },
+      {
+        "controller": "mappo-vehicle",
+        "crossing": ":J2_c3",
+        "approach": "West",
+        "p95_seconds": 618.4555555555555,
+        "actuated_p95_seconds": 670.3333333333334,
+        "excess_seconds": -51.87777777777785,
+        "excess_percent": -7.739101607823646
+      }
+    ],
+    "saved_extremes": [
+      {
+        "scenario": "primary",
+        "controller": "fixed_time",
+        "pedestrian_unfinished_mean": 107.0,
+        "pedestrian_unfinished_ci95": 22.76749820243679,
+        "pedestrian_unfinished_maximum_observed": 115.0,
+        "maximum_observed_crossing_p95_seconds": 1006.6,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      },
+      {
+        "scenario": "primary",
+        "controller": "pedestrian_actuated",
+        "pedestrian_unfinished_mean": 124.0,
+        "pedestrian_unfinished_ci95": 110.64874739492608,
+        "pedestrian_unfinished_maximum_observed": 172.0,
+        "maximum_observed_crossing_p95_seconds": 863.0,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      },
+      {
+        "scenario": "primary",
+        "controller": "ippo-vehicle",
+        "pedestrian_unfinished_mean": 122.11111111111111,
+        "pedestrian_unfinished_ci95": 33.577576217611906,
+        "pedestrian_unfinished_maximum_observed": 167.0,
+        "maximum_observed_crossing_p95_seconds": 1562.5,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      },
+      {
+        "scenario": "primary",
+        "controller": "ippo-vehicle_pedestrian",
+        "pedestrian_unfinished_mean": 144.55555555555554,
+        "pedestrian_unfinished_ci95": 60.170702620934044,
+        "pedestrian_unfinished_maximum_observed": 181.0,
+        "maximum_observed_crossing_p95_seconds": 1512.7,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      },
+      {
+        "scenario": "primary",
+        "controller": "mappo-vehicle",
+        "pedestrian_unfinished_mean": 144.0,
+        "pedestrian_unfinished_ci95": 17.62396063963349,
+        "pedestrian_unfinished_maximum_observed": 177.0,
+        "maximum_observed_crossing_p95_seconds": 1528.6,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      },
+      {
+        "scenario": "primary",
+        "controller": "mappo-vehicle_pedestrian",
+        "pedestrian_unfinished_mean": 128.88888888888889,
+        "pedestrian_unfinished_ci95": 21.94451837496594,
+        "pedestrian_unfinished_maximum_observed": 178.0,
+        "maximum_observed_crossing_p95_seconds": 1516.3,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      },
+      {
+        "scenario": "high",
+        "controller": "fixed_time",
+        "pedestrian_unfinished_mean": 329.0,
+        "pedestrian_unfinished_ci95": 61.20261991158891,
+        "pedestrian_unfinished_maximum_observed": 355.0,
+        "maximum_observed_crossing_p95_seconds": 1258.9,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      },
+      {
+        "scenario": "high",
+        "controller": "pedestrian_actuated",
+        "pedestrian_unfinished_mean": 316.0,
+        "pedestrian_unfinished_ci95": 146.05800276788915,
+        "pedestrian_unfinished_maximum_observed": 383.0,
+        "maximum_observed_crossing_p95_seconds": 1039.5,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      },
+      {
+        "scenario": "high",
+        "controller": "ippo-vehicle",
+        "pedestrian_unfinished_mean": 343.22222222222223,
+        "pedestrian_unfinished_ci95": 129.66345753650566,
+        "pedestrian_unfinished_maximum_observed": 436.0,
+        "maximum_observed_crossing_p95_seconds": 1483.1,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      },
+      {
+        "scenario": "high",
+        "controller": "ippo-vehicle_pedestrian",
+        "pedestrian_unfinished_mean": 320.6666666666667,
+        "pedestrian_unfinished_ci95": 80.96663165828575,
+        "pedestrian_unfinished_maximum_observed": 399.0,
+        "maximum_observed_crossing_p95_seconds": 1652.3,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      },
+      {
+        "scenario": "high",
+        "controller": "mappo-vehicle",
+        "pedestrian_unfinished_mean": 303.88888888888886,
+        "pedestrian_unfinished_ci95": 36.86742072734032,
+        "pedestrian_unfinished_maximum_observed": 337.0,
+        "maximum_observed_crossing_p95_seconds": 1203.6,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      },
+      {
+        "scenario": "high",
+        "controller": "mappo-vehicle_pedestrian",
+        "pedestrian_unfinished_mean": 309.22222222222223,
+        "pedestrian_unfinished_ci95": 101.09397181436822,
+        "pedestrian_unfinished_maximum_observed": 348.0,
+        "maximum_observed_crossing_p95_seconds": 1094.2,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      },
+      {
+        "scenario": "slow",
+        "controller": "fixed_time",
+        "pedestrian_unfinished_mean": 189.66666666666666,
+        "pedestrian_unfinished_ci95": 35.16027608449623,
+        "pedestrian_unfinished_maximum_observed": 206.0,
+        "maximum_observed_crossing_p95_seconds": 1412.2,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      },
+      {
+        "scenario": "slow",
+        "controller": "pedestrian_actuated",
+        "pedestrian_unfinished_mean": 148.66666666666666,
+        "pedestrian_unfinished_ci95": 40.38793365979342,
+        "pedestrian_unfinished_maximum_observed": 163.0,
+        "maximum_observed_crossing_p95_seconds": 886.1,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      },
+      {
+        "scenario": "slow",
+        "controller": "ippo-vehicle",
+        "pedestrian_unfinished_mean": 194.0,
+        "pedestrian_unfinished_ci95": 12.934490505890114,
+        "pedestrian_unfinished_maximum_observed": 231.0,
+        "maximum_observed_crossing_p95_seconds": 1506.0,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      },
+      {
+        "scenario": "slow",
+        "controller": "ippo-vehicle_pedestrian",
+        "pedestrian_unfinished_mean": 194.33333333333334,
+        "pedestrian_unfinished_ci95": 19.09898243708022,
+        "pedestrian_unfinished_maximum_observed": 226.0,
+        "maximum_observed_crossing_p95_seconds": 1098.3,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      },
+      {
+        "scenario": "slow",
+        "controller": "mappo-vehicle",
+        "pedestrian_unfinished_mean": 188.0,
+        "pedestrian_unfinished_ci95": 0.8280459039479411,
+        "pedestrian_unfinished_maximum_observed": 211.0,
+        "maximum_observed_crossing_p95_seconds": 1341.2,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      },
+      {
+        "scenario": "slow",
+        "controller": "mappo-vehicle_pedestrian",
+        "pedestrian_unfinished_mean": 203.33333333333334,
+        "pedestrian_unfinished_ci95": 88.92534509151544,
+        "pedestrian_unfinished_maximum_observed": 259.0,
+        "maximum_observed_crossing_p95_seconds": 1565.5,
+        "maximum_individual_wait_seconds": null,
+        "maximum_individual_wait_status": "not recorded in saved V2 metrics"
+      }
+    ],
+    "primary_rows": 42,
+    "summary_rows": 168
+  },
+  "rollouts": [
+    {
+      "controller": "pedestrian_actuated",
+      "training_seed": null,
+      "checkpoint": null,
+      "selected_episode": null,
+      "evaluation_seed": 11,
+      "duration": 3600,
+      "elapsed_seconds": 17.85899999999674,
+      "junctions": [
+        {
+          "junction": "J0",
+          "all_phase_transitions": 229,
+          "green_terminations": 77,
+          "mean_completed_green_seconds": 36.87012987012987,
+          "min_completed_green_seconds": 27.0,
+          "max_completed_green_seconds": 37.0,
+          "phase_seconds": {
+            "0": 1433.0,
+            "1": 191.0,
+            "2": 190.0,
+            "3": 1406.0,
+            "4": 190.0,
+            "5": 190.0
+          },
+          "decisions": 0,
+          "action_percent": {
+            "hold": null,
+            "switch": null,
+            "extend_5": null,
+            "extend_10": null
+          },
+          "green_action_counts": {},
+          "effective_commands": {
+            "early_termination": 1
+          }
+        },
+        {
+          "junction": "J1",
+          "all_phase_transitions": 229,
+          "green_terminations": 77,
+          "mean_completed_green_seconds": 36.857142857142854,
+          "min_completed_green_seconds": 26.0,
+          "max_completed_green_seconds": 37.0,
+          "phase_seconds": {
+            "0": 1432.0,
+            "1": 192.0,
+            "2": 190.0,
+            "3": 1406.0,
+            "4": 190.0,
+            "5": 190.0
+          },
+          "decisions": 0,
+          "action_percent": {
+            "hold": null,
+            "switch": null,
+            "extend_5": null,
+            "extend_10": null
+          },
+          "green_action_counts": {},
+          "effective_commands": {
+            "early_termination": 1
+          }
+        },
+        {
+          "junction": "J2",
+          "all_phase_transitions": 228,
+          "green_terminations": 76,
+          "mean_completed_green_seconds": 36.93421052631579,
+          "min_completed_green_seconds": 32.0,
+          "max_completed_green_seconds": 37.0,
+          "phase_seconds": {
+            "0": 1434.0,
+            "1": 190.0,
+            "2": 190.0,
+            "3": 1406.0,
+            "4": 190.0,
+            "5": 190.0
+          },
+          "decisions": 0,
+          "action_percent": {
+            "hold": null,
+            "switch": null,
+            "extend_5": null,
+            "extend_10": null
+          },
+          "green_action_counts": {},
+          "effective_commands": {
+            "early_termination": 1
+          }
+        }
+      ],
+      "maximum_individual_wait_seconds": 979.0,
+      "observed_total_person_wait_seconds": 344862.0,
+      "observation_slots": {},
+      "metrics": {
+        "controller": "pedestrian_actuated",
+        "seed": 11,
+        "duration_seconds": 3600,
+        "green_duration_seconds": 37,
+        "pedestrian_speed_meters_per_second": 1.4,
+        "warmup_seconds": 0,
+        "vehicle_waiting_seconds": 387824.0,
+        "pedestrian_waiting_seconds": 344862.0,
+        "vehicle_completed_waiting_seconds": 234855.0,
+        "pedestrian_completed_waiting_seconds": 326903.0,
+        "vehicle_average_waiting_seconds": 154.8817891373802,
+        "pedestrian_average_waiting_seconds": 160.55027932960894,
+        "vehicle_completed_average_waiting_seconds": 99.8957890259464,
+        "pedestrian_completed_average_waiting_seconds": 160.87746062992127,
+        "vehicle_arrivals": 2504,
+        "pedestrian_arrivals": 2148,
+        "vehicle_completed": 2351,
+        "pedestrian_completed": 2032,
+        "vehicle_unfinished": 153,
+        "pedestrian_unfinished": 116,
+        "vehicle_time_loss_seconds": 452268.4537184418,
+        "vehicle_completed_time_loss_seconds": 284182.11036221316,
+        "pedestrian_p95_waiting_seconds": 439.0,
+        "pedestrian_completed_p95_waiting_seconds": 438.0,
+        "pedestrian_p95_by_crossing": {
+          ":J0_c0": 167.1,
+          ":J0_c2": 178.0,
+          ":J0_c3": 161.0,
+          ":J0_c1": 94.2,
+          ":J1_c0": 187.8,
+          ":J1_c2": 258.2,
+          ":J1_c3": 288.4,
+          ":J1_c1": 99.1,
+          ":J2_c0": 565.1,
+          ":J2_c2": 514.4,
+          ":J2_c3": 594.7,
+          ":J2_c1": 591.7
+        },
+        "waiting_by_junction": {
+          "J0": 72495.0,
+          "J2": 186466.0,
+          "J1": 85901.0
+        },
+        "waiting_by_crossing": {
+          ":J0_c0": 20699.0,
+          ":J0_c2": 21992.0,
+          ":J2_c3": 43736.0,
+          ":J2_c1": 49841.0,
+          ":J0_c3": 20088.0,
+          ":J0_c1": 9716.0,
+          ":J1_c0": 21769.0,
+          ":J1_c2": 25486.0,
+          ":J1_c3": 28364.0,
+          ":J1_c1": 10282.0,
+          ":J2_c0": 47489.0,
+          ":J2_c2": 45400.0
+        }
+      },
+      "saved_replay_differences": {
+        "pedestrian_unfinished": 0.0,
+        "pedestrian_waiting_seconds": 0.0,
+        "vehicle_completed": 0.0,
+        "vehicle_time_loss_seconds": 0.0,
+        "pedestrian_average_waiting_seconds": 0.0
+      },
+      "saved_replay_crossing_p95_max_abs_difference": 0.0
+    },
+    {
+      "controller": "mappo-vehicle",
+      "training_seed": 100,
+      "checkpoint": "C:\\Users\\Shricharan\\VSCodeProjects\\trafficlightcontrolv2\\scenario\\generated\\final-v2-results\\checkpoints\\mappo-vehicle-actions4-seed100\\episode-50.pt",
+      "selected_episode": 50,
+      "evaluation_seed": 11,
+      "duration": 3600,
+      "elapsed_seconds": 22.046999999991385,
+      "junctions": [
+        {
+          "junction": "J0",
+          "all_phase_transitions": 228,
+          "green_terminations": 76,
+          "mean_completed_green_seconds": 37.01315789473684,
+          "min_completed_green_seconds": 37.0,
+          "max_completed_green_seconds": 38.0,
+          "phase_seconds": {
+            "0": 1434.0,
+            "1": 190.0,
+            "2": 190.0,
+            "3": 1406.0,
+            "4": 190.0,
+            "5": 190.0
+          },
+          "decisions": 720,
+          "action_percent": {
+            "hold": 100.0,
+            "switch": 0.0,
+            "extend_5": 0.0,
+            "extend_10": 0.0
+          },
+          "green_action_counts": {
+            "0": 568
+          },
+          "effective_commands": {}
+        },
+        {
+          "junction": "J1",
+          "all_phase_transitions": 195,
+          "green_terminations": 65,
+          "mean_completed_green_seconds": 44.93846153846154,
+          "min_completed_green_seconds": 41.0,
+          "max_completed_green_seconds": 45.0,
+          "phase_seconds": {
+            "0": 1481.0,
+            "1": 165.0,
+            "2": 165.0,
+            "3": 1469.0,
+            "4": 160.0,
+            "5": 160.0
+          },
+          "decisions": 720,
+          "action_percent": {
+            "hold": 18.055555555555557,
+            "switch": 0.0,
+            "extend_5": 81.94444444444444,
+            "extend_10": 0.0
+          },
+          "green_action_counts": {
+            "2": 590
+          },
+          "effective_commands": {
+            "effective_extend_5": 131,
+            "forced_max": 65
+          }
+        },
+        {
+          "junction": "J2",
+          "all_phase_transitions": 225,
+          "green_terminations": 75,
+          "mean_completed_green_seconds": 37.946666666666665,
+          "min_completed_green_seconds": 31.0,
+          "max_completed_green_seconds": 45.0,
+          "phase_seconds": {
+            "0": 1421.0,
+            "1": 190.0,
+            "2": 190.0,
+            "3": 1429.0,
+            "4": 185.0,
+            "5": 185.0
+          },
+          "decisions": 720,
+          "action_percent": {
+            "hold": 84.16666666666667,
+            "switch": 1.6666666666666667,
+            "extend_5": 0.4166666666666667,
+            "extend_10": 13.75
+          },
+          "green_action_counts": {
+            "3": 99,
+            "0": 456,
+            "2": 3,
+            "1": 12
+          },
+          "effective_commands": {
+            "effective_extend_10": 14,
+            "forced_max": 14,
+            "early_termination": 12
+          }
+        }
+      ],
+      "maximum_individual_wait_seconds": 2327.0,
+      "observed_total_person_wait_seconds": 517605.0,
+      "observation_slots": {
+        "total": 8640,
+        "outside_waiting": 8536,
+        "outside_waiting_with_zero_observation": 4274,
+        "nonzero_observed": 4284
+      },
+      "metrics": {
+        "vehicle_departed": 2580,
+        "vehicle_completed": 2443,
+        "vehicle_unfinished": 137,
+        "pedestrian_departed": 2148,
+        "pedestrian_completed": 1971,
+        "pedestrian_unfinished": 177,
+        "vehicle_waiting_seconds": 392458.0,
+        "pedestrian_waiting_seconds": 517605.0,
+        "vehicle_time_loss_seconds": 425463.0284754767,
+        "vehicle_completed_time_loss_seconds": 116664.38675936616,
+        "vehicle_average_waiting_seconds": 152.11550387596898,
+        "vehicle_completed_average_waiting_seconds": 36.088006549324604,
+        "vehicle_completed_average_time_loss_seconds": 47.75455864075569,
+        "pedestrian_average_waiting_seconds": 240.97067039106145,
+        "pedestrian_completed_average_waiting_seconds": 228.22526636225265,
+        "pedestrian_p95_waiting_seconds": 929.2,
+        "pedestrian_completed_p95_waiting_seconds": 892.5,
+        "pedestrian_p95_by_crossing": {
+          ":J0_c0": 162.1,
+          ":J0_c2": 172.5,
+          ":J0_c3": 169.2,
+          ":J0_c1": 92.2,
+          ":J1_c0": 190.2,
+          ":J1_c2": 210.4,
+          ":J1_c3": 251.1,
+          ":J1_c1": 113.1,
+          ":J2_c0": 1301.7,
+          ":J2_c2": 1411.5,
+          ":J2_c3": 1120.6,
+          ":J2_c1": 1191.4
+        },
+        "waiting_by_crossing": {
+          ":J0_c0": 19424.0,
+          ":J0_c2": 21358.0,
+          ":J0_c3": 19947.0,
+          ":J0_c1": 9593.0,
+          ":J1_c0": 23513.0,
+          ":J1_c2": 24218.0,
+          ":J1_c3": 27193.0,
+          ":J1_c1": 11542.0,
+          ":J2_c0": 96250.0,
+          ":J2_c2": 96925.0,
+          ":J2_c3": 76346.0,
+          ":J2_c1": 91296.0
+        }
+      },
+      "saved_replay_differences": {
+        "pedestrian_unfinished": 0.0,
+        "pedestrian_waiting_seconds": 0.0,
+        "vehicle_completed": 0.0,
+        "vehicle_time_loss_seconds": 0.0,
+        "pedestrian_average_waiting_seconds": 0.0
+      },
+      "saved_replay_crossing_p95_max_abs_difference": 0.0,
+      "reward_components": {
+        "vehicle_delay_term": 18868.173076923078,
+        "pedestrian_delay_term_if_included": 6362.692071296866,
+        "voluntary_switch_penalty": 18.0
+      }
+    },
+    {
+      "controller": "mappo-vehicle_pedestrian",
+      "training_seed": 100,
+      "checkpoint": "C:\\Users\\Shricharan\\VSCodeProjects\\trafficlightcontrolv2\\scenario\\generated\\final-v2-results\\checkpoints\\mappo-vehicle_pedestrian-actions4-seed100\\episode-250.pt",
+      "selected_episode": 250,
+      "evaluation_seed": 11,
+      "duration": 3600,
+      "elapsed_seconds": 17.765999999974156,
+      "junctions": [
+        {
+          "junction": "J0",
+          "all_phase_transitions": 384,
+          "green_terminations": 128,
+          "mean_completed_green_seconds": 18.0546875,
+          "min_completed_green_seconds": 11.0,
+          "max_completed_green_seconds": 37.0,
+          "phase_seconds": {
+            "0": 1362.0,
+            "1": 320.0,
+            "2": 320.0,
+            "3": 958.0,
+            "4": 320.0,
+            "5": 320.0
+          },
+          "decisions": 720,
+          "action_percent": {
+            "hold": 82.36111111111111,
+            "switch": 17.63888888888889,
+            "extend_5": 0.0,
+            "extend_10": 0.0
+          },
+          "green_action_counts": {
+            "0": 337,
+            "1": 127
+          },
+          "effective_commands": {
+            "early_termination": 127
+          }
+        },
+        {
+          "junction": "J1",
+          "all_phase_transitions": 228,
+          "green_terminations": 76,
+          "mean_completed_green_seconds": 37.11842105263158,
+          "min_completed_green_seconds": 37.0,
+          "max_completed_green_seconds": 45.0,
+          "phase_seconds": {
+            "0": 1426.0,
+            "1": 190.0,
+            "2": 190.0,
+            "3": 1414.0,
+            "4": 190.0,
+            "5": 190.0
+          },
+          "decisions": 720,
+          "action_percent": {
+            "hold": 99.44444444444444,
+            "switch": 0.0,
+            "extend_5": 0.5555555555555556,
+            "extend_10": 0.0
+          },
+          "green_action_counts": {
+            "0": 564,
+            "2": 4
+          },
+          "effective_commands": {
+            "effective_extend_5": 2,
+            "forced_max": 1
+          }
+        },
+        {
+          "junction": "J2",
+          "all_phase_transitions": 195,
+          "green_terminations": 65,
+          "mean_completed_green_seconds": 44.93846153846154,
+          "min_completed_green_seconds": 41.0,
+          "max_completed_green_seconds": 45.0,
+          "phase_seconds": {
+            "0": 1481.0,
+            "1": 165.0,
+            "2": 165.0,
+            "3": 1469.0,
+            "4": 160.0,
+            "5": 160.0
+          },
+          "decisions": 720,
+          "action_percent": {
+            "hold": 18.055555555555557,
+            "switch": 0.0,
+            "extend_5": 81.94444444444444,
+            "extend_10": 0.0
+          },
+          "green_action_counts": {
+            "2": 590
+          },
+          "effective_commands": {
+            "effective_extend_5": 131,
+            "forced_max": 65
+          }
+        }
+      ],
+      "maximum_individual_wait_seconds": 1236.0,
+      "observed_total_person_wait_seconds": 339440.0,
+      "observation_slots": {
+        "total": 8640,
+        "outside_waiting": 8504,
+        "outside_waiting_with_zero_observation": 3733,
+        "nonzero_observed": 4815
+      },
+      "metrics": {
+        "vehicle_departed": 2358,
+        "vehicle_completed": 2209,
+        "vehicle_unfinished": 149,
+        "pedestrian_departed": 2148,
+        "pedestrian_completed": 2022,
+        "pedestrian_unfinished": 126,
+        "vehicle_waiting_seconds": 380650.0,
+        "pedestrian_waiting_seconds": 339440.0,
+        "vehicle_time_loss_seconds": 445610.512545342,
+        "vehicle_completed_time_loss_seconds": 321718.60714441625,
+        "vehicle_average_waiting_seconds": 161.42917726887194,
+        "vehicle_completed_average_waiting_seconds": 120.32503395201448,
+        "vehicle_completed_average_time_loss_seconds": 145.63993080326674,
+        "pedestrian_average_waiting_seconds": 158.02607076350094,
+        "pedestrian_completed_average_waiting_seconds": 151.88921859545005,
+        "pedestrian_p95_waiting_seconds": 463.0,
+        "pedestrian_completed_p95_waiting_seconds": 432.0,
+        "pedestrian_p95_by_crossing": {
+          ":J0_c0": 146.2,
+          ":J0_c2": 167.3,
+          ":J0_c3": 149.1,
+          ":J0_c1": 63.0,
+          ":J1_c0": 186.1,
+          ":J1_c2": 276.4,
+          ":J1_c3": 283.1,
+          ":J1_c1": 96.2,
+          ":J2_c0": 633.0,
+          ":J2_c2": 622.1,
+          ":J2_c3": 577.1,
+          ":J2_c1": 644.2
+        },
+        "waiting_by_crossing": {
+          ":J0_c0": 15498.0,
+          ":J0_c2": 17152.0,
+          ":J0_c3": 15082.0,
+          ":J0_c1": 6662.0,
+          ":J1_c0": 21420.0,
+          ":J1_c2": 27175.0,
+          ":J1_c3": 27885.0,
+          ":J1_c1": 10023.0,
+          ":J2_c0": 51191.0,
+          ":J2_c2": 53418.0,
+          ":J2_c3": 46775.0,
+          ":J2_c1": 47159.0
+        }
+      },
+      "saved_replay_differences": {
+        "pedestrian_unfinished": 0.0,
+        "pedestrian_waiting_seconds": 0.0,
+        "vehicle_completed": 0.0,
+        "vehicle_time_loss_seconds": 0.0,
+        "pedestrian_average_waiting_seconds": 0.0
+      },
+      "saved_replay_crossing_p95_max_abs_difference": 0.0,
+      "reward_components": {
+        "vehicle_delay_term": 18300.48076923077,
+        "pedestrian_delay_term_if_included": 4172.587584511371,
+        "voluntary_switch_penalty": 190.5
+      }
+    }
+  ],
+  "network_crossing_edges": {
+    ":J0_c0": "J0_N0 N0_J0",
+    ":J0_c1": "J0_J1 J1_J0",
+    ":J0_c2": "J0_S0 S0_J0",
+    ":J0_c3": "J0_W0 W0_J0",
+    ":J1_c0": "J1_N1 N1_J1",
+    ":J1_c1": "J1_J2 J2_J1",
+    ":J1_c2": "J1_S1 S1_J1",
+    ":J1_c3": "J1_J0 J0_J1",
+    ":J2_c0": "J2_N2 N2_J2",
+    ":J2_c1": "J2_E2 E2_J2",
+    ":J2_c2": "J2_S2 S2_J2",
+    ":J2_c3": "J2_J1 J1_J2"
+  },
+  "torch_version": "2.3.0+cpu"
+}

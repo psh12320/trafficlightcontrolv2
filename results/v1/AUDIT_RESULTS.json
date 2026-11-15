@@ -1,0 +1,9 @@
+{
+  "accepted_test_evaluations": 168,
+  "validation_checkpoint_evaluations": 108,
+  "verified_manifest_files": 293,
+  "selected_checkpoints": 12,
+  "validation_feasible_runs": 1,
+  "all_scenario_demands_matched": true,
+  "all_selected_action_sizes": 4
+}

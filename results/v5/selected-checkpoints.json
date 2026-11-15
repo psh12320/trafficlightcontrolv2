@@ -1,0 +1,62 @@
+[
+  {
+    "controller": "mappo-vehicle-actions2-seed100",
+    "episode": 250,
+    "vehicle_time_loss": 431940.5023021358,
+    "max_crossing_p95_violation": 4.699999999999989,
+    "normalized_violation": 0.06396778323605731,
+    "sha256": "5cf6ed4f87181f84c796b1df5de5e3aaaaf5818302d4e8583a5b604a4d2e3a73",
+    "frozen_utc": "2026-11-14T14:39:57.894725+00:00",
+    "checkpoint": "checkpoints/mappo-vehicle-actions2-seed100/episode-250.pt"
+  },
+  {
+    "controller": "mappo-vehicle_pedestrian-actions2-seed100",
+    "episode": 200,
+    "vehicle_time_loss": 431270.46666135127,
+    "max_crossing_p95_violation": 4.533333333333331,
+    "normalized_violation": 0.06254924309584711,
+    "sha256": "ac4474bc5436c2631099e9da4a4aa3c59ccb7cbba2540a0a5bcf6fab34d7a44e",
+    "frozen_utc": "2026-11-14T14:39:57.969532+00:00",
+    "checkpoint": "checkpoints/mappo-vehicle_pedestrian-actions2-seed100/episode-200.pt"
+  },
+  {
+    "controller": "mappo-vehicle-actions2-seed200",
+    "episode": 0,
+    "vehicle_time_loss": 434204.956106312,
+    "max_crossing_p95_violation": 32.299999999999955,
+    "normalized_violation": 0.1030936846685509,
+    "sha256": "e784cacb864b88c16ba8a17f1aa600d621f95c7cae7fe47f62ac2b240283217a",
+    "frozen_utc": "2026-11-14T14:39:58.032355+00:00",
+    "checkpoint": "checkpoints/mappo-vehicle-actions2-seed200/episode-0-bc.pt"
+  },
+  {
+    "controller": "mappo-vehicle_pedestrian-actions2-seed200",
+    "episode": 0,
+    "vehicle_time_loss": 434204.956106312,
+    "max_crossing_p95_violation": 32.299999999999955,
+    "normalized_violation": 0.1030936846685509,
+    "sha256": "771265d9e0145df7b03e61a657f41852d2af996cd084c95ae541e8e382c18578",
+    "frozen_utc": "2026-11-14T14:39:58.078874+00:00",
+    "checkpoint": "checkpoints/mappo-vehicle_pedestrian-actions2-seed200/episode-0-bc.pt"
+  },
+  {
+    "controller": "mappo-vehicle-actions2-seed300",
+    "episode": 100,
+    "vehicle_time_loss": 448127.23145144584,
+    "max_crossing_p95_violation": 65.79999999999995,
+    "normalized_violation": 0.2502032711086752,
+    "sha256": "03b2498fb98462c10fcb9a379a73f3193ceb762644c1535da37f104f8563f097",
+    "frozen_utc": "2026-11-14T14:39:58.121959+00:00",
+    "checkpoint": "checkpoints/mappo-vehicle-actions2-seed300/episode-100.pt"
+  },
+  {
+    "controller": "mappo-vehicle_pedestrian-actions2-seed300",
+    "episode": 100,
+    "vehicle_time_loss": 448127.23145144584,
+    "max_crossing_p95_violation": 65.79999999999995,
+    "normalized_violation": 0.2502032711086752,
+    "sha256": "cb5a74bb1257ebf04e625c6e2eb3e4ba1e1d9e6e337fc65c86b3d5aa4f20f265",
+    "frozen_utc": "2026-11-14T14:39:58.169891+00:00",
+    "checkpoint": "checkpoints/mappo-vehicle_pedestrian-actions2-seed300/episode-100.pt"
+  }
+]

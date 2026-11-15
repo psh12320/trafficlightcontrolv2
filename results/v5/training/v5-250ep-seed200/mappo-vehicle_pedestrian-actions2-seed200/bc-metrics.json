@@ -1,0 +1,189 @@
+{
+  "bc_episodes": 20,
+  "bc_simulation_seeds": [
+    1200000,
+    1200001,
+    1200002,
+    1200003,
+    1200004,
+    1200005,
+    1200006,
+    1200007,
+    1200008,
+    1200009,
+    1200010,
+    1200011,
+    1200012,
+    1200013,
+    1200014,
+    1200015,
+    1200016,
+    1200017,
+    1200018,
+    1200019
+  ],
+  "bc_transitions_per_agent": 14400,
+  "bc_learning_rate": 0.001,
+  "bc_epochs": 15,
+  "bc_sampling": "balanced-legal-action-minibatches",
+  "expert": "recorded-pedestrian-actuated-request-rule-at-legal-five-second-decisions",
+  "actor_fits": [
+    {
+      "agent_index": 0,
+      "cross_entropy_by_epoch": [
+        0.08368534594774246,
+        0.045516420155763626,
+        0.040736544877290726,
+        0.039165157824754715,
+        0.038861893117427826,
+        0.039188697934150696,
+        0.03773187845945358,
+        0.036983098834753036,
+        0.036132872104644775,
+        0.034776974469423294,
+        0.03506943956017494,
+        0.034854721277952194,
+        0.03185058385133743,
+        0.03245585039258003,
+        0.031462278217077255
+      ],
+      "all_decision_accuracy": 0.9912499785423279,
+      "legal_choice_accuracy": 0.9847789406776428,
+      "expert_switches": 12,
+      "legal_choice_decisions": 8278,
+      "switch_recall": 1.0,
+      "confusion_true_pred": [
+        [
+          14262,
+          126
+        ],
+        [
+          0,
+          12
+        ]
+      ]
+    },
+    {
+      "agent_index": 1,
+      "cross_entropy_by_epoch": [
+        0.0435381643474102,
+        0.03510937839746475,
+        0.03158566728234291,
+        0.0312701053917408,
+        0.03065849281847477,
+        0.030019486322999,
+        0.030478840693831444,
+        0.029566798359155655,
+        0.029607437551021576,
+        0.02932783216238022,
+        0.0276202280074358,
+        0.027056146413087845,
+        0.028412681072950363,
+        0.027837080880999565,
+        0.02725750207901001
+      ],
+      "all_decision_accuracy": 0.992638885974884,
+      "legal_choice_accuracy": 0.9871980547904968,
+      "expert_switches": 5,
+      "legal_choice_decisions": 8280,
+      "switch_recall": 1.0,
+      "confusion_true_pred": [
+        [
+          14289,
+          106
+        ],
+        [
+          0,
+          5
+        ]
+      ]
+    },
+    {
+      "agent_index": 2,
+      "cross_entropy_by_epoch": [
+        0.05248706042766571,
+        0.04716165363788605,
+        0.04329754784703255,
+        0.04397595301270485,
+        0.03975687921047211,
+        0.04163689166307449,
+        0.03942999243736267,
+        0.03868141770362854,
+        0.040634285658597946,
+        0.036063939332962036,
+        0.03526276350021362,
+        0.034753236919641495,
+        0.033384595066308975,
+        0.032913174480199814,
+        0.028906239196658134
+      ],
+      "all_decision_accuracy": 0.9907639026641846,
+      "legal_choice_accuracy": 0.9839255213737488,
+      "expert_switches": 10,
+      "legal_choice_decisions": 8274,
+      "switch_recall": 1.0,
+      "confusion_true_pred": [
+        [
+          14257,
+          133
+        ],
+        [
+          0,
+          10
+        ]
+      ]
+    }
+  ],
+  "critic_warmup_episodes": 5,
+  "critic_warmup_simulation_seeds": [
+    1200100,
+    1200101,
+    1200102,
+    1200103,
+    1200104
+  ],
+  "critic_warmup_epochs": 15,
+  "critic_warmup_actor_parameters_unchanged": true,
+  "critic_fits": [
+    {
+      "critic_index": 0,
+      "mse_before_warmup": 73141976.0,
+      "mse_after_warmup": 9810580.0,
+      "mean_return_bias_initialization": -7951.25537109375
+    }
+  ],
+  "bc_policy_rollout_expert_agreement": 0.9977777777777778,
+  "bc_policy_rollout_confusion_by_agent": [
+    [
+      [
+        3590,
+        9
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        3594,
+        5
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    [
+      [
+        3589,
+        9
+      ],
+      [
+        0,
+        2
+      ]
+    ]
+  ],
+  "bc_policy_rollout_legal_choice_expert_agreement": 0.9960988296488946
+}

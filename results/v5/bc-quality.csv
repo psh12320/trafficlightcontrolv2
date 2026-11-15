@@ -1,0 +1,7 @@
+controller,demonstration_switch_labels,training_switch_recall,training_false_switches,rollout_expert_switches,rollout_policy_switches,rollout_true_switches,rollout_false_switches,rollout_switch_recall,rollout_switch_precision,rollout_legal_choice_agreement,critic_mse_before,critic_mse_after
+mappo-vehicle-actions2-seed100,20,1.0,304,4,15,0,15,0.0,0.0,0.9969180859691809,5653108.5,346192.46875
+mappo-vehicle_pedestrian-actions2-seed100,20,1.0,304,4,15,0,15,0.0,0.0,0.9969180859691809,54211768.0,8278428.5
+mappo-vehicle-actions2-seed200,27,1.0,365,4,26,3,23,0.75,0.11538461538461539,0.9960988296488946,6115294.0,388354.0
+mappo-vehicle_pedestrian-actions2-seed200,27,1.0,365,4,26,3,23,0.75,0.11538461538461539,0.9960988296488946,73141976.0,9810580.0
+mappo-vehicle-actions2-seed300,33,1.0,299,2,20,0,20,0.0,0.0,0.9964285714285714,5875923.0,350442.3125
+mappo-vehicle_pedestrian-actions2-seed300,33,1.0,299,2,20,0,20,0.0,0.0,0.9964285714285714,56053400.0,5706068.0

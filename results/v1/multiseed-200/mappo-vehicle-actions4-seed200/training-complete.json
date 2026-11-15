@@ -1,0 +1,5 @@
+{
+  "training_seed": 200,
+  "elapsed_seconds": 457.7511510848999,
+  "metrics": "/workspace/trafficlightcontrolv2/scenario/generated/multiseed-200/mappo-vehicle-actions4-seed200/checkpoint-metrics.csv"
+}

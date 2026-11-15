@@ -1,0 +1,18 @@
+{
+  "training_runs": 6,
+  "training_episodes": 2400,
+  "snapshots": 48,
+  "validation_checkpoint_evaluations": 144,
+  "selected_checkpoints": 6,
+  "new_policy_evaluations": 72,
+  "reused_baseline_rows": 24,
+  "accepted_rows": 96,
+  "validation_feasible_runs": 0,
+  "verified_manifest_entries": 214,
+  "prior_artifact_files_unchanged": 4524,
+  "fixed_primary_training_verified": true,
+  "all_test_demands_matched": true,
+  "baseline_reuse_exact": true,
+  "selection_unchanged_during_test": true,
+  "test_seed_status": "reused V3 seeds for matched exploratory comparison"
+}

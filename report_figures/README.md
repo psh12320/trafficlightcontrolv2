@@ -5,6 +5,9 @@ The original experiment results are read-only inputs; their SHA-256 hashes are
 checked against `_support/prior_artifact_manifest.json` after rendering.
 Supporting captures, extracted source snapshots, and working files under
 `_support/` are kept locally and gitignored.
+The [published result records](../results/README.md) provide the evaluation
+CSVs, selected policies, versioned source, and V2/V4 diagnostic evidence used
+to check the numeric figure claims.
 
 | Figure | File | Pixels | Size at 300 DPI |
 | --- | --- | --- | --- |

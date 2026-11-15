@@ -4,6 +4,97 @@ This project creates a small SUMO scenario with **3 signalized junctions** and
 **12 pedestrian crossings** (four at each junction), then runs an adaptive
 TraCI controller.
 
+## Review and reproduce
+
+The [published experiment records](results/README.md) include V1-V5 reports,
+accepted evaluation CSVs, training logs, validation metrics, 48 frozen selected
+checkpoints, and matching archived source. The [final figures and captions](report_figures/README.md)
+are included in the repository.
+
+Verify all published artifact hashes, recompute the result summaries, and check
+validation-based selections with Python 3.10 or newer.
+
+```bash
+python scripts/verify_results.py
+```
+
+The check covers 696 accepted main test rows, 18 V5 BC reference rows, 792
+validation evaluations, and 48 selected policies. It uses the Python standard
+library. The [replay instructions](results/README.md#replay-a-selected-v3-policy)
+show how to evaluate a saved policy using its matching implementation.
+
+| Version | Episodes per run | Actor inputs | Actions | Traffic test seeds | Validation-feasible selections |
+|---|---|---:|---:|---|---:|
+| V1 | 60 | 13 | 4 | 11-13 | 1/12 |
+| V2 | 300 | 13 | 4 | 11-13 | 2/12 |
+| V3 | 300 | 21 | 2 | 41-43 | 2/12 |
+| V4 | 400 | 25 | 2 | 41-43 | 0/6 |
+| V5 | 20 BC + 5 critic warm-up + 250 PPO | 75 | 2 | 41-43 | 0/6 |
+
+Training seeds are 100/200/300 and validation seeds are 21/22/23. V2 reuses V1's
+traffic test seeds. V4-V5 reuse V3's traffic test seeds for matched exploratory
+comparisons. Several design choices change together between versions.
+
+## Final benchmark results
+
+All values are mean ± 95% Student-t confidence intervals, n=3 and df=2.
+Learned-policy intervals use three training-seed averages after averaging the
+three traffic tests within each training seed. Baseline intervals use the
+three traffic seeds directly. MAPPO-Vehicle's zero-width V3 intervals reflect
+identical training-seed averages on the shared test set. Traffic-seed outcomes
+still vary.
+
+Every evaluation lasts 3,600 seconds. Vehicle loss is total observed time loss
+per departed vehicle. Unfinished counts cover active trips. Pedestrian waits
+include active trips observed to the cutoff. Worst crossing p95 is the maximum
+of the 12 route-assigned crossing percentiles per rollout, then averaged.
+
+| Regime | Walking speed (m/s) | Vehicle period (s) | Pedestrian batch interval (s) |
+|---|---:|---:|---:|
+| Primary | 1.4 | 6 | 20 |
+| Low | 1.4 | 10 | 30 |
+| High | 1.4 | 4 | 12 |
+| Slower-Walking | 0.9 | 6 | 20 |
+
+The generated signal program serves north-south cross-street approaches in
+phase 0 and east-west arterial approaches in phase 3, with pedestrian greens
+for c1/c3 and c0/c2, respectively. Its phase 2/5 duration is 5 s for standard
+walking and 8 s for slower walking. The [signal-state note](results/README.md#metric-interpretation)
+describes the actual generated states used by the experiments.
+
+### V3 Primary benchmark
+
+| Controller | Vehicle loss (s/veh) | Throughput (veh/h) | Unfinished veh. | Mean ped. wait (s) | Worst crossing p95 (s) | Unfinished ped. |
+|---|---:|---:|---:|---:|---:|---:|
+| Fixed-Time | 173.69 ± 50.33 | 2379.33 ± 493.56 | 138.33 ± 8.72 | 189.42 ± 104.98 | 974.80 ± 1040.86 | 136.67 ± 66.16 |
+| Ped.-Actuated | 178.03 ± 63.63 | 2325.00 ± 818.80 | 134.00 ± 11.38 | 191.48 ± 121.04 | 919.67 ± 1189.92 | 147.00 ± 78.87 |
+| IPPO-Vehicle | 191.01 ± 41.01 | 2230.67 ± 325.49 | 137.33 ± 13.83 | 200.93 ± 43.99 | 1024.08 ± 460.71 | 143.00 ± 48.73 |
+| IPPO-Combined | 186.11 ± 10.20 | 2269.56 ± 184.01 | 142.11 ± 5.51 | 182.24 ± 17.69 | 966.91 ± 178.76 | 138.22 ± 35.72 |
+| MAPPO-Vehicle | 173.69 ± 0.00 | 2379.33 ± 0.00 | 138.33 ± 0.00 | 189.42 ± 0.00 | 974.80 ± 0.00 | 136.67 ± 0.00 |
+| MAPPO-Combined | 221.89 ± 118.55 | 2017.56 ± 839.94 | 146.33 ± 16.12 | 192.08 ± 116.80 | 935.48 ± 574.34 | 139.78 ± 103.07 |
+
+### Full results by version
+
+Each full report contains Primary, Low, High, and Slower-Walking tables. The
+summary CSVs contain all reported metrics and confidence intervals. Selected
+models and their matching source are available alongside each report.
+
+| Version | Full report | Summary data | Selected models | Matching source |
+|---|---|---|---|---|
+| V1 | [Results](results/v1/FINAL_RESULTS.md) | [CSV](results/v1/final-summary.csv) | [Checkpoints](results/v1/checkpoints) | [Source ZIP](results/v1/source.zip) |
+| V2 | [Results](results/v2/FINAL_RESULTS.md) | [CSV](results/v2/final-summary.csv) | [Checkpoints](results/v2/checkpoints) | [Source ZIP](results/v2/source.zip) |
+| V3 | [Results](results/v3/FINAL_RESULTS.md) | [CSV](results/v3/final-summary.csv) | [Checkpoints](results/v3/checkpoints) | [Source ZIP](results/v3/source.zip) |
+| V4 | [Results](results/v4/FINAL_RESULTS.md) | [CSV](results/v4/final-summary.csv) | [Checkpoints](results/v4/checkpoints) | [Source ZIP](results/v4/source.zip) |
+| V5 | [Results](results/v5/FINAL_RESULTS.md) | [CSV](results/v5/final-summary.csv) | [Checkpoints](results/v5/checkpoints) | [Source ZIP](results/v5/source.zip) |
+
+The [results guide](results/README.md) explains the raw evaluation files,
+validation records, model hashes, and replay commands. V5 includes the matched
+BC reference and paired fine-tuning comparisons. The saved results show
+regime-dependent trade-offs across vehicle efficiency and pedestrian waiting.
+
+<details>
+<summary>Completed V1-V5 experiment notes</summary>
+
 ## Completed V5 BC warm-started experiment
 
 V5 completed six MAPPO vehicle/combined runs with training seeds 100/200/300:
@@ -18,21 +109,20 @@ All 36 snapshots, 108 validations and six frozen selections are saved. There are
 primary BC reference (12 new tests, six reused selected-BC rows). Test seeds
 41-43 are reused exploratory cases. Selection uses only validation seeds 21-23.
 
-All three pods and the temporary volume are deleted. Last pod termination was
-22:49:15 SGT on 14 November, before the 00:30 deadline on 15 November. Conservative
+All three pods and the temporary volume are deleted. Conservative
 V5 cost is **$1.22**, including diagnostics and transfers, below the $5 cap.
-All 31 tests pass. The audit verified 282 entries, four archive hashes and
+The project test suite contains 31 passing tests. The audit verified 282 entries, four archive hashes and
 **4,841 prior V1-V4 files unchanged**.
 
 V5 does not establish consistent superiority over actuated control or a primary
 PPO benefit over BC. Two selections remain BC-only; none meets every crossing
 validation threshold. Initial uniform BC collapsed to hold and was excluded.
 Balanced sampling learns rare demonstration switches but rollout imitation
-remains imperfect. See the [full comparison tables](scenario/generated/final-v5-results/FINAL_RESULTS.md) and
-[takeaways](scenario/generated/final-v5-results/KEY_TAKEAWAYS.md).
+remains imperfect. See the [full comparison tables](results/v5/FINAL_RESULTS.md) and
+[takeaways](results/v5/KEY_TAKEAWAYS.md).
 Do not restart training.
 
-## Completed V4 experiment (14 November 2026)
+## Completed V4 experiment
 
 V4 trained only MAPPO vehicle/combined objectives with seeds 100/200/300,
 400 episodes x3600s, fixed primary training demand (no randomization), and
@@ -44,13 +134,12 @@ signal phases and two-action semantics are unchanged.
 Validation uses 21/22/23. The requested test seeds 41/42/43 are reused from V3,
 so this is a matched exploratory comparison. V3's baseline records are copied
 exactly rather than rerun. Prior artifacts are protected by a 4,524-file hash
-manifest. Outputs go to `scenario/generated/final-v4-results/`.
+manifest. Outputs go to `results/v4/`.
 
 All six runs, 48 snapshots, 144 validation evaluations, six frozen selections,
 and 72 new policy tests are complete (96 final rows including reused baselines).
-All three pods were terminated by **20:56:30 SGT**, before the 23:30 deadline;
-the temporary checkpoint volume is deleted. Conservative V4 runtime/storage
-cost is **$0.95**, below the $5 cap; cumulative project bound is $4.35. Posted
+All three pods were terminated and the temporary checkpoint volume is deleted.
+Conservative V4 runtime/storage cost is **$0.95**, below the $5 cap; cumulative project bound is $4.35. Posted
 billing lags. The audit verified 214 transferred entries and all 4,524 protected
 prior files unchanged. All 25 local tests and each cloud smoke test passed.
 
@@ -59,14 +148,14 @@ Primary vehicle-only reduces mean pedestrian wait 3.1% versus actuated with
 similar vehicle loss, but crossing p95 is 3.8% higher. Combined worsens primary
 vehicle loss 26.7%, pedestrian wait 7.3%, and crossing p95 16.4%. No selected
 checkpoint meets every crossing's validation limit; all use the declared
-violation fallback. See the [full comparison tables](scenario/generated/final-v4-results/FINAL_RESULTS.md) and
-[takeaways](scenario/generated/final-v4-results/KEY_TAKEAWAYS.md).
+violation fallback. See the [full comparison tables](results/v4/FINAL_RESULTS.md) and
+[takeaways](results/v4/KEY_TAKEAWAYS.md).
 Do not restart training.
 Older 21-input V3 checkpoints require their preserved V3 source rather than
 current 25-input code. V4 changes several settings together, so comparisons
 cannot isolate the density feature or the switch penalty's causal effect.
 
-## Completed V3 experiment (14 November 2026)
+## Completed V3 experiment
 
 V3 trained IPPO/MAPPO with vehicle and combined objectives, two actions, and
 21 observations. Pedestrian features distinguish approach waiting counts,
@@ -83,21 +172,20 @@ All pods and the temporary checkpoint volume are deleted. The conservative V3
 runtime/storage bound is $1.69, below the $5 cap. The final local suite passes
 23 tests; the audit verified 348 manifest entries and 368 unchanged V2 files.
 
-The [full report](scenario/generated/final-v3-results/FINAL_RESULTS.md),
-[summary](scenario/generated/final-v3-results/final-summary.csv), and
-[crossing breakdown](scenario/generated/final-v3-results/per-crossing-p95.csv)
-are saved under `scenario/generated/final-v3-results/`.
+The [full report](results/v3/FINAL_RESULTS.md),
+[summary](results/v3/final-summary.csv), and
+[crossing breakdown](results/v3/per-crossing-p95.csv)
+are saved under `results/v3/`.
 Only 2/12 selected checkpoints were validation-feasible. V3 does not establish
 a consistent primary advantage over actuated control. MAPPO vehicle-only
 matches fixed-time metrics; its zero-width training-seed intervals do not mean
 traffic test seeds have no variability.
-The original V2 output remains unchanged, with a checksum-verified copy under
-`scenario/generated/archive-v2-300ep/`. V2 checkpoints use 13 inputs and four
-actions; reproduce V2 with its archived source ZIP rather than current V3 code.
+V2 checkpoints use 13 inputs and four actions. Its matching implementation is
+published in `results/v2/source.zip`.
 V2 versus V3 changes several settings together and does not isolate individual
 causal effects.
 
-## Completed V2 300-episode experiment (14 November 2026)
+## Completed V2 300-episode experiment
 
 The V2 experiment is complete: 12 runs trained from scratch for 300 episodes of
 3,600 seconds, with normalized proposal rewards, a 1.5 switch penalty, and
@@ -107,10 +195,10 @@ All 18 local tests pass; the independent audit verified 216 validation checkpoin
 evaluations, 168 held-out evaluations, 12 selected checkpoints, reproducible
 demand schedules, and the unchanged 490-file pilot archive.
 
-See the [complete V2 report](scenario/generated/final-v2-results/FINAL_RESULTS.md),
-[summary CSV](scenario/generated/final-v2-results/final-summary.csv), and
-[pilot comparison](scenario/generated/final-v2-results/pilot-comparison.csv).
-The original pilot is preserved under `scenario/generated/archive-60ep-pilot/`.
+See the [complete V2 report](results/v2/FINAL_RESULTS.md),
+[summary CSV](results/v2/final-summary.csv), and
+[pilot comparison](results/v2/pilot-comparison.csv).
+The accepted pilot results and selected policies are published under `results/v1/`.
 
 V2 did not establish a consistent primary-benchmark advantage over actuated
 control. Low-demand IPPO vehicle-only control had favorable point estimates;
@@ -122,7 +210,8 @@ Three-seed intervals are wide and the test seeds were reused from the pilot.
 Reproduce one training seed with:
 
 ```bash
-python scripts/run_marl_sweep.py --algorithms ippo mappo \
+python -m zipfile -e results/v2/source.zip scenario/generated/review-v2
+python scenario/generated/review-v2/scripts/run_marl_sweep.py --algorithms ippo mappo \
   --reward-modes vehicle vehicle_pedestrian --action-sizes 4 \
   --episodes 300 --horizon 3600 --seed 100 --randomize-demand \
   --snapshot-interval 50 --evaluation-duration 3600 \
@@ -134,7 +223,7 @@ networks in private temporary directories, and checkpoint validation uses fixed
 primary demand. `v2_finalize.py`, `select_v2_checkpoints.py`,
 `audit_v2_results.py`, and `report_v2_results.py` implement the remaining stages.
 
-## Completed 60-episode proposal pilot (14 November 2026)
+## Completed 60-episode proposal pilot
 
 The four proposal controllers (IPPO/MAPPO × vehicle/vehicle-pedestrian rewards,
 four actions) were each trained with seeds 100, 200, and 300 for 60 episodes of
@@ -144,8 +233,8 @@ primary, low-demand, high-demand, and slower-walking scenarios: 168 accepted
 test evaluations. Test seeds were excluded from this run's selection, although
 they had been used in earlier exploratory experiments.
 
-The downloaded [full results](scenario/generated/FINAL_RESULTS.md) and
-[summary CSV](scenario/generated/final-summary.csv) contain means and 95%
+The downloaded [full results](results/v1/FINAL_RESULTS.md) and
+[summary CSV](results/v1/final-summary.csv) contain means and 95%
 Student-t intervals. Learned-controller intervals use three independent training
 seeds after averaging their three test evaluations. On the primary benchmark,
 actuated control averaged 168.65 seconds time loss per departed vehicle versus
@@ -158,7 +247,8 @@ trip counts, zero-wait pedestrians in p95 populations, and pedestrian arrivals
 between policy decisions. The high-demand evaluation was rerun after the arrival
 fix, with 3,588 pedestrians injected for every controller. The slow scenario
 uses 0.9 m/s pedestrians and eight-second clearance. Final local verification:
-15 tests pass. Artifacts under `scenario/generated/` are intentionally gitignored.
+15 tests pass. Generated simulation outputs live under `scenario/generated/`.
+The accepted final records are published under `results/`.
 
 For a fresh run, with matching SUMO/libsumo versions installed:
 
@@ -170,15 +260,19 @@ python scripts/summarize_proposal_pilot.py --root scenario/generated/new-pilot
 The caller must supervise cloud costs, download artifacts, and terminate compute;
 the Python experiment runner does not provision or terminate cloud resources.
 
+</details>
+
 ## Requirements
 
-- SUMO 1.18 or newer on `PATH`, or `SUMO_HOME` set to the SUMO installation
+- SUMO 1.28.0 for recorded experiment replays, with its binaries on `PATH`
 - Python 3.10 or newer
 - The `traci` package, normally available at `%SUMO_HOME%\tools`
+- Python packages listed in [requirements.txt](requirements.txt)
 
 ## Run
 
 ```powershell
+python -m pip install -r requirements.txt
 python scripts\build_network.py
 python scripts\run_simulation.py --nogui
 ```
@@ -200,7 +294,7 @@ python scripts\run_experiment.py --duration 300 --seeds 1 2 3
 ```
 
 Results are written to `scenario\generated\baseline-results.csv`. The
-authoritative Phase 0 benchmark uses 10 seeds and 600 seconds. Its corrected
+initial baseline benchmark uses 10 seeds and 600 seconds. Its corrected
 pedestrian-actuated controller averaged 55.05 seconds vehicle waiting and
 102.43 seconds pedestrian waiting (95% confidence intervals: 49.25-60.86 and
 99.32-105.54 seconds). Waiting is network-wide across all three junctions and
@@ -209,19 +303,21 @@ pedestrian-actuated controller averaged 55.05 seconds vehicle waiting and
 ## IPPO and MAPPO
 
 `train_marl.py` provides independent PPO (`--algorithm ippo`) and centralized
-critic MAPPO (`--algorithm mappo`) training. The reward penalizes vehicle
-waiting plus twice pedestrian waiting, with a small phase-switch penalty:
+critic MAPPO (`--algorithm mappo`) training. Reward objectives, vehicle/pedestrian weights, and switching costs are
+configurable. The versioned source snapshots record the completed experiments
+for the saved checkpoints.
 
 ```powershell
 python scripts\train_marl.py --algorithm mappo --episodes 100 --horizon 120
 ```
 
 Training is not guaranteed to improve monotonically. Use
-`--snapshot-dir` to save every episode and evaluate a learning curve:
+`--snapshot-dir` and `--snapshot-interval` to save checkpoints and evaluate a
+learning curve.
 
 ```powershell
 python scripts\train_marl.py --algorithm mappo --episodes 50 `
-  --snapshot-dir scenario\generated\mappo-snapshots
+  --snapshot-dir scenario\generated\mappo-snapshots --snapshot-interval 10
 python scripts\evaluate_marl.py `
   --checkpoint scenario\generated\mappo-snapshots\episode-20.pt `
   --duration 300 --seeds 1 2 3
@@ -237,11 +333,11 @@ development machine, a 50-episode run typically takes about 3-5 minutes when
 run alone; running several runs in parallel has similar wall-clock time but
 uses more CPU.
 
-The original experiments used two actions: hold the current signal behavior,
-or request a legal phase switch. The richer action set now also supports
+The default action space has two actions, hold the current signal behavior
+and request a legal phase switch. The optional four-action set also supports
 extending the current green by 5 or 10 seconds. Extensions are legal only
-during green and remain bounded by the 45-second maximum green. SUMO still
-handles yellow and all-red clearance phases.
+during green and remain bounded by the 45-second maximum green. SUMO advances
+the generated transition phases.
 
 This objective follows recent pedestrian-aware signal-control work that
 evaluates waiting time, queue length, throughput, and pedestrian service
@@ -254,7 +350,13 @@ These papers support the experiment design, but their reported improvements
 cannot be assumed to transfer to this small network; every learned policy
 must be evaluated on the same seeds and demand as the baseline.
 
-## Current comparison
+<details>
+<summary>Preliminary experiments and development history</summary>
+
+## Preliminary short-run comparisons
+
+These experiments preceded the V1-V5 final benchmarks and are retained as
+development history.
 
 The canonical PPO implementation was tested with identical 120-second
 training horizons for 10 episodes, then evaluated on held-out seeds 11-13 for
@@ -346,8 +448,8 @@ include completed and unfinished trips, vehicle time loss, waiting totals and
 means, pedestrian 95th-percentile waiting, and waiting by crossing. The same
 `--pedestrian-speed` value must be used for training, learned-policy
 evaluation, and fixed-time/pedestrian-actuated baselines. Network generation
-sets the all-red clearance phases from the crossing length and walking speed,
-with a three-second minimum.
+sets the phase 2/5 durations from the crossing length and walking speed, with
+a three-second minimum.
 
 ### 100-episode reproduction attempt
 
@@ -464,6 +566,8 @@ alone does not solve the joint target. During validation of this experiment we
 also corrected the RL environment to reset its internal phase-age state when
 SUMO naturally changes phase; earlier preliminary timing-policy results are
 not used here.
+
+</details>
 
 ## Network layout
 

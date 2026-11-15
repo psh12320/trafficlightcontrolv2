@@ -1,3 +1,8 @@
 scenario/generated/
 __pycache__/
 .pytest_cache/
+
+# Local experiment handoffs and generated figure working files.
+/HANDOFF.md
+/V*_HANDOFF.md
+/report_figures/_support/

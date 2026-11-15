@@ -4,6 +4,172 @@ This project creates a small SUMO scenario with **3 signalized junctions** and
 **12 pedestrian crossings** (four at each junction), then runs an adaptive
 TraCI controller.
 
+## Completed V5 BC warm-started experiment
+
+V5 completed six MAPPO vehicle/combined runs with training seeds 100/200/300:
+20 expert BC episodes, five critic warm-up episodes and 250 PPO episodes of
+3,600 seconds on fixed primary demand. `--frame-stack 3` gives 75 actor and 225
+critic inputs. BC uses 15 masked-cross-entropy epochs, Adam 1e-3 and balanced
+legal-action minibatches. PPO uses `--learning-rate 1e-4`. Defaults remain frame
+stack one and BC zero. Switch cost is 3; V4 reward scales remain unchanged.
+
+All 36 snapshots, 108 validations and six frozen selections are saved. There are
+96 main test rows, including 24 exactly reused baselines, plus an 18-row matched
+primary BC reference (12 new tests, six reused selected-BC rows). Test seeds
+41-43 are reused exploratory cases. Selection uses only validation seeds 21-23.
+
+All three pods and the temporary volume are deleted. Last pod termination was
+22:49:15 SGT on 14 November, before the 00:30 deadline on 15 November. Conservative
+V5 cost is **$1.22**, including diagnostics and transfers, below the $5 cap.
+All 31 tests pass. The audit verified 282 entries, four archive hashes and
+**4,841 prior V1-V4 files unchanged**.
+
+V5 does not establish consistent superiority over actuated control or a primary
+PPO benefit over BC. Two selections remain BC-only; none meets every crossing
+validation threshold. Initial uniform BC collapsed to hold and was excluded.
+Balanced sampling learns rare demonstration switches but rollout imitation
+remains imperfect. See the [full comparison tables](scenario/generated/final-v5-results/FINAL_RESULTS.md) and
+[takeaways](scenario/generated/final-v5-results/KEY_TAKEAWAYS.md).
+Do not restart training.
+
+## Completed V4 experiment (14 November 2026)
+
+V4 trained only MAPPO vehicle/combined objectives with seeds 100/200/300,
+400 episodes x3600s, fixed primary training demand (no randomization), and
+snapshots every 50 episodes. It adds four approaching-vehicle density features
+to the stopped queues, giving 25 local inputs and 75 centralized critic inputs.
+Switch cost is 3; V3 pedestrian urgency and scales remain unchanged. Network,
+signal phases and two-action semantics are unchanged.
+
+Validation uses 21/22/23. The requested test seeds 41/42/43 are reused from V3,
+so this is a matched exploratory comparison. V3's baseline records are copied
+exactly rather than rerun. Prior artifacts are protected by a 4,524-file hash
+manifest. Outputs go to `scenario/generated/final-v4-results/`.
+
+All six runs, 48 snapshots, 144 validation evaluations, six frozen selections,
+and 72 new policy tests are complete (96 final rows including reused baselines).
+All three pods were terminated by **20:56:30 SGT**, before the 23:30 deadline;
+the temporary checkpoint volume is deleted. Conservative V4 runtime/storage
+cost is **$0.95**, below the $5 cap; cumulative project bound is $4.35. Posted
+billing lags. The audit verified 214 transferred entries and all 4,524 protected
+prior files unchanged. All 25 local tests and each cloud smoke test passed.
+
+V4 does not establish a consistent advantage over actuated control or V3.
+Primary vehicle-only reduces mean pedestrian wait 3.1% versus actuated with
+similar vehicle loss, but crossing p95 is 3.8% higher. Combined worsens primary
+vehicle loss 26.7%, pedestrian wait 7.3%, and crossing p95 16.4%. No selected
+checkpoint meets every crossing's validation limit; all use the declared
+violation fallback. See the [full comparison tables](scenario/generated/final-v4-results/FINAL_RESULTS.md) and
+[takeaways](scenario/generated/final-v4-results/KEY_TAKEAWAYS.md).
+Do not restart training.
+Older 21-input V3 checkpoints require their preserved V3 source rather than
+current 25-input code. V4 changes several settings together, so comparisons
+cannot isolate the density feature or the switch penalty's causal effect.
+
+## Completed V3 experiment (14 November 2026)
+
+V3 trained IPPO/MAPPO with vehicle and combined objectives, two actions, and
+21 observations. Pedestrian features distinguish approach waiting counts,
+oldest current waits and crossing occupancy. Walking-area queues are attributed
+using SUMO's actual next crossing, with a start-edge fallback. The combined cost
+uses vehicle waiting / 20.8, pedestrian waiting / 20, crossing urgency
+`0.5 * sum((max_wait / 60) ** 2)`, and a switch cost of 8.
+
+Three 16-vCPU pods trained seeds 100/200/300 for 300 episodes of 3,600 seconds,
+with randomized demand and validation every 50 episodes on seeds 21/22/23.
+Selections froze before testing all four scenarios on fresh seeds 41/42/43.
+All 12 runs, 216 validation evaluations, and 168 test evaluations are complete.
+All pods and the temporary checkpoint volume are deleted. The conservative V3
+runtime/storage bound is $1.69, below the $5 cap. The final local suite passes
+23 tests; the audit verified 348 manifest entries and 368 unchanged V2 files.
+
+The [full report](scenario/generated/final-v3-results/FINAL_RESULTS.md),
+[summary](scenario/generated/final-v3-results/final-summary.csv), and
+[crossing breakdown](scenario/generated/final-v3-results/per-crossing-p95.csv)
+are saved under `scenario/generated/final-v3-results/`.
+Only 2/12 selected checkpoints were validation-feasible. V3 does not establish
+a consistent primary advantage over actuated control. MAPPO vehicle-only
+matches fixed-time metrics; its zero-width training-seed intervals do not mean
+traffic test seeds have no variability.
+The original V2 output remains unchanged, with a checksum-verified copy under
+`scenario/generated/archive-v2-300ep/`. V2 checkpoints use 13 inputs and four
+actions; reproduce V2 with its archived source ZIP rather than current V3 code.
+V2 versus V3 changes several settings together and does not isolate individual
+causal effects.
+
+## Completed V2 300-episode experiment (14 November 2026)
+
+The V2 experiment is complete: 12 runs trained from scratch for 300 episodes of
+3,600 seconds, with normalized proposal rewards, a 1.5 switch penalty, and
+randomized training demand. Three parallel 16-vCPU pods were used and all are
+terminated. The conservative V2 runtime-cost bound is $1.39, below the $15 cap.
+All 18 local tests pass; the independent audit verified 216 validation checkpoint
+evaluations, 168 held-out evaluations, 12 selected checkpoints, reproducible
+demand schedules, and the unchanged 490-file pilot archive.
+
+See the [complete V2 report](scenario/generated/final-v2-results/FINAL_RESULTS.md),
+[summary CSV](scenario/generated/final-v2-results/final-summary.csv), and
+[pilot comparison](scenario/generated/final-v2-results/pilot-comparison.csv).
+The original pilot is preserved under `scenario/generated/archive-60ep-pilot/`.
+
+V2 did not establish a consistent primary-benchmark advantage over actuated
+control. Low-demand IPPO vehicle-only control had favorable point estimates;
+MAPPO vehicle-only reduced vehicle loss under high demand and slower walking,
+with worse pedestrian tail waits than actuated control. Only 2 of 12 selected
+runs met every crossing's validation limit, versus 1 of 12 in the pilot.
+Three-seed intervals are wide and the test seeds were reused from the pilot.
+
+Reproduce one training seed with:
+
+```bash
+python scripts/run_marl_sweep.py --algorithms ippo mappo \
+  --reward-modes vehicle vehicle_pedestrian --action-sizes 4 \
+  --episodes 300 --horizon 3600 --seed 100 --randomize-demand \
+  --snapshot-interval 50 --evaluation-duration 3600 \
+  --evaluation-seeds 21 22 23 --output-root scenario/generated/v2-300ep-seed100
+```
+
+Repeat in separate processes/pods for seeds 200 and 300. Workers cache demand
+networks in private temporary directories, and checkpoint validation uses fixed
+primary demand. `v2_finalize.py`, `select_v2_checkpoints.py`,
+`audit_v2_results.py`, and `report_v2_results.py` implement the remaining stages.
+
+## Completed 60-episode proposal pilot (14 November 2026)
+
+The four proposal controllers (IPPO/MAPPO × vehicle/vehicle-pedestrian rewards,
+four actions) were each trained with seeds 100, 200, and 300 for 60 episodes of
+3,600 seconds. Episodes 20, 40, and 60 were evaluated on validation seeds 21–23.
+The 12 selected checkpoints and two baselines were tested on seeds 11–13 in
+primary, low-demand, high-demand, and slower-walking scenarios: 168 accepted
+test evaluations. Test seeds were excluded from this run's selection, although
+they had been used in earlier exploratory experiments.
+
+The downloaded [full results](scenario/generated/FINAL_RESULTS.md) and
+[summary CSV](scenario/generated/final-summary.csv) contain means and 95%
+Student-t intervals. Learned-controller intervals use three independent training
+seeds after averaging their three test evaluations. On the primary benchmark,
+actuated control averaged 168.65 seconds time loss per departed vehicle versus
+181.09–208.39 for the learned families. This pilot does not establish a primary
+MARL improvement. Only one of 12 selections met every crossing's validation
+limit; the others used the lowest normalized violation fallback.
+
+The final code also corrects mixed baseline/MARL CSV output, active unfinished
+trip counts, zero-wait pedestrians in p95 populations, and pedestrian arrivals
+between policy decisions. The high-demand evaluation was rerun after the arrival
+fix, with 3,588 pedestrians injected for every controller. The slow scenario
+uses 0.9 m/s pedestrians and eight-second clearance. Final local verification:
+15 tests pass. Artifacts under `scenario/generated/` are intentionally gitignored.
+
+For a fresh run, with matching SUMO/libsumo versions installed:
+
+```bash
+python scripts/run_proposal_pilot.py --output-root scenario/generated/new-pilot --workers 12
+python scripts/summarize_proposal_pilot.py --root scenario/generated/new-pilot
+```
+
+The caller must supervise cloud costs, download artifacts, and terminate compute;
+the Python experiment runner does not provision or terminate cloud resources.
+
 ## Requirements
 
 - SUMO 1.18 or newer on `PATH`, or `SUMO_HOME` set to the SUMO installation

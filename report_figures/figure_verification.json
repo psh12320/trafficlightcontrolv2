@@ -1,0 +1,70 @@
+{
+  "figures": [
+    {
+      "file": "fig1_sumo_corridor_overview.png",
+      "pixels": [
+        4350,
+        1680
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "bytes": 236077,
+      "sha256": "df12b57b678c61b62337065657983dca005917a4352a22e6e60c8d8568c7f0ac"
+    },
+    {
+      "file": "fig2_v1_to_v5_progression.png",
+      "pixels": [
+        4800,
+        1350
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "bytes": 603370,
+      "sha256": "e55b53c4436af0da955b1e59daee22c3f46261363387eac8e36146a233ff791c"
+    },
+    {
+      "file": "fig3_scenario_comparison.png",
+      "pixels": [
+        4500,
+        3150
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "bytes": 316885,
+      "sha256": "8d41096bbe8ce991b1aff2d4d9eb3352df07dbdd75f27a10c05c58bc739876cc"
+    },
+    {
+      "file": "fig4_per_crossing_p95.png",
+      "pixels": [
+        3540,
+        2400
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "bytes": 358384,
+      "sha256": "b2c0a747cefb3d5a2a3d2f6e7bdf1290dab0c8345e15123d50e292994c723cb1"
+    },
+    {
+      "file": "fig5_ablation_progression.png",
+      "pixels": [
+        4200,
+        1950
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "bytes": 436484,
+      "sha256": "57bdced71e5385d364971fdcc137831a454ce18b3df3f5c0939b879f951038cc"
+    }
+  ],
+  "prior_files_unchanged": 5249
+}
